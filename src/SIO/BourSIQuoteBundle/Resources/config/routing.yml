@@ -1,0 +1,3 @@
+bour_si_quote_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: BourSIQuoteBundle:Default:index }
