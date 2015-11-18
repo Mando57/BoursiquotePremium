@@ -1,3 +1,4 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+bourse:
+    resource: "@BourseBundle/Resources/config/routing.yml"
+    prefix:   /
+
