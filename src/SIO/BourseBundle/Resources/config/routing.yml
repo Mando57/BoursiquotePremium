@@ -1,3 +1,6 @@
 bourse_homepage:
     path:     /hello/{name}
     defaults: { _controller: BourseBundle:Default:index }
+bourse_homepage:
+    path:     /profile
+    defaults: { _controller: BourseBundle:Profile:index }
