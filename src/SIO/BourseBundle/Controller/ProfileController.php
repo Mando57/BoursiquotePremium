@@ -8,6 +8,6 @@ class ProfileController extends Controller
 {
     public function indexAction($name)
     {
-        return $this->render('BourseBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('BourseBundle:Profile:index.html.twig');
     }
 }

@@ -6,7 +6,7 @@
         </title>
     <meta http-equiv="Content-Language" content="fr">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    {% stylesheets '@LaFleurSymfonyBundle/Resources/public/css/cssGeneral.css' filter='cssrewrite' %}
+    {% stylesheets '@BourseBundle/Resources/public/css/cssGeneral.css' filter='cssrewrite' %}
     <link href="{{ asset_url }}" rel="stylesheet" media="screen">
     {% endstylesheets %}
 </head>
@@ -18,19 +18,19 @@
 </div>
 <!--  Menu haut-->
 <ul id="menu">
-    <li><a href={{ path('la_fleur_symfony_accueil') }}> Accueil </a></li>
-    <li><a href={{ path('la_fleur_symfony_catalogue') }}> Voir le catalogue de fleurs </a></li>
-    <li><a href={{ path('la_fleur_symfony_voirPanier') }}> Voir le panier</a></li>
-    <li><a href="" >Administrer</a></li>
+    <li><a href={# path('la_fleur_symfony_accueil') #}> Accueil </a></li>
+    <li><a href=> Voir le catalogue de fleurs </a></li>
+    <li><a href=> Voir le panier</a></li>
+    <li><a href= >Administrer</a></li>
     {% set layout = app.session.get('layout') %}
     {% if layout==1 %}
                
         {% else %}
         <li>
-            <a href={{ path('la_fleur_symfony_nouveau') }} >Créer un compte</a>
+            <a href= >Créer un compte</a>
         </li>
         <li>
-            <a href={{ path('la_fleur_symfony_connec') }} >connecter</a>
+            <a href= >connecter</a>
         </li>
     {% endif %}
        {#
