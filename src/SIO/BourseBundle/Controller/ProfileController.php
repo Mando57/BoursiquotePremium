@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ProfileController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
         return $this->render('BourseBundle:Profile:index.html.twig');
     }
