@@ -1,4 +1,0 @@
-bourse:
-    resource: "@BourseBundle/Resources/config/routing.yml"
-    prefix:   /
-
