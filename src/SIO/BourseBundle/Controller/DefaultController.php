@@ -10,4 +10,12 @@ class DefaultController extends Controller
     {
         return $this->render('BourseBundle:Default:index.html.twig', array('name' => $name));
     }
+    public function accueilAction()
+    {
+        return $this->render('BourseBundle:Default:accueil.html.twig');
+    }
+    public function TDBAction()
+    {
+        return $this->render('BourseBundle:Default:tableau.html.twig');
+    }
 }
