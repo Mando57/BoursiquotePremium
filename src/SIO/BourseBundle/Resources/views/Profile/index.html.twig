@@ -1,0 +1,13 @@
+{% extends "BourseBundle:layout:layout.html.twig" %}
+
+{% block title %} {{ parent() }} - Accueil général {% endblock %}
+
+{% block lateral %}
+
+        <u>Mes valeurs favorites</u>
+    {% for categ in lesBourses %}
+        {{ categ.nom }}
+
+
+    {% endfor %}
+{% endblock %}

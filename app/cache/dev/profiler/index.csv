@@ -1,0 +1,12 @@
+c728b3,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/accueil,1447947531,,200
+c10e12,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/accueil,1447947657,,200
+a60f3c,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/accueil,1447947686,,200
+ef2ab7,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/,1447949531,,200
+34b1fe,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/accueil,1447949542,,200
+390bf8,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php//hello/axel,1447949661,9e8d7e,200
+9e8d7e,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php//hello/axel,1447949661,,404
+42277e,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/hello/axel,1447949673,018fc7,200
+018fc7,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/hello/axel,1447949673,,404
+4a659e,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/,1449061699,,200
+5957cc,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/,1449061731,,200
+a683f6,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/profile,1449061753,,200
