@@ -15,8 +15,8 @@ class __TwigTemplate_8fa1e626090a09d5ee87a238696f8fdcad7c4f9671ed072b336929f91ae
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_886367e527f723b55f562d088b352bd75d0bf7e02156b138a4efd8338d007da1 = $this->env->getExtension("native_profiler");
-        $__internal_886367e527f723b55f562d088b352bd75d0bf7e02156b138a4efd8338d007da1->enter($__internal_886367e527f723b55f562d088b352bd75d0bf7e02156b138a4efd8338d007da1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:traces_text.html.twig"));
+        $__internal_27ac5ea862350977545e8dca55a5ecc26fd6238d75cf4ac87d12503ce1463bcf = $this->env->getExtension("native_profiler");
+        $__internal_27ac5ea862350977545e8dca55a5ecc26fd6238d75cf4ac87d12503ce1463bcf->enter($__internal_27ac5ea862350977545e8dca55a5ecc26fd6238d75cf4ac87d12503ce1463bcf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:traces_text.html.twig"));
 
         // line 1
         echo "<div class=\"block\">
@@ -39,7 +39,7 @@ class __TwigTemplate_8fa1e626090a09d5ee87a238696f8fdcad7c4f9671ed072b336929f91ae
 <pre>";
         // line 13
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")), "toarray", array()));
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["exception"]) ? $context["exception"] : null), "toarray", array()));
         foreach ($context['_seq'] as $context["i"] => $context["e"]) {
             // line 14
             echo "[";
@@ -62,7 +62,7 @@ class __TwigTemplate_8fa1e626090a09d5ee87a238696f8fdcad7c4f9671ed072b336929f91ae
 </div>
 ";
         
-        $__internal_886367e527f723b55f562d088b352bd75d0bf7e02156b138a4efd8338d007da1->leave($__internal_886367e527f723b55f562d088b352bd75d0bf7e02156b138a4efd8338d007da1_prof);
+        $__internal_27ac5ea862350977545e8dca55a5ecc26fd6238d75cf4ac87d12503ce1463bcf->leave($__internal_27ac5ea862350977545e8dca55a5ecc26fd6238d75cf4ac87d12503ce1463bcf_prof);
 
     }
 
