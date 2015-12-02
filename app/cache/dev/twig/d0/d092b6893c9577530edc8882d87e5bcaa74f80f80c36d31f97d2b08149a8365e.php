@@ -15,15 +15,15 @@ class __TwigTemplate_7425f7988328059d6b84e8d60ea302c35ab19c09e01444c8a7926d17649
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2bcb4d503a21d9d5397a754eaa8fd2a8f03dc769dcb83f964fa6e2a076404405 = $this->env->getExtension("native_profiler");
-        $__internal_2bcb4d503a21d9d5397a754eaa8fd2a8f03dc769dcb83f964fa6e2a076404405->enter($__internal_2bcb4d503a21d9d5397a754eaa8fd2a8f03dc769dcb83f964fa6e2a076404405_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:logs.html.twig"));
+        $__internal_8322e2bd124bc401465f3df117a953c24ae9cfd52122033b800d6328e9297628 = $this->env->getExtension("native_profiler");
+        $__internal_8322e2bd124bc401465f3df117a953c24ae9cfd52122033b800d6328e9297628->enter($__internal_8322e2bd124bc401465f3df117a953c24ae9cfd52122033b800d6328e9297628_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:logs.html.twig"));
 
         // line 1
         echo "<ol class=\"traces logs\">
     ";
         // line 2
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["logs"]) ? $context["logs"] : $this->getContext($context, "logs")));
+        $context['_seq'] = twig_ensure_traversable((isset($context["logs"]) ? $context["logs"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["log"]) {
             // line 3
             echo "        <li";
@@ -49,7 +49,7 @@ class __TwigTemplate_7425f7988328059d6b84e8d60ea302c35ab19c09e01444c8a7926d17649
         echo "</ol>
 ";
         
-        $__internal_2bcb4d503a21d9d5397a754eaa8fd2a8f03dc769dcb83f964fa6e2a076404405->leave($__internal_2bcb4d503a21d9d5397a754eaa8fd2a8f03dc769dcb83f964fa6e2a076404405_prof);
+        $__internal_8322e2bd124bc401465f3df117a953c24ae9cfd52122033b800d6328e9297628->leave($__internal_8322e2bd124bc401465f3df117a953c24ae9cfd52122033b800d6328e9297628_prof);
 
     }
 
