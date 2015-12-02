@@ -3,7 +3,11 @@
 {% block title %} {{ parent() }} - Accueil général {% endblock %}
 
 {% block lateral %}
-    {% for categ in lesCategories %}
-        test
+
+        <u>Mes valeurs favorites</u>
+    {% for categ in lesBourses %}
+        {{ categ.nom }}
+
+
     {% endfor %}
 {% endblock %}
