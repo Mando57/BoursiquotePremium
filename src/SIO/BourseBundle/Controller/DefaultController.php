@@ -16,6 +16,6 @@ class DefaultController extends Controller
     }
     public function TDBAction()
     {
-        return $this->render('BourseBundle:Default:tableau.html.twig');
+        return $this->render('BourseBundle:Default:TableauDeBord.html.twig');
     }
 }
