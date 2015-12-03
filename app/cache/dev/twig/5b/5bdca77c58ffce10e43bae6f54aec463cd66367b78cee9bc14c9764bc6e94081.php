@@ -18,8 +18,8 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_66b74f335069a4a01aa52a3647f37f591c9f631549e115c7a0c1d020998e8766 = $this->env->getExtension("native_profiler");
-        $__internal_66b74f335069a4a01aa52a3647f37f591c9f631549e115c7a0c1d020998e8766->enter($__internal_66b74f335069a4a01aa52a3647f37f591c9f631549e115c7a0c1d020998e8766_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:layout:layout.html.twig"));
+        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f = $this->env->getExtension("native_profiler");
+        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f->enter($__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:layout:layout.html.twig"));
 
         // line 1
         echo "<html lang=fr>
@@ -76,22 +76,45 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
     <li><a href=";
         // line 26
         echo "> Gerer tableau de bord</a></li>
-
-
+    ";
+        // line 27
+        $context["layout"] = $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "get", array(0 => "layout"), "method");
+        // line 28
+        echo "    ";
+        if (((isset($context["layout"]) ? $context["layout"] : null) == 1)) {
+            // line 29
+            echo "
+    ";
+        } else {
+            // line 31
+            echo "        <li>
+            <a href=";
+            // line 32
+            echo " >Créer un compte</a>
+        </li>
+        <li>
+            <a href=";
+            // line 35
+            echo " >connecter</a>
+        </li>
+    ";
+        }
+        // line 38
+        echo "
 </ul>
 <div id=\"menu lateral\">
 ";
-        // line 31
+        // line 41
         $this->displayBlock('lateral', $context, $blocks);
-        // line 33
+        // line 43
         echo "</div>
 
 
 <div id=\"conteneur\">
     ";
-        // line 37
+        // line 47
         $this->displayBlock('content', $context, $blocks);
-        // line 39
+        // line 49
         echo "</div>
 
 
@@ -104,45 +127,45 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
 </html>";
         
-        $__internal_66b74f335069a4a01aa52a3647f37f591c9f631549e115c7a0c1d020998e8766->leave($__internal_66b74f335069a4a01aa52a3647f37f591c9f631549e115c7a0c1d020998e8766_prof);
+        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f->leave($__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_a7205912038432df2d28ae2b299ae08f314431e51bf33d17350e75fdef2b22df = $this->env->getExtension("native_profiler");
-        $__internal_a7205912038432df2d28ae2b299ae08f314431e51bf33d17350e75fdef2b22df->enter($__internal_a7205912038432df2d28ae2b299ae08f314431e51bf33d17350e75fdef2b22df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03 = $this->env->getExtension("native_profiler");
+        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03->enter($__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
         echo "                boursiquote :
             ";
         
-        $__internal_a7205912038432df2d28ae2b299ae08f314431e51bf33d17350e75fdef2b22df->leave($__internal_a7205912038432df2d28ae2b299ae08f314431e51bf33d17350e75fdef2b22df_prof);
+        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03->leave($__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03_prof);
 
     }
 
-    // line 31
+    // line 41
     public function block_lateral($context, array $blocks = array())
     {
-        $__internal_38865d3804cf2d0db04d0e62ce09e187872d4c3be9e68864ec29b5e8ed1f4955 = $this->env->getExtension("native_profiler");
-        $__internal_38865d3804cf2d0db04d0e62ce09e187872d4c3be9e68864ec29b5e8ed1f4955->enter($__internal_38865d3804cf2d0db04d0e62ce09e187872d4c3be9e68864ec29b5e8ed1f4955_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
+        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b = $this->env->getExtension("native_profiler");
+        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b->enter($__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
 
         
-        $__internal_38865d3804cf2d0db04d0e62ce09e187872d4c3be9e68864ec29b5e8ed1f4955->leave($__internal_38865d3804cf2d0db04d0e62ce09e187872d4c3be9e68864ec29b5e8ed1f4955_prof);
+        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b->leave($__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b_prof);
 
     }
 
-    // line 37
+    // line 47
     public function block_content($context, array $blocks = array())
     {
-        $__internal_d1e9fdcdc8aac81db32a476ffa72890f7b6c87aff470b8f4882070bf94dd65dc = $this->env->getExtension("native_profiler");
-        $__internal_d1e9fdcdc8aac81db32a476ffa72890f7b6c87aff470b8f4882070bf94dd65dc->enter($__internal_d1e9fdcdc8aac81db32a476ffa72890f7b6c87aff470b8f4882070bf94dd65dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc = $this->env->getExtension("native_profiler");
+        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc->enter($__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 38
+        // line 48
         echo "    ";
         
-        $__internal_d1e9fdcdc8aac81db32a476ffa72890f7b6c87aff470b8f4882070bf94dd65dc->leave($__internal_d1e9fdcdc8aac81db32a476ffa72890f7b6c87aff470b8f4882070bf94dd65dc_prof);
+        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc->leave($__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc_prof);
 
     }
 
@@ -158,7 +181,7 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
     public function getDebugInfo()
     {
-        return array (  143 => 38,  137 => 37,  126 => 31,  118 => 4,  112 => 3,  95 => 39,  93 => 37,  87 => 33,  85 => 31,  78 => 26,  74 => 25,  71 => 24,  62 => 18,  54 => 12,  40 => 10,  36 => 9,  31 => 6,  29 => 3,  25 => 1,);
+        return array (  166 => 48,  160 => 47,  149 => 41,  141 => 4,  135 => 3,  118 => 49,  116 => 47,  110 => 43,  108 => 41,  103 => 38,  98 => 35,  93 => 32,  90 => 31,  86 => 29,  83 => 28,  81 => 27,  78 => 26,  74 => 25,  71 => 24,  62 => 18,  54 => 12,  40 => 10,  36 => 9,  31 => 6,  29 => 3,  25 => 1,);
     }
 }
 /* <html lang=fr>*/
@@ -187,7 +210,17 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 /*     <li><a href={{ path('bourse_tableau') }}> Tableau de bord </a></li>       {# les liens sont a remettre via le routing #}*/
 /*     <li><a href={#  {{ path('analyse') }}       #}> Analyse du marché</a></li>*/
 /*     <li><a href={#  {{ path('gerertableau') }}  #}> Gerer tableau de bord</a></li>*/
+/*     {% set layout = app.session.get('layout') %}*/
+/*     {% if layout==1 %}*/
 /* */
+/*     {% else %}*/
+/*         <li>*/
+/*             <a href={# path('la_fleur_symfony_nouveau') #} >Créer un compte</a>*/
+/*         </li>*/
+/*         <li>*/
+/*             <a href={# path('la_fleur_symfony_connec') #} >connecter</a>*/
+/*         </li>*/
+/*     {% endif %}*/
 /* */
 /* </ul>*/
 /* <div id="menu lateral">*/
