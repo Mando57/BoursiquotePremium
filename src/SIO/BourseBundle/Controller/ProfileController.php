@@ -15,7 +15,7 @@ class ProfileController extends Controller
     {
         //include('PHPGraphLib.php');
         //$graph=models\PHPGraphLib::PHPGraphLib(650,200);
-        $graph = $this->container->get('la_fleur_symfony.panier');
+        /*$graph = $this->container->get('la_fleur_symfony.panier');
         $graph->PHPGraphLib(650,200);
 
         $data = array("1" => .0032, "2" => .0028, "3" => .0021, "4" => .0033,
@@ -32,7 +32,7 @@ class ProfileController extends Controller
         $graph->setDataValueColor('maroon');
         $graph->setGoalLine(.0025);
         $graph->setGoalLineColor('red');
-        $graph->createGraph();
+        $graph->createGraph();*/
         return $this->render('BourseBundle:Profile:index.html.twig');
     }
 }
