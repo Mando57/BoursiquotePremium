@@ -22,26 +22,26 @@ class __TwigTemplate_feac620a021b3f41e03db6aa65edd1e1dd57bcf1451cb27d2d8bcb9fa7e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c8529553e2f4c49ac42e0adba4d05f52c1cce3dd0717b90b47ce79e3ca38a9c7 = $this->env->getExtension("native_profiler");
-        $__internal_c8529553e2f4c49ac42e0adba4d05f52c1cce3dd0717b90b47ce79e3ca38a9c7->enter($__internal_c8529553e2f4c49ac42e0adba4d05f52c1cce3dd0717b90b47ce79e3ca38a9c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:layout.html.twig"));
+        $__internal_4ad56fe7dfbee6065e4eaed0f6a1b9b3449b29d5852f2e85a9762def3142ce1a = $this->env->getExtension("native_profiler");
+        $__internal_4ad56fe7dfbee6065e4eaed0f6a1b9b3449b29d5852f2e85a9762def3142ce1a->enter($__internal_4ad56fe7dfbee6065e4eaed0f6a1b9b3449b29d5852f2e85a9762def3142ce1a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:layout.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c8529553e2f4c49ac42e0adba4d05f52c1cce3dd0717b90b47ce79e3ca38a9c7->leave($__internal_c8529553e2f4c49ac42e0adba4d05f52c1cce3dd0717b90b47ce79e3ca38a9c7_prof);
+        $__internal_4ad56fe7dfbee6065e4eaed0f6a1b9b3449b29d5852f2e85a9762def3142ce1a->leave($__internal_4ad56fe7dfbee6065e4eaed0f6a1b9b3449b29d5852f2e85a9762def3142ce1a_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_03d541d41541e51fea02022d4d480cad4fd34673967683d84380d053d8a1a142 = $this->env->getExtension("native_profiler");
-        $__internal_03d541d41541e51fea02022d4d480cad4fd34673967683d84380d053d8a1a142->enter($__internal_03d541d41541e51fea02022d4d480cad4fd34673967683d84380d053d8a1a142_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_4d95e4a43097128ef01b1b346ac5c4ec60c52f3ad6a89a417ee8096e9f4d26d3 = $this->env->getExtension("native_profiler");
+        $__internal_4d95e4a43097128ef01b1b346ac5c4ec60c52f3ad6a89a417ee8096e9f4d26d3->enter($__internal_4d95e4a43097128ef01b1b346ac5c4ec60c52f3ad6a89a417ee8096e9f4d26d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
     ";
         // line 5
-        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('routing')->getPath("_wdt", array("token" => (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "position" => "normal")));
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('routing')->getPath("_wdt", array("token" => (isset($context["token"]) ? $context["token"] : null), "position" => "normal")));
         echo "
 
     <div id=\"content\">
@@ -56,7 +56,7 @@ class __TwigTemplate_feac620a021b3f41e03db6aa65edd1e1dd57bcf1451cb27d2d8bcb9fa7e
                 <div id=\"collector-wrapper\">
                     ";
         // line 14
-        if ((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile"))) {
+        if ((isset($context["profile"]) ? $context["profile"] : null)) {
             // line 15
             echo "                        <div id=\"resume\">
                             <a id=\"resume-view-all\" href=\"";
@@ -66,22 +66,22 @@ class __TwigTemplate_feac620a021b3f41e03db6aa65edd1e1dd57bcf1451cb27d2d8bcb9fa7e
                             <strong>Profile for:</strong>
                             ";
             // line 18
-            echo twig_escape_filter($this->env, twig_upper_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), "method", array())), "html", null, true);
+            echo twig_escape_filter($this->env, twig_upper_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : null), "method", array())), "html", null, true);
             echo "
                             ";
             // line 19
-            if (twig_in_filter(twig_upper_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), "method", array())), array(0 => "GET", 1 => "HEAD"))) {
+            if (twig_in_filter(twig_upper_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : null), "method", array())), array(0 => "GET", 1 => "HEAD"))) {
                 // line 20
                 echo "                                <a href=\"";
-                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), "url", array()), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : null), "url", array()), "html", null, true);
                 echo "\" id=\"resume-url\">";
-                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), "url", array()), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : null), "url", array()), "html", null, true);
                 echo "</a>
                             ";
             } else {
                 // line 22
                 echo "                                <span id=\"resume-url\">";
-                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), "url", array()), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : null), "url", array()), "html", null, true);
                 echo "</span>
                             ";
             }
@@ -89,9 +89,9 @@ class __TwigTemplate_feac620a021b3f41e03db6aa65edd1e1dd57bcf1451cb27d2d8bcb9fa7e
             echo "                            <span class=\"date\">
                                 <em>by ";
             // line 25
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), "ip", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : null), "ip", array()), "html", null, true);
             echo "</em> at <em>";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), "time", array()), "r"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["profile"]) ? $context["profile"] : null), "time", array()), "r"), "html", null, true);
             echo "</em>
                             </span>
                         </div>
@@ -118,28 +118,28 @@ class __TwigTemplate_feac620a021b3f41e03db6aa65edd1e1dd57bcf1451cb27d2d8bcb9fa7e
                             ";
             // line 38
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["templates"]) ? $context["templates"] : $this->getContext($context, "templates")));
+            $context['_seq'] = twig_ensure_traversable((isset($context["templates"]) ? $context["templates"] : null));
             foreach ($context['_seq'] as $context["name"] => $context["template"]) {
                 // line 39
                 echo "                                ";
                 ob_start();
-                echo twig_escape_filter($this->env, $this->getAttribute($context["template"], "renderBlock", array(0 => "menu", 1 => array("collector" => $this->getAttribute((isset($context["profile"]) ? $context["profile"] : $this->getContext($context, "profile")), "getcollector", array(0 => $context["name"]), "method"))), "method"), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute($context["template"], "renderBlock", array(0 => "menu", 1 => array("collector" => $this->getAttribute((isset($context["profile"]) ? $context["profile"] : null), "getcollector", array(0 => $context["name"]), "method"))), "method"), "html", null, true);
                 $context["menu"] = ('' === $tmp = ob_get_clean()) ? '' : new Twig_Markup($tmp, $this->env->getCharset());
                 // line 40
                 echo "                                ";
-                if (((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")) != "")) {
+                if (((isset($context["menu"]) ? $context["menu"] : null) != "")) {
                     // line 41
                     echo "                                    <li class=\"";
                     echo twig_escape_filter($this->env, $context["name"], "html", null, true);
-                    if (($context["name"] == (isset($context["panel"]) ? $context["panel"] : $this->getContext($context, "panel")))) {
+                    if (($context["name"] == (isset($context["panel"]) ? $context["panel"] : null))) {
                         echo " selected";
                     }
                     echo "\">
                                         <a href=\"";
                     // line 42
-                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_profiler", array("token" => (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "panel" => $context["name"])), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_profiler", array("token" => (isset($context["token"]) ? $context["token"] : null), "panel" => $context["name"])), "html", null, true);
                     echo "\">";
-                    echo (isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu"));
+                    echo (isset($context["menu"]) ? $context["menu"] : null);
                     echo "</a>
                                     </li>
                                 ";
@@ -168,7 +168,7 @@ class __TwigTemplate_feac620a021b3f41e03db6aa65edd1e1dd57bcf1451cb27d2d8bcb9fa7e
         echo "
                     ";
         // line 57
-        $this->loadTemplate("@WebProfiler/Profiler/admin.html.twig", "WebProfilerBundle:Profiler:layout.html.twig", 57)->display(array("token" => (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token"))));
+        $this->loadTemplate("@WebProfiler/Profiler/admin.html.twig", "WebProfilerBundle:Profiler:layout.html.twig", 57)->display(array("token" => (isset($context["token"]) ? $context["token"] : null)));
         // line 58
         echo "                </div>
             </div>
@@ -244,19 +244,19 @@ class __TwigTemplate_feac620a021b3f41e03db6aa65edd1e1dd57bcf1451cb27d2d8bcb9fa7e
     //]]></script>
 ";
         
-        $__internal_03d541d41541e51fea02022d4d480cad4fd34673967683d84380d053d8a1a142->leave($__internal_03d541d41541e51fea02022d4d480cad4fd34673967683d84380d053d8a1a142_prof);
+        $__internal_4d95e4a43097128ef01b1b346ac5c4ec60c52f3ad6a89a417ee8096e9f4d26d3->leave($__internal_4d95e4a43097128ef01b1b346ac5c4ec60c52f3ad6a89a417ee8096e9f4d26d3_prof);
 
     }
 
     // line 32
     public function block_panel($context, array $blocks = array())
     {
-        $__internal_917b4d13b9336150d85fa787cd6bff36285e4a0c38fa7990351e0b521a398091 = $this->env->getExtension("native_profiler");
-        $__internal_917b4d13b9336150d85fa787cd6bff36285e4a0c38fa7990351e0b521a398091->enter($__internal_917b4d13b9336150d85fa787cd6bff36285e4a0c38fa7990351e0b521a398091_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "panel"));
+        $__internal_5376f7750ade88e06ea51c22b61b71f9c1f7ca4bdff84992269f180aec3ee7e2 = $this->env->getExtension("native_profiler");
+        $__internal_5376f7750ade88e06ea51c22b61b71f9c1f7ca4bdff84992269f180aec3ee7e2->enter($__internal_5376f7750ade88e06ea51c22b61b71f9c1f7ca4bdff84992269f180aec3ee7e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "panel"));
 
         echo "";
         
-        $__internal_917b4d13b9336150d85fa787cd6bff36285e4a0c38fa7990351e0b521a398091->leave($__internal_917b4d13b9336150d85fa787cd6bff36285e4a0c38fa7990351e0b521a398091_prof);
+        $__internal_5376f7750ade88e06ea51c22b61b71f9c1f7ca4bdff84992269f180aec3ee7e2->leave($__internal_5376f7750ade88e06ea51c22b61b71f9c1f7ca4bdff84992269f180aec3ee7e2_prof);
 
     }
 

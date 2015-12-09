@@ -15,8 +15,8 @@ class __TwigTemplate_d8b3a7b2990f274718269ba03cd41607e76bb7702c49a1132f9d3e394d7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_eecf93e974c2c23422f89ec3bfffd573b8823e00153d0cb5a0ce9ce4a8f442b2 = $this->env->getExtension("native_profiler");
-        $__internal_eecf93e974c2c23422f89ec3bfffd573b8823e00153d0cb5a0ce9ce4a8f442b2->enter($__internal_eecf93e974c2c23422f89ec3bfffd573b8823e00153d0cb5a0ce9ce4a8f442b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/toolbar.css.twig"));
+        $__internal_6eb24ac5d90fab1571765e37c9e587b51bb5e5efbbfa2550147a8cd66ad03631 = $this->env->getExtension("native_profiler");
+        $__internal_6eb24ac5d90fab1571765e37c9e587b51bb5e5efbbfa2550147a8cd66ad03631->enter($__internal_6eb24ac5d90fab1571765e37c9e587b51bb5e5efbbfa2550147a8cd66ad03631_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/toolbar.css.twig"));
 
         // line 1
         echo ".sf-minitoolbar {
@@ -368,7 +368,7 @@ class __TwigTemplate_d8b3a7b2990f274718269ba03cd41607e76bb7702c49a1132f9d3e394d7
 /***** Override the setting when the toolbar is on the top *****/
 ";
         // line 348
-        if (((isset($context["position"]) ? $context["position"] : $this->getContext($context, "position")) == "top")) {
+        if (((isset($context["position"]) ? $context["position"] : null) == "top")) {
             // line 349
             echo "    .sf-minitoolbar {
         top: 0;
@@ -415,7 +415,7 @@ class __TwigTemplate_d8b3a7b2990f274718269ba03cd41607e76bb7702c49a1132f9d3e394d7
         echo "
 ";
         // line 390
-        if ( !(isset($context["floatable"]) ? $context["floatable"] : $this->getContext($context, "floatable"))) {
+        if ( !(isset($context["floatable"]) ? $context["floatable"] : null)) {
             // line 391
             echo "    .sf-toolbarreset {
         position: static;
@@ -475,7 +475,7 @@ class __TwigTemplate_d8b3a7b2990f274718269ba03cd41607e76bb7702c49a1132f9d3e394d7
 }
 ";
         
-        $__internal_eecf93e974c2c23422f89ec3bfffd573b8823e00153d0cb5a0ce9ce4a8f442b2->leave($__internal_eecf93e974c2c23422f89ec3bfffd573b8823e00153d0cb5a0ce9ce4a8f442b2_prof);
+        $__internal_6eb24ac5d90fab1571765e37c9e587b51bb5e5efbbfa2550147a8cd66ad03631->leave($__internal_6eb24ac5d90fab1571765e37c9e587b51bb5e5efbbfa2550147a8cd66ad03631_prof);
 
     }
 

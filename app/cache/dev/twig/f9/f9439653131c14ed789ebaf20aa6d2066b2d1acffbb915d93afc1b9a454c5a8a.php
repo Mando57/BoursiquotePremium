@@ -15,8 +15,8 @@ class __TwigTemplate_637b5cfe236bd7941d211160cdcd259232e0981eca7ea0857715668a23d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b1041178440db42ba517cff7fcd59620c56b4e5bcb3cb59edde389ac41cac680 = $this->env->getExtension("native_profiler");
-        $__internal_b1041178440db42ba517cff7fcd59620c56b4e5bcb3cb59edde389ac41cac680->enter($__internal_b1041178440db42ba517cff7fcd59620c56b4e5bcb3cb59edde389ac41cac680_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/base_js.html.twig"));
+        $__internal_08ef80ea0ef9b41995a8e256b7b3c34a61b8165ab673e89f9400d60e7d6ad22f = $this->env->getExtension("native_profiler");
+        $__internal_08ef80ea0ef9b41995a8e256b7b3c34a61b8165ab673e89f9400d60e7d6ad22f->enter($__internal_08ef80ea0ef9b41995a8e256b7b3c34a61b8165ab673e89f9400d60e7d6ad22f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/base_js.html.twig"));
 
         // line 1
         echo "<script>/*<![CDATA[*/
@@ -241,27 +241,27 @@ class __TwigTemplate_637b5cfe236bd7941d211160cdcd259232e0981eca7ea0857715668a23d
                     if (url.substr(0, 1) === '/') {
                         if (0 === url.indexOf('";
             // line 218
-            echo twig_escape_filter($this->env, twig_escape_filter($this->env, $this->getAttribute((isset($context["request"]) ? $context["request"] : $this->getContext($context, "request")), "basePath", array()), "js"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_escape_filter($this->env, $this->getAttribute((isset($context["request"]) ? $context["request"] : null), "basePath", array()), "js"), "html", null, true);
             echo "')) {
                             path = url.substr(";
             // line 219
-            echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute((isset($context["request"]) ? $context["request"] : $this->getContext($context, "request")), "basePath", array())), "html", null, true);
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute((isset($context["request"]) ? $context["request"] : null), "basePath", array())), "html", null, true);
             echo ");
                         }
                     }
                     else if (0 === url.indexOf('";
             // line 222
-            echo twig_escape_filter($this->env, twig_escape_filter($this->env, ($this->getAttribute((isset($context["request"]) ? $context["request"] : $this->getContext($context, "request")), "schemeAndHttpHost", array()) . $this->getAttribute((isset($context["request"]) ? $context["request"] : $this->getContext($context, "request")), "basePath", array())), "js"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_escape_filter($this->env, ($this->getAttribute((isset($context["request"]) ? $context["request"] : null), "schemeAndHttpHost", array()) . $this->getAttribute((isset($context["request"]) ? $context["request"] : null), "basePath", array())), "js"), "html", null, true);
             echo "')) {
                         path = url.substr(";
             // line 223
-            echo twig_escape_filter($this->env, twig_length_filter($this->env, ($this->getAttribute((isset($context["request"]) ? $context["request"] : $this->getContext($context, "request")), "schemeAndHttpHost", array()) . $this->getAttribute((isset($context["request"]) ? $context["request"] : $this->getContext($context, "request")), "basePath", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, ($this->getAttribute((isset($context["request"]) ? $context["request"] : null), "schemeAndHttpHost", array()) . $this->getAttribute((isset($context["request"]) ? $context["request"] : null), "basePath", array()))), "html", null, true);
             echo ");
                     }
 
                     if (path.substr(0, 1) === '/' && !path.match(new RegExp(";
             // line 226
-            echo twig_jsonencode_filter((isset($context["excluded_ajax_paths"]) ? $context["excluded_ajax_paths"] : $this->getContext($context, "excluded_ajax_paths")));
+            echo twig_jsonencode_filter((isset($context["excluded_ajax_paths"]) ? $context["excluded_ajax_paths"] : null));
             echo "))) {
                         var stackElement = {
                             loading: true,
@@ -351,7 +351,7 @@ class __TwigTemplate_637b5cfe236bd7941d211160cdcd259232e0981eca7ea0857715668a23d
 /*]]>*/</script>
 ";
         
-        $__internal_b1041178440db42ba517cff7fcd59620c56b4e5bcb3cb59edde389ac41cac680->leave($__internal_b1041178440db42ba517cff7fcd59620c56b4e5bcb3cb59edde389ac41cac680_prof);
+        $__internal_08ef80ea0ef9b41995a8e256b7b3c34a61b8165ab673e89f9400d60e7d6ad22f->leave($__internal_08ef80ea0ef9b41995a8e256b7b3c34a61b8165ab673e89f9400d60e7d6ad22f_prof);
 
     }
 
