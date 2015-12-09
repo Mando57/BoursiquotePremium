@@ -67,7 +67,7 @@ class ProfileController extends Controller
 
 
 
-        return $this->render ('BourseBundle:Profile.html.twig');
+        return $this->render ('BourseBundle:Profile:connection.html.twig');
     }
 
 
