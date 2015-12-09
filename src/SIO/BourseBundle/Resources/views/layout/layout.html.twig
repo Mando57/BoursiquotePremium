@@ -25,6 +25,7 @@
     <!-- Images En-tête -->
     <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->
     <img id="banniere" src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>
+    <input type='submit' id="bt-deco" value="Déconnexion" name='Deconnexion'/>
 
 </div>
 
@@ -33,9 +34,14 @@
     <li><a href={{ path('bourse_tableau') }}> Tableau de bord </a></li>       {# les liens sont a remettre via le routing #}
     <li><a href={#  {{ path('analyse') }}       #}> Analyse du marché</a></li>
     <li><a href={#  {{ path('gerertableau') }}  #}> Gerer tableau de bord</a></li>
-
-
 </ul>
+<div id="recherche">
+    Recherche : <input type="text" name="recherche"> <input type='submit' value="OK" name='OK'/>
+</div>
+
+
+
+
 <div id="menu lateral">
 {% block lateral %}
 {% endblock %}
@@ -51,8 +57,7 @@
 
 
 <br><br><br>
-<div id="pied"> Copyright _ BourSIQoute _ 2016 </div>
-<div id="credits"> powered by symfony 2 </div>
+<div id="pied"> Copyright _ BourSIQoute _ 2016 </br> powered by symfony 2 </div>
 </body>
 
 </html>
