@@ -37,8 +37,8 @@ class ProfileController extends Controller
                 $pwd= $request->get('mdp');
                 $pdo = models\PdoBourse::getPdoBourse();
                 $try=$pdo->checkClient($identifiant, $pwd);
-
-                if($try['logged']==true);
+                
+                if($try['logged']==true)
                 {
                     $session= new Session;
 
@@ -47,6 +47,11 @@ class ProfileController extends Controller
                     $session->set('layout',1);
                     $url=$this->get('router')->generate('bourse_profile');
                     return new RedirectResponse($url);
+                }
+                else
+                {
+                    $this->get('session')->getFlashBag()->add('notice', 'Erreur identifiants! ');
+                    return $this->render ('BourseBundle:Profile:connection.html.twig');
                 }
 
 

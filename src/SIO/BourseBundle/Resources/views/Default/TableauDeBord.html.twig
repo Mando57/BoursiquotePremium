@@ -1,6 +1,6 @@
 {% extends "BourseBundle:layout:layout.html.twig" %}
 
-{% block title %} {{ parent() }} page de test {% endblock %}
+{% block title %} {{ parent() }} Tableau de bord {% endblock %}
 
 
 {% block lateral %}{{ parent }}
@@ -10,6 +10,65 @@
 {% endblock %}
 
 {% block content %}{{ parent }}
+
+
+    <div id="conteneur">
+
+        <p id="p1"> Mes valeurs favorites </p>
+
+        <div id="f1">
+            <p> CAC 40 - Paris </p>
+            <p id="desc">
+                ..............................</br>
+                ..............................</br>
+                ..............................</br>
+                ..............................</br>
+                .................. .</br>
+            </p>
+            <img id="g" src={{ asset('images/graph/graph.php') }} />
+            <a href="">En savoir plus...</a>
+        </div>
+
+        <div id="f2">
+            <p> TOTAL - Paris </p>
+            <p id="desc2">
+                ..............................</br>
+                ..............................</br>
+                ..............................</br>
+                ..............................</br>
+                .................. .</br>
+            </p>
+            <img id="g" src={{ asset('images/graph/graph.php') }} />
+            <a href="">En savoir plus...</a>
+        </div>
+
+        <div id="f3">
+            <p> SANEF - Paris </p>
+            <p id="desc3">
+                ..............................</br>
+                ..............................</br>
+                ..............................</br>
+                ..............................</br>
+                .................. .</br>
+            </p>
+            <img id="g" src={{ asset('images/graph/graph.php') }} />
+            <a href="">En savoir plus...</a>
+        </div>
+
+        <div id="f4">
+            <p> CAC 15 - World </p>
+            <p id="desc4">
+                ..............................</br>
+                ..............................</br>
+                ..............................</br>
+                ..............................</br>
+                .................. .</br>
+            </p>
+            <img id="g" src={{ asset('images/graph/graph.php') }} />
+            <a href="">En savoir plus...</a>
+        </div>
+
+    </div>
 
 
 

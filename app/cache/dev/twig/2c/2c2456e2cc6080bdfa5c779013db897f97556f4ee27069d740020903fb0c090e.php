@@ -23,23 +23,23 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8b8b3116707f4731779b76575ece1dd4cde377f510f411893a0fe7dca816bdea = $this->env->getExtension("native_profiler");
-        $__internal_8b8b3116707f4731779b76575ece1dd4cde377f510f411893a0fe7dca816bdea->enter($__internal_8b8b3116707f4731779b76575ece1dd4cde377f510f411893a0fe7dca816bdea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Collector/events.html.twig"));
+        $__internal_6f5c0ee11823379911e9f6ecb2e7c4b88346598f0f7df2b162aac36fa4a65444 = $this->env->getExtension("native_profiler");
+        $__internal_6f5c0ee11823379911e9f6ecb2e7c4b88346598f0f7df2b162aac36fa4a65444->enter($__internal_6f5c0ee11823379911e9f6ecb2e7c4b88346598f0f7df2b162aac36fa4a65444_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Collector/events.html.twig"));
 
         // line 3
-        $context["__internal_feb8f1e3c4dfd56f6004ff8de324e3a338099d3b80de853347ecb53b348de096"] = $this;
+        $context["__internal_5a5a09628b50413fd4625ead5b3e5d19f2dc2f9586a1d41b36054ab249e830c6"] = $this;
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8b8b3116707f4731779b76575ece1dd4cde377f510f411893a0fe7dca816bdea->leave($__internal_8b8b3116707f4731779b76575ece1dd4cde377f510f411893a0fe7dca816bdea_prof);
+        $__internal_6f5c0ee11823379911e9f6ecb2e7c4b88346598f0f7df2b162aac36fa4a65444->leave($__internal_6f5c0ee11823379911e9f6ecb2e7c4b88346598f0f7df2b162aac36fa4a65444_prof);
 
     }
 
     // line 5
     public function block_menu($context, array $blocks = array())
     {
-        $__internal_e6027442cdc19d8668a7edc00304cce4342aef40e1688fba62277f3f4269bb84 = $this->env->getExtension("native_profiler");
-        $__internal_e6027442cdc19d8668a7edc00304cce4342aef40e1688fba62277f3f4269bb84->enter($__internal_e6027442cdc19d8668a7edc00304cce4342aef40e1688fba62277f3f4269bb84_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menu"));
+        $__internal_d119ad7e44539ede77bdcc7eff61d2823d1367367e7427446dae5618dd450b13 = $this->env->getExtension("native_profiler");
+        $__internal_d119ad7e44539ede77bdcc7eff61d2823d1367367e7427446dae5618dd450b13->enter($__internal_d119ad7e44539ede77bdcc7eff61d2823d1367367e7427446dae5618dd450b13_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menu"));
 
         // line 6
         echo "<span class=\"label\">
@@ -48,19 +48,19 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
 </span>
 ";
         
-        $__internal_e6027442cdc19d8668a7edc00304cce4342aef40e1688fba62277f3f4269bb84->leave($__internal_e6027442cdc19d8668a7edc00304cce4342aef40e1688fba62277f3f4269bb84_prof);
+        $__internal_d119ad7e44539ede77bdcc7eff61d2823d1367367e7427446dae5618dd450b13->leave($__internal_d119ad7e44539ede77bdcc7eff61d2823d1367367e7427446dae5618dd450b13_prof);
 
     }
 
     // line 12
     public function block_panel($context, array $blocks = array())
     {
-        $__internal_064901700817320fd7baf18b69994b640883afe8d54921545833683c668709db = $this->env->getExtension("native_profiler");
-        $__internal_064901700817320fd7baf18b69994b640883afe8d54921545833683c668709db->enter($__internal_064901700817320fd7baf18b69994b640883afe8d54921545833683c668709db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "panel"));
+        $__internal_630e0e47b1622c39553d0a0bf320110060808644984dcce5ba37d00a583d246b = $this->env->getExtension("native_profiler");
+        $__internal_630e0e47b1622c39553d0a0bf320110060808644984dcce5ba37d00a583d246b->enter($__internal_630e0e47b1622c39553d0a0bf320110060808644984dcce5ba37d00a583d246b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "panel"));
 
         // line 13
         echo "    ";
-        if (twig_length_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "calledlisteners", array()))) {
+        if (twig_length_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "calledlisteners", array()))) {
             // line 14
             echo "        ";
             $this->displayBlock("panelContent", $context, $blocks);
@@ -75,15 +75,15 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
     ";
         }
         
-        $__internal_064901700817320fd7baf18b69994b640883afe8d54921545833683c668709db->leave($__internal_064901700817320fd7baf18b69994b640883afe8d54921545833683c668709db_prof);
+        $__internal_630e0e47b1622c39553d0a0bf320110060808644984dcce5ba37d00a583d246b->leave($__internal_630e0e47b1622c39553d0a0bf320110060808644984dcce5ba37d00a583d246b_prof);
 
     }
 
     // line 23
     public function block_panelContent($context, array $blocks = array())
     {
-        $__internal_ebc3b708c66de80449e50040f4a941465ac1d6a430cc3919d936f5b9281010a6 = $this->env->getExtension("native_profiler");
-        $__internal_ebc3b708c66de80449e50040f4a941465ac1d6a430cc3919d936f5b9281010a6->enter($__internal_ebc3b708c66de80449e50040f4a941465ac1d6a430cc3919d936f5b9281010a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "panelContent"));
+        $__internal_1fb2c7cb18d17e030b649b2c6d8ab11fcf3e2e2d8eb484d57e3fab437e9be63a = $this->env->getExtension("native_profiler");
+        $__internal_1fb2c7cb18d17e030b649b2c6d8ab11fcf3e2e2d8eb484d57e3fab437e9be63a->enter($__internal_1fb2c7cb18d17e030b649b2c6d8ab11fcf3e2e2d8eb484d57e3fab437e9be63a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "panelContent"));
 
         // line 24
         echo "    <h2>Called Listeners</h2>
@@ -96,7 +96,7 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
         ";
         // line 31
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "calledlisteners", array()));
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "calledlisteners", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["listener"]) {
             // line 32
             echo "            <tr>
@@ -106,7 +106,7 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
             echo "</code></td>
                 <td><code>";
             // line 34
-            echo $context["__internal_feb8f1e3c4dfd56f6004ff8de324e3a338099d3b80de853347ecb53b348de096"]->getdisplay_listener($context["listener"]);
+            echo $context["__internal_5a5a09628b50413fd4625ead5b3e5d19f2dc2f9586a1d41b36054ab249e830c6"]->getdisplay_listener($context["listener"]);
             echo "</code></td>
             </tr>
         ";
@@ -121,7 +121,7 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
 
     ";
         // line 41
-        if ($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "notcalledlisteners", array())) {
+        if ($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "notcalledlisteners", array())) {
             // line 42
             echo "        <table>
             <tr>
@@ -130,21 +130,21 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
             </tr>
             ";
             // line 47
-            $context["listeners"] = $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "notcalledlisteners", array());
+            $context["listeners"] = $this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "notcalledlisteners", array());
             // line 48
             echo "            ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_sort_filter(twig_get_array_keys_filter((isset($context["listeners"]) ? $context["listeners"] : $this->getContext($context, "listeners")))));
+            $context['_seq'] = twig_ensure_traversable(twig_sort_filter(twig_get_array_keys_filter((isset($context["listeners"]) ? $context["listeners"] : null))));
             foreach ($context['_seq'] as $context["_key"] => $context["listener"]) {
                 // line 49
                 echo "                <tr>
                     <td><code>";
                 // line 50
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : $this->getContext($context, "listeners")), $context["listener"], array(), "array"), "event", array()), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : null), $context["listener"], array(), "array"), "event", array()), "html", null, true);
                 echo "</code></td>
                     <td><code>";
                 // line 51
-                echo $context["__internal_feb8f1e3c4dfd56f6004ff8de324e3a338099d3b80de853347ecb53b348de096"]->getdisplay_listener($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : $this->getContext($context, "listeners")), $context["listener"], array(), "array"));
+                echo $context["__internal_5a5a09628b50413fd4625ead5b3e5d19f2dc2f9586a1d41b36054ab249e830c6"]->getdisplay_listener($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : null), $context["listener"], array(), "array"));
                 echo "</code></td>
                 </tr>
             ";
@@ -170,7 +170,7 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
     ";
         }
         
-        $__internal_ebc3b708c66de80449e50040f4a941465ac1d6a430cc3919d936f5b9281010a6->leave($__internal_ebc3b708c66de80449e50040f4a941465ac1d6a430cc3919d936f5b9281010a6_prof);
+        $__internal_1fb2c7cb18d17e030b649b2c6d8ab11fcf3e2e2d8eb484d57e3fab437e9be63a->leave($__internal_1fb2c7cb18d17e030b649b2c6d8ab11fcf3e2e2d8eb484d57e3fab437e9be63a_prof);
 
     }
 
@@ -186,55 +186,55 @@ class __TwigTemplate_3e15b46c9e988bcf73b9f20cffaab40fa23f4ab24f7df1fac09ce99d718
 
         ob_start();
         try {
-            $__internal_deac97d710e9bb5ecbd9cd4ea9a1995084a2529aeb7f6813fa8871a9934e402b = $this->env->getExtension("native_profiler");
-            $__internal_deac97d710e9bb5ecbd9cd4ea9a1995084a2529aeb7f6813fa8871a9934e402b->enter($__internal_deac97d710e9bb5ecbd9cd4ea9a1995084a2529aeb7f6813fa8871a9934e402b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "macro", "display_listener"));
+            $__internal_0542689e32425374db72bb655d77807c993e49032a0ad57e4db89b3ed150d614 = $this->env->getExtension("native_profiler");
+            $__internal_0542689e32425374db72bb655d77807c993e49032a0ad57e4db89b3ed150d614->enter($__internal_0542689e32425374db72bb655d77807c993e49032a0ad57e4db89b3ed150d614_prof = new Twig_Profiler_Profile($this->getTemplateName(), "macro", "display_listener"));
 
             // line 70
             echo "    ";
-            if (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "type", array()) == "Closure")) {
+            if (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "type", array()) == "Closure")) {
                 // line 71
                 echo "        Closure
     ";
             } elseif (($this->getAttribute(            // line 72
-(isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "type", array()) == "Function")) {
+(isset($context["listener"]) ? $context["listener"] : null), "type", array()) == "Function")) {
                 // line 73
                 echo "        ";
-                $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "file", array()), $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "line", array()));
+                $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "file", array()), $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "line", array()));
                 // line 74
                 echo "        ";
-                if ((isset($context["link"]) ? $context["link"] : $this->getContext($context, "link"))) {
+                if ((isset($context["link"]) ? $context["link"] : null)) {
                     echo "<a href=\"";
-                    echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : $this->getContext($context, "link")), "html", null, true);
+                    echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true);
                     echo "\">";
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "function", array()), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "function", array()), "html", null, true);
                     echo "</a>";
                 } else {
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "function", array()), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "function", array()), "html", null, true);
                 }
                 // line 75
                 echo "    ";
-            } elseif (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "type", array()) == "Method")) {
+            } elseif (($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "type", array()) == "Method")) {
                 // line 76
                 echo "        ";
-                $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "file", array()), $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "line", array()));
+                $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "file", array()), $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "line", array()));
                 // line 77
                 echo "        ";
-                echo $this->env->getExtension('code')->abbrClass($this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "class", array()));
+                echo $this->env->getExtension('code')->abbrClass($this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "class", array()));
                 echo "::";
-                if ((isset($context["link"]) ? $context["link"] : $this->getContext($context, "link"))) {
+                if ((isset($context["link"]) ? $context["link"] : null)) {
                     echo "<a href=\"";
-                    echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : $this->getContext($context, "link")), "html", null, true);
+                    echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : null), "html", null, true);
                     echo "\">";
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "method", array()), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "method", array()), "html", null, true);
                     echo "</a>";
                 } else {
-                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : $this->getContext($context, "listener")), "method", array()), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["listener"]) ? $context["listener"] : null), "method", array()), "html", null, true);
                 }
                 // line 78
                 echo "    ";
             }
             
-            $__internal_deac97d710e9bb5ecbd9cd4ea9a1995084a2529aeb7f6813fa8871a9934e402b->leave($__internal_deac97d710e9bb5ecbd9cd4ea9a1995084a2529aeb7f6813fa8871a9934e402b_prof);
+            $__internal_0542689e32425374db72bb655d77807c993e49032a0ad57e4db89b3ed150d614->leave($__internal_0542689e32425374db72bb655d77807c993e49032a0ad57e4db89b3ed150d614_prof);
 
         } catch (Exception $e) {
             ob_end_clean();

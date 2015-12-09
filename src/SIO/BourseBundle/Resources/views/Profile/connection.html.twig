@@ -1,13 +1,50 @@
+<html lang=fr>
+<head>
+    <title> {% block title %}
+            boursiquote :
+        {% endblock %}
+    </title>
+    <meta http-equiv="Content-Language" content="fr">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {% stylesheets '@BourseBundle/Resources/public/css/cssGeneral.css' filter='cssrewrite' %}
+    <link href="{{ asset_url }}" rel="stylesheet" media="screen">
+    {% endstylesheets %}
+</head>
 
-<form name="form1" method="POST" action ="">
-    <table border="0" align="center" cellspacing="2" cellpadding="2">
+<script>
+    function R1600()
+    {
+        var width = 1600;
+        document.body.style.zoom = screen.width/1600;
+    }
+</script>
 
-        <p>login <br> <input type="text" name="login" required="Champ vide!" /></p>
-        <p>Mot de passe : <br> <input type="text" name="mdp" required="Champ vide!" /></p>
-        <input type='submit' name='Connexion'/>
+<body onload="R1600();">
 
-</form>*
-<body></body>
+<div id="bandeau">
+    <!-- Images En-tête -->
+    <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->
+    <img id="banniere" src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>
+
+
+</div>
+<div id="conteneur">
+    <div id="conn">
+
+        <form name="form1" method="POST" action ="">
+            <table border="0" align="center" cellspacing="2" cellpadding="2">
+
+                <p>Mail : <br> <input type="text" name="login" required="Champ vide!" /></p>
+                <p>Mot de passe : <br> <input type="text" name="mdp" required="Champ vide!" /></p>
+                <input type='submit' name='Connexion'/>
+
+        </form>
+
+    </div>
+
+
+</div>
+
 
 
 

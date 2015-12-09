@@ -18,8 +18,8 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f = $this->env->getExtension("native_profiler");
-        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f->enter($__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:layout:layout.html.twig"));
+        $__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301 = $this->env->getExtension("native_profiler");
+        $__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301->enter($__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:layout:layout.html.twig"));
 
         // line 1
         echo "<html lang=fr>
@@ -53,68 +53,54 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
         // line 12
         echo "</head>
 
-<body>
+<script>
+    function R1600()
+    {
+        var width = 1600;
+        document.body.style.zoom = screen.width/1600;
+    }
+</script>
+
+<body onload=\"R1600();\">
+
 <div id=\"bandeau\">
     <!-- Images En-tête -->
     <!--<img src=\"images/menuGauche.gif\"\talt=\"Choisir\" title=\"Choisir\"/>-->
-    <img src=";
-        // line 18
+    <img id=\"banniere\" src=";
+        // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/banniere.png"), "html", null, true);
         echo " alt=\"Lentete\" title=\"entetebourseimg\"/>
-
+<!---testet-->
 </div>
 
 <!--  Menu haut-->
 <ul id=\"menu\">
     <li><a href=";
-        // line 24
+        // line 33
         echo $this->env->getExtension('routing')->getPath("bourse_tableau");
         echo "> Tableau de bord </a></li>       ";
-        // line 25
+        // line 34
         echo "    <li><a href=";
         echo "> Analyse du marché</a></li>
     <li><a href=";
-        // line 26
+        // line 35
         echo "> Gerer tableau de bord</a></li>
-    ";
-        // line 27
-        $context["layout"] = $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "get", array(0 => "layout"), "method");
-        // line 28
-        echo "    ";
-        if (((isset($context["layout"]) ? $context["layout"] : null) == 1)) {
-            // line 29
-            echo "
-    ";
-        } else {
-            // line 31
-            echo "        <li>
-            <a href=";
-            // line 32
-            echo " >Créer un compte</a>
-        </li>
-        <li>
-            <a href=";
-            // line 35
-            echo " >connecter</a>
-        </li>
-    ";
-        }
-        // line 38
-        echo "
+
+
 </ul>
 <div id=\"menu lateral\">
 ";
-        // line 41
+        // line 40
         $this->displayBlock('lateral', $context, $blocks);
-        // line 43
+        // line 42
         echo "</div>
 
 
 <div id=\"conteneur\">
     ";
-        // line 47
+        // line 46
         $this->displayBlock('content', $context, $blocks);
-        // line 49
+        // line 48
         echo "</div>
 
 
@@ -127,45 +113,45 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
 </html>";
         
-        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f->leave($__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f_prof);
+        $__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301->leave($__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03 = $this->env->getExtension("native_profiler");
-        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03->enter($__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca = $this->env->getExtension("native_profiler");
+        $__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca->enter($__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
         echo "                boursiquote :
             ";
         
-        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03->leave($__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03_prof);
+        $__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca->leave($__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca_prof);
 
     }
 
-    // line 41
+    // line 40
     public function block_lateral($context, array $blocks = array())
     {
-        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b = $this->env->getExtension("native_profiler");
-        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b->enter($__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
+        $__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090 = $this->env->getExtension("native_profiler");
+        $__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090->enter($__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
 
         
-        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b->leave($__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b_prof);
+        $__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090->leave($__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090_prof);
 
     }
 
-    // line 47
+    // line 46
     public function block_content($context, array $blocks = array())
     {
-        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc = $this->env->getExtension("native_profiler");
-        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc->enter($__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb = $this->env->getExtension("native_profiler");
+        $__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb->enter($__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 48
+        // line 47
         echo "    ";
         
-        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc->leave($__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc_prof);
+        $__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb->leave($__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb_prof);
 
     }
 
@@ -181,7 +167,7 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
     public function getDebugInfo()
     {
-        return array (  166 => 48,  160 => 47,  149 => 41,  141 => 4,  135 => 3,  118 => 49,  116 => 47,  110 => 43,  108 => 41,  103 => 38,  98 => 35,  93 => 32,  90 => 31,  86 => 29,  83 => 28,  81 => 27,  78 => 26,  74 => 25,  71 => 24,  62 => 18,  54 => 12,  40 => 10,  36 => 9,  31 => 6,  29 => 3,  25 => 1,);
+        return array (  152 => 47,  146 => 46,  135 => 40,  127 => 4,  121 => 3,  104 => 48,  102 => 46,  96 => 42,  94 => 40,  87 => 35,  83 => 34,  80 => 33,  71 => 27,  54 => 12,  40 => 10,  36 => 9,  31 => 6,  29 => 3,  25 => 1,);
     }
 }
 /* <html lang=fr>*/
@@ -197,12 +183,21 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 /*     {% endstylesheets %}*/
 /* </head>*/
 /* */
-/* <body>*/
+/* <script>*/
+/*     function R1600()*/
+/*     {*/
+/*         var width = 1600;*/
+/*         document.body.style.zoom = screen.width/1600;*/
+/*     }*/
+/* </script>*/
+/* */
+/* <body onload="R1600();">*/
+/* */
 /* <div id="bandeau">*/
 /*     <!-- Images En-tête -->*/
 /*     <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->*/
-/*     <img src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>*/
-/* */
+/*     <img id="banniere" src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>*/
+/* <!---testet-->*/
 /* </div>*/
 /* */
 /* <!--  Menu haut-->*/
@@ -210,17 +205,7 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 /*     <li><a href={{ path('bourse_tableau') }}> Tableau de bord </a></li>       {# les liens sont a remettre via le routing #}*/
 /*     <li><a href={#  {{ path('analyse') }}       #}> Analyse du marché</a></li>*/
 /*     <li><a href={#  {{ path('gerertableau') }}  #}> Gerer tableau de bord</a></li>*/
-/*     {% set layout = app.session.get('layout') %}*/
-/*     {% if layout==1 %}*/
 /* */
-/*     {% else %}*/
-/*         <li>*/
-/*             <a href={# path('la_fleur_symfony_nouveau') #} >Créer un compte</a>*/
-/*         </li>*/
-/*         <li>*/
-/*             <a href={# path('la_fleur_symfony_connec') #} >connecter</a>*/
-/*         </li>*/
-/*     {% endif %}*/
 /* */
 /* </ul>*/
 /* <div id="menu lateral">*/
