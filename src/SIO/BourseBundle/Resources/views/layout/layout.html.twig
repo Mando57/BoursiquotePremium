@@ -11,11 +11,20 @@
     {% endstylesheets %}
 </head>
 
-<body>
+<script>
+    function R1600()
+    {
+        var width = 1600;
+        document.body.style.zoom = screen.width/1600;
+    }
+</script>
+
+<body onload="R1600();">
+
 <div id="bandeau">
     <!-- Images En-tête -->
     <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->
-    <img src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>
+    <img id="banniere" src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>
 
 </div>
 
