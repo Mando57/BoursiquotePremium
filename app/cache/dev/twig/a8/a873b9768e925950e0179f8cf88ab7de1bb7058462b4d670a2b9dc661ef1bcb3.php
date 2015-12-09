@@ -21,20 +21,20 @@ class __TwigTemplate_951da6aaf90824e715fe1d3b557ef8bc095479766bb428170033d0298d5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_99d976d2abb4a017d5a14c85c4898d623b13b527cb1222bbbe68b25fd80d992b = $this->env->getExtension("native_profiler");
-        $__internal_99d976d2abb4a017d5a14c85c4898d623b13b527cb1222bbbe68b25fd80d992b->enter($__internal_99d976d2abb4a017d5a14c85c4898d623b13b527cb1222bbbe68b25fd80d992b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Collector/memory.html.twig"));
+        $__internal_4c2554671bfdd9509a5134d006bb3d4d8639e96fb3350993a262685ebd79069e = $this->env->getExtension("native_profiler");
+        $__internal_4c2554671bfdd9509a5134d006bb3d4d8639e96fb3350993a262685ebd79069e->enter($__internal_4c2554671bfdd9509a5134d006bb3d4d8639e96fb3350993a262685ebd79069e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Collector/memory.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_99d976d2abb4a017d5a14c85c4898d623b13b527cb1222bbbe68b25fd80d992b->leave($__internal_99d976d2abb4a017d5a14c85c4898d623b13b527cb1222bbbe68b25fd80d992b_prof);
+        $__internal_4c2554671bfdd9509a5134d006bb3d4d8639e96fb3350993a262685ebd79069e->leave($__internal_4c2554671bfdd9509a5134d006bb3d4d8639e96fb3350993a262685ebd79069e_prof);
 
     }
 
     // line 3
     public function block_toolbar($context, array $blocks = array())
     {
-        $__internal_82e5fd771c1dbb3492a3ee55052c131eaccfbb0333ca12c89f1f734e1dd19f1c = $this->env->getExtension("native_profiler");
-        $__internal_82e5fd771c1dbb3492a3ee55052c131eaccfbb0333ca12c89f1f734e1dd19f1c->enter($__internal_82e5fd771c1dbb3492a3ee55052c131eaccfbb0333ca12c89f1f734e1dd19f1c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "toolbar"));
+        $__internal_7371663a055d1fefcbeef2782700c92f2e4b7ea36e81d499b62db0fcd7d63101 = $this->env->getExtension("native_profiler");
+        $__internal_7371663a055d1fefcbeef2782700c92f2e4b7ea36e81d499b62db0fcd7d63101->enter($__internal_7371663a055d1fefcbeef2782700c92f2e4b7ea36e81d499b62db0fcd7d63101_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "toolbar"));
 
         // line 4
         echo "    ";
@@ -44,7 +44,7 @@ class __TwigTemplate_951da6aaf90824e715fe1d3b557ef8bc095479766bb428170033d0298d5
             <svg width=\"13\" height=\"28\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" x=\"0px\" y=\"0px\" viewBox=\"0 0 13 28\" enable-background=\"new 0 0 13 28\" xml:space=\"preserve\"><g><rect x=\"3\" y=\"11\" fill=\"#BCBCBB\" width=\"7\" height=\"9\"/></g><g><path fill=\"#3F3F3F\" d=\"M11 6V21H2V6H0V22c0 0.6 0.4 1 1 1h11c0.6 0 1-0.4 1-1V6H11z\"/></g></svg>
             <span>";
         // line 7
-        echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "memory", array()) / 1024) / 1024)), "html", null, true);
+        echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "memory", array()) / 1024) / 1024)), "html", null, true);
         echo " MB</span>
         </span>
     ";
@@ -57,9 +57,9 @@ class __TwigTemplate_951da6aaf90824e715fe1d3b557ef8bc095479766bb428170033d0298d5
             <b>Memory usage</b>
             <span>";
         // line 13
-        echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "memory", array()) / 1024) / 1024)), "html", null, true);
+        echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "memory", array()) / 1024) / 1024)), "html", null, true);
         echo " / ";
-        echo ((($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "memoryLimit", array()) ==  -1)) ? ("&infin;") : (twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "memoryLimit", array()) / 1024) / 1024)))));
+        echo ((($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "memoryLimit", array()) ==  -1)) ? ("&infin;") : (twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "memoryLimit", array()) / 1024) / 1024)))));
         echo " MB</span>
         </div>
     ";
@@ -68,7 +68,7 @@ class __TwigTemplate_951da6aaf90824e715fe1d3b557ef8bc095479766bb428170033d0298d5
         echo "    ";
         $this->loadTemplate("@WebProfiler/Profiler/toolbar_item.html.twig", "@WebProfiler/Collector/memory.html.twig", 16)->display(array_merge($context, array("link" => false)));
         
-        $__internal_82e5fd771c1dbb3492a3ee55052c131eaccfbb0333ca12c89f1f734e1dd19f1c->leave($__internal_82e5fd771c1dbb3492a3ee55052c131eaccfbb0333ca12c89f1f734e1dd19f1c_prof);
+        $__internal_7371663a055d1fefcbeef2782700c92f2e4b7ea36e81d499b62db0fcd7d63101->leave($__internal_7371663a055d1fefcbeef2782700c92f2e4b7ea36e81d499b62db0fcd7d63101_prof);
 
     }
 
