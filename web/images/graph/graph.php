@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if(isset($_GET['t']))
 {
     $title=$_GET['t'];
@@ -30,16 +30,23 @@ if(isset($_GET['tailleH']))
     $tailleH=200;
 }
 
+/*use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Debug\Debug;
+use DirkOlbrich\YahooFinanceQuery\YahooFinanceQuery;
+        $querry= new YahooFinanceQuery;*/
+		//$data = $query->yql()->historicalQuote('basf', '09/11/2015', '09/12/2015', 'daily')->get();
+
 		include('PHPGraphLib.php');
         //$graph=models\PHPGraphLib::PHPGraphLib(650,200);
         //$graph = $this->container->get('la_fleur_symfony.panier');
         $graph= new PHPGraphLib($tailleL,$tailleH);
-
-        $data = array("1" => .0032, "2" => .0028, "3" => .0021, "4" => .0033,
-            "5" => .0034, "6" => .0031, "7" => .0036, "8" => .0027, "9" => .0024,
-            "10" => .0021, "11" => .0026, "12" => .0024, "13" => .0036,
-            "14" => .0028, "15" => .0025);
-        $graph->addData($data);
+	if(!isset($_SESSION['test']))
+	{
+        $data = array("1" => .0032, "2" => .0028);
+}else{
+		$data=$_SESSION['test'];
+}
+		$graph->addData($data);
         $graph->setTitle($title);
         $graph->setBars(false);
         $graph->setLine(true);
@@ -48,6 +55,6 @@ if(isset($_GET['tailleH']))
         $graph->setDataValues(false);
         $graph->setDataValueColor('maroon');
         $graph->setGoalLineColor('red');
-		$graph->setRange(0.0035,0.0020);
+		$graph->setRange(70,80);
         $graph->createGraph();
 ?>
