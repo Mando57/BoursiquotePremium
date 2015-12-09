@@ -35,3 +35,10 @@ ba3fd1,127.0.0.1,POST,http://127.0.0.1/dmp/web/app_dev.php/connection,1449072296
 a18630,127.0.0.1,POST,http://127.0.0.1/dmp/web/app_dev.php/connection,1449072321,,200
 01767a,127.0.0.1,POST,http://127.0.0.1/dmp/web/app_dev.php/connection,1449072439,,200
 aa5c5c,127.0.0.1,POST,http://127.0.0.1/dmp/web/app_dev.php/connection,1449072455,,200
+3cf6f3,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/connection,1449665502,,200
+7563e8,127.0.0.1,POST,http://127.0.0.1/dmp/web/app_dev.php/connection,1449665511,,200
+5a3bd9,127.0.0.1,POST,http://127.0.0.1/dmp/web/app_dev.php/connection,1449665515,,200
+4ec6dc,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/connection,1449666129,e77bae,200
+e77bae,127.0.0.1,POST,http://127.0.0.1/dmp/web/app_dev.php/connection,1449666129,,500
+038ad4,127.0.0.1,POST,http://127.0.0.1/dmp/web/app_dev.php/connection,1449666159,,302
+a900a0,127.0.0.1,GET,http://127.0.0.1/dmp/web/app_dev.php/profile,1449666159,,200

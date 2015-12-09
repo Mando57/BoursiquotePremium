@@ -32,7 +32,10 @@ class ProfileController extends Controller
                     $session->set('logged',true);
                     $session->set('userId',$try['id']);
                     $session->set('layout',1);
+                    $url=$this->get('router')->generate('bourse_profile');
+                    return new RedirectResponse($url);
                 }
+
 
             }
 
@@ -44,7 +47,7 @@ class ProfileController extends Controller
 
 
 
-        return $this->render ('BourseBundle:Profile:connection.html.twig');
+        return $this->render ('BourseBundle:Profile.html.twig');
     }
 
 
