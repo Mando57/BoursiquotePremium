@@ -18,8 +18,8 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c489d2b84119e31a074894f6adbf6251c1e62c755e3edccfe25f5b4fcb00fdd0 = $this->env->getExtension("native_profiler");
-        $__internal_c489d2b84119e31a074894f6adbf6251c1e62c755e3edccfe25f5b4fcb00fdd0->enter($__internal_c489d2b84119e31a074894f6adbf6251c1e62c755e3edccfe25f5b4fcb00fdd0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:layout:layout.html.twig"));
+        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f = $this->env->getExtension("native_profiler");
+        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f->enter($__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:layout:layout.html.twig"));
 
         // line 1
         echo "<html lang=fr>
@@ -52,101 +52,120 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
         unset($context["asset_url"]);
         // line 12
         echo "</head>
+
 <body>
 <div id=\"bandeau\">
     <!-- Images En-tête -->
     <!--<img src=\"images/menuGauche.gif\"\talt=\"Choisir\" title=\"Choisir\"/>-->
     <img src=";
-        // line 17
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/lafleur.gif"), "html", null, true);
-        echo "\talt=\"Lafleur\" title=\"Lafleur\"/>
+        // line 18
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/banniere.png"), "html", null, true);
+        echo " alt=\"Lentete\" title=\"entetebourseimg\"/>
+
 </div>
+
 <!--  Menu haut-->
 <ul id=\"menu\">
     <li><a href=";
-        // line 21
-        echo "> Accueil </a></li>
-    <li><a href=> Voir le catalogue de fleurs </a></li>
-    <li><a href=> Voir le panier</a></li>
-    <li><a href= >Administrer</a></li>
-    ";
+        // line 24
+        echo $this->env->getExtension('routing')->getPath("bourse_tableau");
+        echo "> Tableau de bord </a></li>       ";
         // line 25
-        $context["layout"] = $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "get", array(0 => "layout"), "method");
+        echo "    <li><a href=";
+        echo "> Analyse du marché</a></li>
+    <li><a href=";
         // line 26
+        echo "> Gerer tableau de bord</a></li>
+    ";
+        // line 27
+        $context["layout"] = $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "get", array(0 => "layout"), "method");
+        // line 28
         echo "    ";
         if (((isset($context["layout"]) ? $context["layout"] : null) == 1)) {
-            // line 27
-            echo "               
-        ";
-        } else {
             // line 29
+            echo "
+    ";
+        } else {
+            // line 31
             echo "        <li>
-            <a href= >Créer un compte</a>
+            <a href=";
+            // line 32
+            echo " >Créer un compte</a>
         </li>
         <li>
-            <a href= >connecter</a>
+            <a href=";
+            // line 35
+            echo " >connecter</a>
         </li>
     ";
         }
-        // line 36
-        echo "       ";
-        // line 43
-        echo "</ul>
-";
-        // line 44
-        $this->displayBlock('lateral', $context, $blocks);
-        // line 46
+        // line 38
         echo "
+</ul>
+<div id=\"menu lateral\">
 ";
+        // line 41
+        $this->displayBlock('lateral', $context, $blocks);
+        // line 43
+        echo "</div>
+
+
+<div id=\"conteneur\">
+    ";
         // line 47
         $this->displayBlock('content', $context, $blocks);
         // line 49
-        echo "
+        echo "</div>
+
+
 
 
 <br><br><br>
-powered by symfony 2
+<div id=\"pied\"> Copyright _ BourSIQoute _ 2016 </div>
+<div id=\"credits\"> powered by symfony 2 </div>
 </body>
 
 </html>";
         
-        $__internal_c489d2b84119e31a074894f6adbf6251c1e62c755e3edccfe25f5b4fcb00fdd0->leave($__internal_c489d2b84119e31a074894f6adbf6251c1e62c755e3edccfe25f5b4fcb00fdd0_prof);
+        $__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f->leave($__internal_2b606b268e12078342e7a056992d27ac6f4b993e1e9c489686dd49c73cc03e1f_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_58d7b07fd1f4e6afd81cf764c01b6703eb6f14a602f3b8cf23aa8858fb6e7c6e = $this->env->getExtension("native_profiler");
-        $__internal_58d7b07fd1f4e6afd81cf764c01b6703eb6f14a602f3b8cf23aa8858fb6e7c6e->enter($__internal_58d7b07fd1f4e6afd81cf764c01b6703eb6f14a602f3b8cf23aa8858fb6e7c6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03 = $this->env->getExtension("native_profiler");
+        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03->enter($__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
-        echo "                lafleur symfony 2
+        echo "                boursiquote :
             ";
         
-        $__internal_58d7b07fd1f4e6afd81cf764c01b6703eb6f14a602f3b8cf23aa8858fb6e7c6e->leave($__internal_58d7b07fd1f4e6afd81cf764c01b6703eb6f14a602f3b8cf23aa8858fb6e7c6e_prof);
+        $__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03->leave($__internal_9ad20b1b5f5436dfd10455c62fce926e9ea29151a28892342531a317a2db0a03_prof);
 
     }
 
-    // line 44
+    // line 41
     public function block_lateral($context, array $blocks = array())
     {
-        $__internal_9ee0d3ead853dbd7ca5d2cdadade82fad537083f69995c2fed0f44212ea81d75 = $this->env->getExtension("native_profiler");
-        $__internal_9ee0d3ead853dbd7ca5d2cdadade82fad537083f69995c2fed0f44212ea81d75->enter($__internal_9ee0d3ead853dbd7ca5d2cdadade82fad537083f69995c2fed0f44212ea81d75_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
+        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b = $this->env->getExtension("native_profiler");
+        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b->enter($__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
 
         
-        $__internal_9ee0d3ead853dbd7ca5d2cdadade82fad537083f69995c2fed0f44212ea81d75->leave($__internal_9ee0d3ead853dbd7ca5d2cdadade82fad537083f69995c2fed0f44212ea81d75_prof);
+        $__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b->leave($__internal_0dcedcdf9ca63461c5ce41e717240ae2e9eaa4267e775763615d2d97a936a55b_prof);
 
     }
 
     // line 47
     public function block_content($context, array $blocks = array())
     {
-        $__internal_0ab2a92abe25bcc681584f71b0c405d3dbea42f24df990f55422c2faadae60c1 = $this->env->getExtension("native_profiler");
-        $__internal_0ab2a92abe25bcc681584f71b0c405d3dbea42f24df990f55422c2faadae60c1->enter($__internal_0ab2a92abe25bcc681584f71b0c405d3dbea42f24df990f55422c2faadae60c1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc = $this->env->getExtension("native_profiler");
+        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc->enter($__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
+        // line 48
+        echo "    ";
         
-        $__internal_0ab2a92abe25bcc681584f71b0c405d3dbea42f24df990f55422c2faadae60c1->leave($__internal_0ab2a92abe25bcc681584f71b0c405d3dbea42f24df990f55422c2faadae60c1_prof);
+        $__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc->leave($__internal_0df9a6d7d62ba94f66b0f1be91663be4d8af3aa8981ae6002cae38d72dac02cc_prof);
 
     }
 
@@ -162,13 +181,13 @@ powered by symfony 2
 
     public function getDebugInfo()
     {
-        return array (  143 => 47,  132 => 44,  124 => 4,  118 => 3,  104 => 49,  102 => 47,  99 => 46,  97 => 44,  94 => 43,  92 => 36,  83 => 29,  79 => 27,  76 => 26,  74 => 25,  68 => 21,  61 => 17,  54 => 12,  40 => 10,  36 => 9,  31 => 6,  29 => 3,  25 => 1,);
+        return array (  166 => 48,  160 => 47,  149 => 41,  141 => 4,  135 => 3,  118 => 49,  116 => 47,  110 => 43,  108 => 41,  103 => 38,  98 => 35,  93 => 32,  90 => 31,  86 => 29,  83 => 28,  81 => 27,  78 => 26,  74 => 25,  71 => 24,  62 => 18,  54 => 12,  40 => 10,  36 => 9,  31 => 6,  29 => 3,  25 => 1,);
     }
 }
 /* <html lang=fr>*/
 /* <head>*/
 /*     <title> {% block title %}*/
-/*                 lafleur symfony 2*/
+/*                 boursiquote :*/
 /*             {% endblock %}*/
 /*         </title>*/
 /*     <meta http-equiv="Content-Language" content="fr">*/
@@ -177,47 +196,50 @@ powered by symfony 2
 /*     <link href="{{ asset_url }}" rel="stylesheet" media="screen">*/
 /*     {% endstylesheets %}*/
 /* </head>*/
+/* */
 /* <body>*/
 /* <div id="bandeau">*/
 /*     <!-- Images En-tête -->*/
 /*     <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->*/
-/*     <img src={{ asset('images/lafleur.gif') }}	alt="Lafleur" title="Lafleur"/>*/
+/*     <img src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>*/
+/* */
 /* </div>*/
+/* */
 /* <!--  Menu haut-->*/
 /* <ul id="menu">*/
-/*     <li><a href={# path('la_fleur_symfony_accueil') #}> Accueil </a></li>*/
-/*     <li><a href=> Voir le catalogue de fleurs </a></li>*/
-/*     <li><a href=> Voir le panier</a></li>*/
-/*     <li><a href= >Administrer</a></li>*/
+/*     <li><a href={{ path('bourse_tableau') }}> Tableau de bord </a></li>       {# les liens sont a remettre via le routing #}*/
+/*     <li><a href={#  {{ path('analyse') }}       #}> Analyse du marché</a></li>*/
+/*     <li><a href={#  {{ path('gerertableau') }}  #}> Gerer tableau de bord</a></li>*/
 /*     {% set layout = app.session.get('layout') %}*/
 /*     {% if layout==1 %}*/
-/*                */
-/*         {% else %}*/
+/* */
+/*     {% else %}*/
 /*         <li>*/
-/*             <a href= >Créer un compte</a>*/
+/*             <a href={# path('la_fleur_symfony_nouveau') #} >Créer un compte</a>*/
 /*         </li>*/
 /*         <li>*/
-/*             <a href= >connecter</a>*/
+/*             <a href={# path('la_fleur_symfony_connec') #} >connecter</a>*/
 /*         </li>*/
 /*     {% endif %}*/
-/*        {#*/
-/* <!---<li><a href="index.php?uc=gererPanier&action=voirPanier"> Voir son panier </a></li>*/
-/* ajout du controle*/
-/* <li><a href="index.php?uc=connec&action=login"> Connection </a></li>*/
-/* fin d'ajout du controle*/
-/* <li><a href="index.php?uc=administrer&action=administrer"> Administrer </a></li>-->*/
-/* #}*/
+/* */
 /* </ul>*/
+/* <div id="menu lateral">*/
 /* {% block lateral %}*/
 /* {% endblock %}*/
+/* </div>*/
 /* */
-/* {% block content %}*/
-/* {% endblock %}*/
+/* */
+/* <div id="conteneur">*/
+/*     {% block content %}*/
+/*     {% endblock %}*/
+/* </div>*/
+/* */
 /* */
 /* */
 /* */
 /* <br><br><br>*/
-/* powered by symfony 2*/
+/* <div id="pied"> Copyright _ BourSIQoute _ 2016 </div>*/
+/* <div id="credits"> powered by symfony 2 </div>*/
 /* </body>*/
 /* */
 /* </html>*/

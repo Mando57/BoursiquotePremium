@@ -4,6 +4,13 @@ bourse_homepage:
 bourse_profile:
     path:     /profile
     defaults: { _controller: BourseBundle:Profile:index }
+bourse_1337:
+    path:     /1337
+    defaults: { _controller: BourseBundle:Default:accueil }
+bourse_tableau:
+    path:     /TableauDeBord
+    defaults: { _controller: BourseBundle:Default:TDB }
+
 
 bourse_connexion :
     path: /connection
