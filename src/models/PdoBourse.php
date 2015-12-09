@@ -17,10 +17,10 @@ namespace models;
 
 use Symfony\Component\HttpFoundation\Session\Session;
 
-class PdoLafleur
+class PdoBourse
 {
     private static $serveur='mysql:host=172.18.204.105';
-    private static $bdd='dbname=Bourse';
+    private static $bdd='dbname=BSIQ';
     private static $user='root' ;
     private static $mdp='yama2211' ;
     private static $monPdo;
@@ -32,17 +32,17 @@ class PdoLafleur
      */
     private function __construct()
     {
-        PdoBourse::$monPdo = new \PDO(PdoBourse::$serveur.';'.PdoBourse::$bdd, PdoLafleur::$user, PdoLafleur::$mdp);
+        PdoBourse::$monPdo = new \PDO(PdoBourse::$serveur.';'.PdoBourse::$bdd, PdoBourse::$user, PdoBourse::$mdp);
         PdoBourse::$monPdo->query("SET CHARACTER SET utf8");
     }
     public function _destruct(){
-        PdoLafleur::$monPdo = null;
+        PdoBourse::$monPdo = null;
     }
     /**
      * Fonction statique qui crée l'unique instance de la classe
      *
-     * Appel : $instancePdolafleur = PdoLafleur::getPdoLafleur();
-     * @return l'unique objet de la classe PdoLafleur
+     * Appel : $instancePdoBourse = PdoBourse::getPdoBourse();
+     * @return l'unique objet de la classe PdoBourse
      */
     public  static function getPdoBourse()
     {
@@ -53,9 +53,9 @@ class PdoLafleur
         return PdoBourse::$monPdoBourse;
     }
 
-    public function checkLogin($login,$pwd)
+    public function checkLogin($identifiant,$pwd)
     {
-        $req="select count(*) as nbr from administrateur where nom='".$login."' and mdp='".$pwd."'";
+        $req="select count(*) as nbr from administrateur where nom='".$identifiant."' and mdp='".$pwd."'";
         $res = PdoBourse::$monPdo->query($req);
         $logged=$res->fetch();
         if($logged['nbr']==1)
@@ -83,13 +83,13 @@ class PdoLafleur
     }
 
     /// login du client
-    public function checkClient($login,$pwd)
+    public function checkClient($identifiant,$pwd)
     {
 
-        $req="select id,count(*) as nbr from client where login='".$login."' and mdp='".$pwd."'";
+        $req="select id,count(*) as nbr from client where identifiant='".$identifiant."' and pwd='".$pwd."'";
         $res = PdoBourse::$monPdo->query($req);
         $logged=$res->fetch();
-
+        dump($req);
         if($logged['nbr']==1)
         {
             $LoginConfirmation['logged']=true;

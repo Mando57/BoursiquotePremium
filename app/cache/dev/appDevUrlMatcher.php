@@ -175,14 +175,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'SIO\\BourseBundle\\Controller\\ProfileController::indexAction',  '_route' => 'bourse_profile',);
         }
 
-        // bourse_1337
-        if ($pathinfo === '/1337') {
-            return array (  '_controller' => 'SIO\\BourseBundle\\Controller\\DefaultController::accueilAction',  '_route' => 'bourse_1337',);
-        }
-
-        // bourse_tableau
-        if ($pathinfo === '/TableauDeBord') {
-            return array (  '_controller' => 'SIO\\BourseBundle\\Controller\\DefaultController::TDBAction',  '_route' => 'bourse_tableau',);
+        // bourse_connexion
+        if ($pathinfo === '/connection') {
+            return array (  '_controller' => 'SIO\\BourseBundle\\Controller\\ProfileController::connectionAction',  '_route' => 'bourse_connexion',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
