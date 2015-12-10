@@ -1,0 +1,108 @@
+html {
+font:normal 100%/1.2em "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
+background:#0099FF;
+}
+
+#banniere{
+	margin-left: 20px;
+	border-radius: 40px 5px 40px 5px;
+	height: 21%;
+	width: 97.5%;
+
+}
+
+fieldset {
+ 		display:block;
+ 		width:50%;
+		border: 1px dotted #353535;
+		padding:2px;
+ 		overflow:hidden;                   
+}
+
+.erreur{ 
+   background-color:rgb(237,210,229);
+   color:rgb(203,28,128);
+   font-size:1.1em;
+   width:95%;
+}
+.message{ 
+   background-color:rgb(99, 184, 255);
+   color:rgb(0,0,205);
+   font-size:1.1em;
+   width:95%;
+}
+
+#bandeau {
+
+}
+
+#menu{
+height: 1.5em ;
+margin-left:-2%;
+margin-right: 30%;
+}
+
+
+#contenu{
+
+}
+
+#menu li {
+	list-style-type: none;
+	list-style-image:none;
+	float: left;
+	text-align: center;
+    width: 25%;
+	height: 80%;
+    border: 2px solid  ;
+	position: relative;
+	margin-left: 3%;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	-webkit-border-radius: 15%;
+	-moz-border-radius: 15%;
+	border-radius: 15px;
+	font-family: Courier New;
+	font-size: 18px;
+	padding: 10px 20px 10px 20px;
+	border: solid #1f628d 2px;
+	text-decoration: none;
+}
+
+#menu li a , #categories li a {
+		text-decoration:none;
+		color: black;
+}
+
+#menu li:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+
+#p1{
+	margin-left: 2%;
+	margin-top: 3%;
+	text-decoration: underline;
+	font-size: 120%;
+}
+
+
+#conteneur{
+	margin-top: 2%;
+	margin-left: 3%;
+	border-radius: 15px 15px 15px 15px;
+	background-color: #FFFFFF;
+	width: 94%;
+	height: 45%;
+}
+
+
+
