@@ -10,66 +10,54 @@
 {% endblock %}
 
 {% block content %}{{ parent }}
+    {% set i=1 %}
+    {% if i==5 %}
 
+    {% else %}
 
+    {% endif %}
     <div id="conteneur">
+    <p id="p1"> Mes valeurs favorites </p>
+<table id="graphiques">
 
-        <p id="p1"> Mes valeurs favorites </p>
+    <tr>
+        <td>
+            <div id="f1">
+                <p> CAC 40 - Paris </p>
+                <img id="g" src={{ asset('images/graph/graph.php') }} /><br>
+                <a href="">En savoir plus...</a>
+            </div>
+        </td>
 
-        <div id="f1">
-            <p> CAC 40 - Paris </p>
-            <p id="desc">
-                ..............................</br>
-                ..............................</br>
-                ..............................</br>
-                ..............................</br>
-                .................. .</br>
-            </p>
-            <img id="g" src={{ asset('images/graph/graph.php') }} />
-            <a href="">En savoir plus...</a>
-        </div>
+        <td>
+            <div id="f2">
+                <p> TOTAL - Paris </p>
 
-        <div id="f2">
-            <p> TOTAL - Paris </p>
-            <p id="desc2">
-                ..............................</br>
-                ..............................</br>
-                ..............................</br>
-                ..............................</br>
-                .................. .</br>
-            </p>
-            <img id="g" src={{ asset('images/graph/graph.php') }} />
-            <a href="">En savoir plus...</a>
-        </div>
+                <img id="g" src={{ asset('images/graph/graph.php') }} /><br>
+                <a href="">En savoir plus...</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="f3">
+                <p> SANEF - Paris </p>
 
-        <div id="f3">
-            <p> SANEF - Paris </p>
-            <p id="desc3">
-                ..............................</br>
-                ..............................</br>
-                ..............................</br>
-                ..............................</br>
-                .................. .</br>
-            </p>
-            <img id="g" src={{ asset('images/graph/graph.php') }} />
-            <a href="">En savoir plus...</a>
-        </div>
+                <img id="g" src={{ asset('images/graph/graph.php') }} /><br>
+                <a href="">En savoir plus...</a>
+            </div>
+        </td>
+        <td>
+            <div id="f4">
+                <p> TOTAL - Paris </p>
 
-        <div id="f4">
-            <p> CAC 15 - World </p>
-            <p id="desc4">
-                ..............................</br>
-                ..............................</br>
-                ..............................</br>
-                ..............................</br>
-                .................. .</br>
-            </p>
-            <img id="g" src={{ asset('images/graph/graph.php') }} />
-            <a href="">En savoir plus...</a>
-        </div>
+                <img id="g" src={{ asset('images/graph/graph.php') }} /><br>
+                <a href="">En savoir plus...</a>
+            </div>
+        </td>
+    </tr>
+</table>
 
     </div>
-
-
 
 {% endblock %}
