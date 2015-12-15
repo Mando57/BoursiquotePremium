@@ -9,7 +9,7 @@ bourse_1337:
     defaults: { _controller: BourseBundle:Default:accueil }
 bourse_tableau:
     path:     /TableauDeBord
-    defaults: { _controller: BourseBundle:Default:TDB }
+    defaults: { _controller: BourseBundle:Profile:index }
 
 
 bourse_connexion:
