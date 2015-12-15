@@ -40,7 +40,7 @@ background:#0099FF;
 
 #recherche{
 	margin-left: 73%;
-	margin-top: -2%;
+	margin-top: -1.5%;
 }
 fieldset {
  		display:block;
@@ -83,7 +83,7 @@ margin-right: 30%;
 	list-style-image:none;
 	float: left;
 	text-align: center;
-    width: 25%;
+    width: 20%;
 	height: 80%;
     border: 2px solid  ;
 	position: relative;
@@ -95,10 +95,10 @@ margin-right: 30%;
 	background-image: linear-gradient(to bottom, #3498db, #2980b9);
 	-webkit-border-radius: 15%;
 	-moz-border-radius: 15%;
-	border-radius: 15px;
+	border-radius: 3px;
 	font-family: Courier New;
-	font-size: 18px;
-	padding: 10px 20px 10px 20px;
+	font-size: 1vmax;
+	padding: 10px 15px 10px 15px;
 	border: solid #1f628d 2px;
 	text-decoration: none;
 }
@@ -118,6 +118,33 @@ margin-right: 30%;
 	text-decoration: none;
 }
 
+
+#graphiques
+{
+	/* faut qui soit plus beau psk la il est grave moche ... et trop petit */
+	/* faire espacer les TD ...?*/
+
+}
+
+tr{
+	border-bottom: 1px solid;
+
+}
+
+td
+{
+	border-left: 15px solid #FFFFFF;
+	border-right: 150px solid #FFFFFF;
+	border-bottom: 30px solid #FFFFFF;
+
+}
+#p1{
+	padding-top: 1%;
+	margin-left: 2%;
+	text-decoration: underline;
+	font-size: 132%;
+}
+/*
 #p1{
 	padding-top: 1%;
 	margin-left: 2%;
@@ -126,7 +153,7 @@ margin-right: 30%;
 }
 
 #f1{
-	margin-left: 25%;
+	margin-left: 70%;
 	position: absolute;
 }
 
@@ -166,29 +193,40 @@ margin-right: 30%;
 	margin-left: -70%;
 	position: absolute;
 }
-
+*/
 
 
 #conteneur{
 position: relative;
-margin-top: 2%;
-margin-left: 3%;
-border-radius: 15px 15px 11px 15px;
+margin-top: 1.2%;
+margin-left: 1%;
+border-radius: 20px 1px 20px 1px;
 background-color: #FFFFFF;
-width: 94%;
-height: 70%;
+width: 97%;
+padding-bottom: 1%;
 }
 
-#pied{
-border-radius: 15px 15px 15px 15px;
+#pied
+{
+margin-left: auto;
+margin-right: auto;
+border-radius: 15px 1px 15px 1px;
 background-color: #FFFFFF;
-width: 94%;
+padding-top: 10px;
+width: 30%;
 text-align: center;
-margin-left:3%;
-margin-top: -2%;
+
+/*margin-top: -2%;*/
 
 }
 #conn{
 
 	text-align: center;
+}
+
+#cred
+{
+	font-size: x-small;
+	margin-top: 1%;
+	padding-bottom: 1%;
 }
