@@ -14,18 +14,29 @@ class ProfileController extends Controller
 {
     public function indexAction()
     {
-        $query= new YahooFinanceQuery;
-        $data = $query->historicalQuote('bas.de', '2015-11-09',  '2015-12-09', 'daily')->get();
-        //dump($data);
-        $data2=array();
-        $i=0;
-        foreach($data as $d)
-        {
-            $data2[]=floatval($d['Close']);
+        $session = new Session();
+        if($session->has('logged')) {
+            $pdo = models\PdoBourses::getPdoBourse();
+            $fav=$pdo->getFav();
+
+            $query = new YahooFinanceQuery;
+            foreach($fav as $favoris) {
+                $data = $query->historicalQuote($favoris['ticker'], '2015-11-09', '2015-12-09', 'daily')->get();
+                dump($data);
+                dump($favoris['ticker']);
+                $data2 = array();
+                $i = 0;
+                foreach ($data as $d) {
+                    $data2[] = floatval($d['Close']);
+                }
+
+                $session->set($favoris['company'], $data2);
+            }
+            dump($fav);
+            return $this->render('BourseBundle:Profile:index.html.twig', array('fav'=>$fav));
+        }else{
+            return $this->redirectToRoute('bourse_connexion');
         }
-        $_SESSION['test']=$data2;
-        dump($data2);
-        return $this->render('BourseBundle:Profile:index.html.twig');
     }
 
     public function connectionAction(Request $request)
@@ -35,7 +46,7 @@ class ProfileController extends Controller
             {
                 $identifiant = $request->get('login');
                 $pwd= $request->get('mdp');
-                $pdo = models\PdoBourse::getPdoBourse();
+                $pdo = models\PdoBourses::getPdoBourse();
                 $try=$pdo->checkClient($identifiant, $pwd);
                 
                 if($try['logged']==true)

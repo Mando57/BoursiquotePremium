@@ -12,6 +12,6 @@ bourse_tableau:
     defaults: { _controller: BourseBundle:Default:TDB }
 
 
-bourse_connexion :
+bourse_connexion:
     path: /connection
     defaults: { _controller: BourseBundle:Profile:connection }

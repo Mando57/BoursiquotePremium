@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+//echo var_dump($_SESSION);
+
 if(isset($_GET['t']))
 {
     $title=$_GET['t'];
@@ -30,22 +33,21 @@ if(isset($_GET['tailleH']))
     $tailleH=200;
 }
 
-/*use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Debug\Debug;
-use DirkOlbrich\YahooFinanceQuery\YahooFinanceQuery;
-        $querry= new YahooFinanceQuery;*/
-		//$data = $query->yql()->historicalQuote('basf', '09/11/2015', '09/12/2015', 'daily')->get();
+
+if(isset($_GET['ent']))
+{
+    $ent=$_GET['ent'];
+}
 
 		include('PHPGraphLib.php');
-        //$graph=models\PHPGraphLib::PHPGraphLib(650,200);
-        //$graph = $this->container->get('la_fleur_symfony.panier');
+        include('PdoBourse.php');
         $graph= new PHPGraphLib($tailleL,$tailleH);
-	if(!isset($_SESSION['test']))
+	if(!isset($_SESSION['_sf2_attributes']['val'][$ent]))
 	{
         $data = array("1" => .0032, "2" => .0028);
-}else{
-		$data=$_SESSION['test'];
-}
+    }else{
+            $data=$_SESSION['_sf2_attributes']['val'][$ent];
+    }
 		$graph->addData($data);
         $graph->setTitle($title);
         $graph->setBars(false);
@@ -56,5 +58,7 @@ use DirkOlbrich\YahooFinanceQuery\YahooFinanceQuery;
         $graph->setDataValueColor('maroon');
         $graph->setGoalLineColor('red');
 		$graph->setRange(70,80);
-        $graph->createGraph();
+       $graph->createGraph();
+
+
 ?>
