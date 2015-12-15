@@ -34,7 +34,9 @@ class ProfileController extends Controller
             }
             dump($fav);
             return $this->render('BourseBundle:Profile:index.html.twig', array('fav'=>$fav));
-        }else{
+        }
+        else
+        {
             return $this->redirectToRoute('bourse_connexion');
         }
     }
@@ -64,17 +66,9 @@ class ProfileController extends Controller
                     $this->get('session')->getFlashBag()->add('notice', 'Erreur identifiants! ');
                     return $this->render ('BourseBundle:Profile:connection.html.twig');
                 }
-
-
             }
 
-
-
         }
-
-
-
-
 
         return $this->render ('BourseBundle:Profile:connection.html.twig');
     }

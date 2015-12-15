@@ -18,8 +18,8 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301 = $this->env->getExtension("native_profiler");
-        $__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301->enter($__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:layout:layout.html.twig"));
+        $__internal_4daf29edbc4cf35c07ed676d42898be487187baf569a1deda76ae0b0ae914d76 = $this->env->getExtension("native_profiler");
+        $__internal_4daf29edbc4cf35c07ed676d42898be487187baf569a1deda76ae0b0ae914d76->enter($__internal_4daf29edbc4cf35c07ed676d42898be487187baf569a1deda76ae0b0ae914d76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:layout:layout.html.twig"));
 
         // line 1
         echo "<html lang=fr>
@@ -70,7 +70,7 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
         // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/banniere.png"), "html", null, true);
         echo " alt=\"Lentete\" title=\"entetebourseimg\"/>
-<!---testet-->
+
 </div>
 
 <!--  Menu haut-->
@@ -85,73 +85,77 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
     <li><a href=";
         // line 35
         echo "> Gerer tableau de bord</a></li>
-
-
 </ul>
+<div id=\"recherche\">
+    Recherche : <input type=\"text\" name=\"recherche\"> <input type='submit' value=\"OK\" name='OK'/>
+</div>
+
+
+
+
 <div id=\"menu lateral\">
 ";
-        // line 40
+        // line 45
         $this->displayBlock('lateral', $context, $blocks);
-        // line 42
+        // line 47
         echo "</div>
 
 
 <div id=\"conteneur\">
     ";
-        // line 46
+        // line 51
         $this->displayBlock('content', $context, $blocks);
-        // line 48
+        // line 53
         echo "</div>
 
 
 
 
 <br><br><br>
-<div id=\"pied\"> Copyright _ BourSIQoute _ 2016 </div>
-<div id=\"credits\"> powered by symfony 2 </div>
+<div id=\"pied\"> Copyright _ BourSIQoute _ 2016 </br> <div id=\"cred\"> powered by symfony 2</div>  </div>
 </body>
 
 </html>";
         
-        $__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301->leave($__internal_6b160ad13061568cb338d7b61f4a8083347f5a9908389df2520cabb14e82a301_prof);
+        $__internal_4daf29edbc4cf35c07ed676d42898be487187baf569a1deda76ae0b0ae914d76->leave($__internal_4daf29edbc4cf35c07ed676d42898be487187baf569a1deda76ae0b0ae914d76_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca = $this->env->getExtension("native_profiler");
-        $__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca->enter($__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b5683b1cd5a9a51180be241406056ec95d52f7ea7dff3deafa180e5dcd87224c = $this->env->getExtension("native_profiler");
+        $__internal_b5683b1cd5a9a51180be241406056ec95d52f7ea7dff3deafa180e5dcd87224c->enter($__internal_b5683b1cd5a9a51180be241406056ec95d52f7ea7dff3deafa180e5dcd87224c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
         echo "                boursiquote :
             ";
         
-        $__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca->leave($__internal_44db12c9175a2f39975bcb6df6004e8c88debe82764720451141065f55b4c5ca_prof);
+        $__internal_b5683b1cd5a9a51180be241406056ec95d52f7ea7dff3deafa180e5dcd87224c->leave($__internal_b5683b1cd5a9a51180be241406056ec95d52f7ea7dff3deafa180e5dcd87224c_prof);
 
     }
 
-    // line 40
+    // line 45
     public function block_lateral($context, array $blocks = array())
     {
-        $__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090 = $this->env->getExtension("native_profiler");
-        $__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090->enter($__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
+        $__internal_11680be860346cb1da6573bee724a75a9300ef14a0995566e8190b0c928973b9 = $this->env->getExtension("native_profiler");
+        $__internal_11680be860346cb1da6573bee724a75a9300ef14a0995566e8190b0c928973b9->enter($__internal_11680be860346cb1da6573bee724a75a9300ef14a0995566e8190b0c928973b9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
 
         
-        $__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090->leave($__internal_c7e9db9bb26665bc8c6ff58380e9df9b011d2fb9831d473ea8e84ab5ae723090_prof);
+        $__internal_11680be860346cb1da6573bee724a75a9300ef14a0995566e8190b0c928973b9->leave($__internal_11680be860346cb1da6573bee724a75a9300ef14a0995566e8190b0c928973b9_prof);
 
     }
 
-    // line 46
+    // line 51
     public function block_content($context, array $blocks = array())
     {
-        $__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb = $this->env->getExtension("native_profiler");
-        $__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb->enter($__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_4b3fa0964abdc0b8f24d687a80914983ce5d50d7f11ae24ea915de04ad2f0018 = $this->env->getExtension("native_profiler");
+        $__internal_4b3fa0964abdc0b8f24d687a80914983ce5d50d7f11ae24ea915de04ad2f0018->enter($__internal_4b3fa0964abdc0b8f24d687a80914983ce5d50d7f11ae24ea915de04ad2f0018_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 47
+        // line 52
         echo "    ";
         
-        $__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb->leave($__internal_00f7b5507b14e3455169c90dc119f1ba334e27e07fdcf0406be4b3cbd4d5c6cb_prof);
+        $__internal_4b3fa0964abdc0b8f24d687a80914983ce5d50d7f11ae24ea915de04ad2f0018->leave($__internal_4b3fa0964abdc0b8f24d687a80914983ce5d50d7f11ae24ea915de04ad2f0018_prof);
 
     }
 
@@ -167,7 +171,7 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 
     public function getDebugInfo()
     {
-        return array (  152 => 47,  146 => 46,  135 => 40,  127 => 4,  121 => 3,  104 => 48,  102 => 46,  96 => 42,  94 => 40,  87 => 35,  83 => 34,  80 => 33,  71 => 27,  54 => 12,  40 => 10,  36 => 9,  31 => 6,  29 => 3,  25 => 1,);
+        return array (  156 => 52,  150 => 51,  139 => 45,  131 => 4,  125 => 3,  109 => 53,  107 => 51,  101 => 47,  99 => 45,  87 => 35,  83 => 34,  80 => 33,  71 => 27,  54 => 12,  40 => 10,  36 => 9,  31 => 6,  29 => 3,  25 => 1,);
     }
 }
 /* <html lang=fr>*/
@@ -197,7 +201,7 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 /*     <!-- Images En-tête -->*/
 /*     <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->*/
 /*     <img id="banniere" src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>*/
-/* <!---testet-->*/
+/* */
 /* </div>*/
 /* */
 /* <!--  Menu haut-->*/
@@ -205,9 +209,14 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 /*     <li><a href={{ path('bourse_tableau') }}> Tableau de bord </a></li>       {# les liens sont a remettre via le routing #}*/
 /*     <li><a href={#  {{ path('analyse') }}       #}> Analyse du marché</a></li>*/
 /*     <li><a href={#  {{ path('gerertableau') }}  #}> Gerer tableau de bord</a></li>*/
-/* */
-/* */
 /* </ul>*/
+/* <div id="recherche">*/
+/*     Recherche : <input type="text" name="recherche"> <input type='submit' value="OK" name='OK'/>*/
+/* </div>*/
+/* */
+/* */
+/* */
+/* */
 /* <div id="menu lateral">*/
 /* {% block lateral %}*/
 /* {% endblock %}*/
@@ -223,8 +232,7 @@ class __TwigTemplate_1caeb87eebe5ff8b447f8c0482df8c3258f603fe3433721318ef71e995b
 /* */
 /* */
 /* <br><br><br>*/
-/* <div id="pied"> Copyright _ BourSIQoute _ 2016 </div>*/
-/* <div id="credits"> powered by symfony 2 </div>*/
+/* <div id="pied"> Copyright _ BourSIQoute _ 2016 </br> <div id="cred"> powered by symfony 2</div>  </div>*/
 /* </body>*/
 /* */
 /* </html>*/

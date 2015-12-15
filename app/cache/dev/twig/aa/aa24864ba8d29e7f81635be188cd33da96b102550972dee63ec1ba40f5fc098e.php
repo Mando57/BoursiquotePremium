@@ -12,6 +12,7 @@ class __TwigTemplate_a9bccf56eeebcd642ca8a23c427a709616bd30f026185d75f7cc18e83f1
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'lateral' => array($this, 'block_lateral'),
+            'content' => array($this, 'block_content'),
         );
     }
 
@@ -22,45 +23,63 @@ class __TwigTemplate_a9bccf56eeebcd642ca8a23c427a709616bd30f026185d75f7cc18e83f1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5511e56b1ac49cf952c5ed776aee1ac1001b2fbac8f9d27bd35919098ea7dbad = $this->env->getExtension("native_profiler");
-        $__internal_5511e56b1ac49cf952c5ed776aee1ac1001b2fbac8f9d27bd35919098ea7dbad->enter($__internal_5511e56b1ac49cf952c5ed776aee1ac1001b2fbac8f9d27bd35919098ea7dbad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:Profile:index.html.twig"));
+        $__internal_d8ed3c2fda3109f0521d043d221f3fa890bc4092555a470afab06180ee91bd0c = $this->env->getExtension("native_profiler");
+        $__internal_d8ed3c2fda3109f0521d043d221f3fa890bc4092555a470afab06180ee91bd0c->enter($__internal_d8ed3c2fda3109f0521d043d221f3fa890bc4092555a470afab06180ee91bd0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BourseBundle:Profile:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5511e56b1ac49cf952c5ed776aee1ac1001b2fbac8f9d27bd35919098ea7dbad->leave($__internal_5511e56b1ac49cf952c5ed776aee1ac1001b2fbac8f9d27bd35919098ea7dbad_prof);
+        $__internal_d8ed3c2fda3109f0521d043d221f3fa890bc4092555a470afab06180ee91bd0c->leave($__internal_d8ed3c2fda3109f0521d043d221f3fa890bc4092555a470afab06180ee91bd0c_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_c749e12545da7f4484c5757f45c130212b9de8b71e27fd4d7bff9821685e1c16 = $this->env->getExtension("native_profiler");
-        $__internal_c749e12545da7f4484c5757f45c130212b9de8b71e27fd4d7bff9821685e1c16->enter($__internal_c749e12545da7f4484c5757f45c130212b9de8b71e27fd4d7bff9821685e1c16_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_bc7fdcfe8ecd1af682ea71bc9bc6ebdf360ee71109c41b8e750a8b68969e3ce6 = $this->env->getExtension("native_profiler");
+        $__internal_bc7fdcfe8ecd1af682ea71bc9bc6ebdf360ee71109c41b8e750a8b68969e3ce6->enter($__internal_bc7fdcfe8ecd1af682ea71bc9bc6ebdf360ee71109c41b8e750a8b68969e3ce6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo " ";
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Accueil général ";
         
-        $__internal_c749e12545da7f4484c5757f45c130212b9de8b71e27fd4d7bff9821685e1c16->leave($__internal_c749e12545da7f4484c5757f45c130212b9de8b71e27fd4d7bff9821685e1c16_prof);
+        $__internal_bc7fdcfe8ecd1af682ea71bc9bc6ebdf360ee71109c41b8e750a8b68969e3ce6->leave($__internal_bc7fdcfe8ecd1af682ea71bc9bc6ebdf360ee71109c41b8e750a8b68969e3ce6_prof);
 
     }
 
     // line 5
     public function block_lateral($context, array $blocks = array())
     {
-        $__internal_c351db3606375bd0932922836dfc91b565e35d1e8b4933a533100691290af7e6 = $this->env->getExtension("native_profiler");
-        $__internal_c351db3606375bd0932922836dfc91b565e35d1e8b4933a533100691290af7e6->enter($__internal_c351db3606375bd0932922836dfc91b565e35d1e8b4933a533100691290af7e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
+        $__internal_bc60ee8801b9d7fd937a0dcd45748d73862f75d44779eb58f5ba4e2ff9ae7c06 = $this->env->getExtension("native_profiler");
+        $__internal_bc60ee8801b9d7fd937a0dcd45748d73862f75d44779eb58f5ba4e2ff9ae7c06->enter($__internal_bc60ee8801b9d7fd937a0dcd45748d73862f75d44779eb58f5ba4e2ff9ae7c06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "lateral"));
 
         // line 6
         echo "
-        <u>Mes valeurs favorites</u>
-   <img src=";
-        // line 8
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/graph/graph.php"), "html", null, true);
-        echo " />
+
 ";
         
-        $__internal_c351db3606375bd0932922836dfc91b565e35d1e8b4933a533100691290af7e6->leave($__internal_c351db3606375bd0932922836dfc91b565e35d1e8b4933a533100691290af7e6_prof);
+        $__internal_bc60ee8801b9d7fd937a0dcd45748d73862f75d44779eb58f5ba4e2ff9ae7c06->leave($__internal_bc60ee8801b9d7fd937a0dcd45748d73862f75d44779eb58f5ba4e2ff9ae7c06_prof);
+
+    }
+
+    // line 10
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_fc1c28cc681c85d1f1e96a81862eecf53b64be7a4006c90b3b0e05c4b732fad7 = $this->env->getExtension("native_profiler");
+        $__internal_fc1c28cc681c85d1f1e96a81862eecf53b64be7a4006c90b3b0e05c4b732fad7->enter($__internal_fc1c28cc681c85d1f1e96a81862eecf53b64be7a4006c90b3b0e05c4b732fad7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+
+        // line 11
+        echo "<div id=\"conteneur\">
+
+        <p id=\"p1\">Mes valeurs favorites</p>
+        <img src=";
+        // line 14
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("images/graph/graph.php"), "html", null, true);
+        echo " />
+
+</div>
+";
+        
+        $__internal_fc1c28cc681c85d1f1e96a81862eecf53b64be7a4006c90b3b0e05c4b732fad7->leave($__internal_fc1c28cc681c85d1f1e96a81862eecf53b64be7a4006c90b3b0e05c4b732fad7_prof);
 
     }
 
@@ -76,7 +95,7 @@ class __TwigTemplate_a9bccf56eeebcd642ca8a23c427a709616bd30f026185d75f7cc18e83f1
 
     public function getDebugInfo()
     {
-        return array (  59 => 8,  55 => 6,  49 => 5,  35 => 3,  11 => 1,);
+        return array (  76 => 14,  71 => 11,  65 => 10,  56 => 6,  50 => 5,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends "BourseBundle:layout:layout.html.twig" %}*/
@@ -85,6 +104,14 @@ class __TwigTemplate_a9bccf56eeebcd642ca8a23c427a709616bd30f026185d75f7cc18e83f1
 /* */
 /* {% block lateral %}*/
 /* */
-/*         <u>Mes valeurs favorites</u>*/
-/*    <img src={{ asset('images/graph/graph.php') }} />*/
+/* */
+/* {% endblock %}*/
+/* */
+/*  {% block content %}*/
+/* <div id="conteneur">*/
+/* */
+/*         <p id="p1">Mes valeurs favorites</p>*/
+/*         <img src={{ asset('images/graph/graph.php') }} />*/
+/* */
+/* </div>*/
 /* {% endblock %}*/
