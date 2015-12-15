@@ -22,42 +22,20 @@
     <p id="p1"> Mes valeurs favorites </p>
 <table id="graphiques">
 
+    {% for fav in favoris %}
     <tr>
         <td>
-            <div id="f1">
-                <p> CAC 40 - Paris </p>
-                <img id="g" src={{ asset('images/graph/graph.php') }} /><br>
-                <a href="">En savoir plus...</a>
-            </div>
-        </td>
 
-        <td>
-            <div id="f2">
-                <p> TOTAL - Paris </p>
 
-                <img id="g" src={{ asset('images/graph/graph.php') }} /><br>
-                <a href="">En savoir plus...</a>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div id="f3">
-                <p> SANEF - Paris </p>
+        <p> {{ fav.company }} </p>
 
-                <img id="g" src={{ asset('images/graph/graph.php') }} /><br>
-                <a href="">En savoir plus...</a>
-            </div>
+        <img id="g" src={{ asset('images/graph/graph.php?ent='~fav.ticker~'&&t='~fav.company ) }} />
+        <a href="">En savoir plus...</a>
         </td>
-        <td>
-            <div id="f4">
-                <p> TOTAL - Paris </p>
+     </tr>
+    {% endfor %}
 
-                <img id="g" src={{ asset('images/graph/graph.php') }} /><br>
-                <a href="">En savoir plus...</a>
-            </div>
-        </td>
-    </tr>
+
 </table>
 
     </div>
