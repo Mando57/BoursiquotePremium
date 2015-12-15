@@ -30,10 +30,10 @@ class ProfileController extends Controller
                     $data2[] = floatval($d['Close']);
                 }
 
-                $session->set($favoris['company'], $data2);
+                $session->set($favoris['ticker'], $data2);
             }
             dump($fav);
-            return $this->render('BourseBundle:Profile:index.html.twig', array('fav'=>$fav));
+            return $this->render('BourseBundle:Profile:index.html.twig', array('favoris'=>$fav));
         }else{
             return $this->redirectToRoute('bourse_connexion');
         }
