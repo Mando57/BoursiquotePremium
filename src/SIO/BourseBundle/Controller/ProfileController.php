@@ -44,18 +44,22 @@ class ProfileController extends Controller
         $session= new Session;
         if ($session->has('logged')) 
         {
-            # code...
-        
+            $url=$this->get('router')->generate('bourse_profile');
+            return new RedirectResponse($url);
+        }
+        else
+        {
+
             if($request->request->has('Connexion'))
             {
                 $identifiant = $request->get('login');
                 $pwd= $request->get('mdp');
                 $pdo = models\PdoBourses::getPdoBourse();
                 $try=$pdo->checkClient($identifiant, $pwd);
-                
+
                 if($try['logged']==true)
                 {
-                    
+
 
                     $session->set('logged',true);
                     $session->set('userId',$try['id']);
@@ -69,12 +73,6 @@ class ProfileController extends Controller
                     return $this->render ('BourseBundle:Profile:connection.html.twig');
                 }
             }
-
-        }
-        else
-        {
-            $url=$this->get('router')->generate('bourse_profile');
-            return new RedirectResponse($url);
 
         }
 
