@@ -1,43 +1,23 @@
-{% extends "BourseBundle:layout:layout.html.twig" %}
-
-{% block title %} {{ parent() }} Tableau de bord {% endblock %}
-
-
-{% block lateral %}{{ parent }}
-
-
-
-{% endblock %}
-
-
-
 {% block content %}{{ parent }}
-    {% set i=1 %}
-    {% if i==5 %}
 
-    {% else %}
-
-    {% endif %}
     <div id="conteneur">
         <p id="p1"> Mes valeurs favorites </p>
-        <table id="graphiques">
+    <table id="graphiques" class><tr><td>
 
-            {% for fav in favoris %}
-                <tr>
-                    <td>
-
-
-                        <p> {{ fav.company }} </p>
-
-                        <img id="g" src={{ asset('images/graph/graph.php?ent='~fav.ticker~'&&t='~fav.company ) }} />
-                        <a href="">En savoir plus...</a>
-                    </td>
-                </tr>
-            {% endfor %}
-
-
-        </table>
-
+    {% set i=0 %}
+    {% for fav in favoris %}
+        {% set i= i + 1 %}
+        <p> {{ fav.company }} </p>
+        <img id="g" src={{ asset('images/graph/graph.php?ent='~fav.ticker~'&&t='~fav.company ) }} /><br>
+        <a href="">En savoir plus...</a>
+    {% if i==4 %}
+        </td></tr><tr><td>
+        {% set i=0 %}
+    {% else %}
+        </td></tr>
+    {% endfor %}
+        </td><td>
+    {% endif %}
+    {% endfor %}
+    </td></tr></table>
     </div>
-
-{% endblock %}
