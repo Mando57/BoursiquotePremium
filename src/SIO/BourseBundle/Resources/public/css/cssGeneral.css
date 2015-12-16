@@ -70,9 +70,15 @@ background:#0099FF;
 }
 
 #recherche{
-	margin-left: 73%;
+	margin-left: 70%;
 	margin-top: -1.5%;
+	font-size: 20px;
 }
+
+#recherche input{
+	font-size: 20px;
+}
+
 fieldset {
  		display:block;
  		width:50%;
@@ -172,7 +178,7 @@ tr{
 	min-width: 200px;
 	max-width: 200px;
 	border-left: 15px solid #FFFFFF;
-	border-right: 200px solid #FFFFFF;
+	border-right: 150px solid #FFFFFF;
 	border-bottom: 60px solid #FFFFFF;
 	text-align: center;
 
@@ -199,57 +205,6 @@ tr{
 	text-decoration: underline;
 	font-size: 200%;
 }
-/*
-#p1{
-	padding-top: 1%;
-	margin-left: 2%;
-	text-decoration: underline;
-	font-size: 150%;
-}
-
-#f1{
-	margin-left: 70%;
-	position: absolute;
-}
-
-#desc{
-	margin-left: -70%;
-	position: absolute;
-}
-
-#f2{
-	margin-left: 70%;
-	position: absolute;
-}
-
-#desc2{
-	margin-left: -70%;
-	position: absolute;
-}
-
-#f3{
-	position: absolute;
-	margin-left: 25%;
-	margin-top: 20%;
-}
-
-#desc3{
-	margin-left: -70%;
-	position: absolute;
-}
-
-#f4{
-	position: absolute;
-	margin-left: 70%;
-	margin-top: 20%;
-}
-
-#desc4{
-	margin-left: -70%;
-	position: absolute;
-}
-*/
-
 
 #conteneur{
 position: relative;
@@ -271,10 +226,8 @@ background-color: #FFFFFF;
 padding-top: 10px;
 width: 30%;
 text-align: center;
-
-/*margin-top: -2%;*/
-
 }
+
 #conn{
 	padding-top: 3%;
 	font-size: 25px;
