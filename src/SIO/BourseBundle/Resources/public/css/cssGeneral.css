@@ -70,9 +70,15 @@ background:#0099FF;
 }
 
 #recherche{
-	margin-left: 73%;
+	margin-left: 70%;
 	margin-top: -1.5%;
+	font-size: 20px;
 }
+
+#recherche input{
+	font-size: 20px;
+}
+
 fieldset {
  		display:block;
  		width:50%;
@@ -99,8 +105,7 @@ fieldset {
    width:95%;
 }
 
-#bandeau 
-{
+#bandeau {
 
 }
 
@@ -111,8 +116,7 @@ margin-right: 30%;
 }
 
 
-#contenu
-{
+#contenu{
 
 }
 
@@ -157,8 +161,11 @@ margin-right: 30%;
 }
 
 
-#graphiques
+#graphiques p
 {
+	font-size: 20px;
+	
+
 }
 
 tr{
@@ -173,6 +180,7 @@ tr{
 	border-left: 15px solid #FFFFFF;
 	border-right: 150px solid #FFFFFF;
 	border-bottom: 60px solid #FFFFFF;
+	text-align: center;
 
 }
 #p1{
@@ -181,7 +189,7 @@ tr{
 	text-decoration: underline;
 	font-size: 132%;
 }
-/*
+
 #p1{
 	padding-top: 1%;
 	margin-left: 2%;
@@ -189,49 +197,27 @@ tr{
 	font-size: 150%;
 }
 
-#f1{
-	margin-left: 70%;
-	position: absolute;
+#info{
+	width: 30px;
+	height: auto;
 }
 
-#desc{
-	margin-left: -70%;
+#info2{
 	position: absolute;
+	font-family: Comic sans MS;
+	font-size: 18px;
+	text-decoration: none;
+}
+#info2:hover{
+	border-bottom: 1px solid darkorange;
 }
 
-#f2{
-	margin-left: 70%;
-	position: absolute;
+#p1{
+	padding-top: 1%;
+	margin-left: 2%;
+	text-decoration: underline;
+	font-size: 200%;
 }
-
-#desc2{
-	margin-left: -70%;
-	position: absolute;
-}
-
-#f3{
-	position: absolute;
-	margin-left: 25%;
-	margin-top: 20%;
-}
-
-#desc3{
-	margin-left: -70%;
-	position: absolute;
-}
-
-#f4{
-	position: absolute;
-	margin-left: 70%;
-	margin-top: 20%;
-}
-
-#desc4{
-	margin-left: -70%;
-	position: absolute;
-}
-*/
-
 
 #conteneur{
 position: relative;
@@ -253,10 +239,8 @@ background-color: #FFFFFF;
 padding-top: 10px;
 width: 30%;
 text-align: center;
-
-/*margin-top: -2%;*/
-
 }
+
 #conn{
 	padding-top: 3%;
 	font-size: 25px;
