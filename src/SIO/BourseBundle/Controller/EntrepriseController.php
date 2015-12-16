@@ -16,5 +16,16 @@ class EntrepriseController extends Controller
         $pdo=models\PdoBourses::getPdoBourse();
         $entreprise=$pdo->getEntrepriseByTicker($ticker);
     }
+    public function rechercherAction(Request $REQUEST)
+    {
+    	$pdo=models\PdoBourses::getPdoBourse();
+    	$entreprises=$pdo->rechercherEntreprise($REQUEST->get('recherche'));
+
+
+
+    	return $this->render ('BourseBundle:Entreprise:recherche.html.twig', array('resultas'=>$entreprises));
+    }
+
+
 
 }

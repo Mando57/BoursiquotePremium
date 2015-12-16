@@ -34,11 +34,11 @@
     <li><a href={#  {{ path('analyse') }}       #}> Analyse du marché</a></li>
     <li><a href={#  {{ path('gerertableau') }}  #}> Gerer tableau de bord</a></li>
 </ul>
+<form method="POST" action={{ path('bourse_recherche') }}>
 <div id="recherche">
-    Recherche : <input type="text" name="recherche"> <input type='submit' value="OK" name='OK'/>
-</div>
-
-
+    Recherche : <input type="text" name="recherche"> <input type='submit' value="OK" name='OK' />
+  </div>
+</form>
 
 
 <div id="menu lateral">

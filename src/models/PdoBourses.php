@@ -120,6 +120,14 @@ class PdoBourses
         return $res;
     }
 
+    public function rechercherEntreprise($rech)
+    {
+        $req="select * from action where company like '".$rech."'";
+        $res=PdoBourses::$monPdo->query($req);
+        $res->fetchAll();
+        return $res;
+    }
+
 
 
 }

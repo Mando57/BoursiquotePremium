@@ -134,10 +134,11 @@ tr{
 
 #graphiques td
 {
-	max-width: 250px;
+	min-width: 200px;
+	max-width: 200px;
 	border-left: 15px solid #FFFFFF;
 	border-right: 150px solid #FFFFFF;
-	border-bottom: 30px solid #FFFFFF;
+	border-bottom: 60px solid #FFFFFF;
 
 }
 #p1{

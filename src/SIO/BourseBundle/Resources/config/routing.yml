@@ -24,3 +24,7 @@ bourse_deconnexion:
 bourse_entreprise:
     path: /Entreprise/{id}
     defaults: { _controller: LaFleurSymfonyBundle:Entreprise:voirEntreprise}
+
+bourse_recherche:
+    path: /recherche
+    defaults: { _controller: BourseBundle:Entreprise:rechercher}
