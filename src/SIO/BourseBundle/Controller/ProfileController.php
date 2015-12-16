@@ -71,6 +71,18 @@ class ProfileController extends Controller
         return $this->render ('BourseBundle:Profile:connection.html.twig');
     }
 
+    public function DeconnectionAction(Request $request)
+    {
+        if($request->request->has('Bt-deco'))
+        {
+            $session= new Session();
+            $session->clear();
+
+        }
+
+        return $this->render ('BourseBundle:Profile:connection.html.twig');
+        //return $this->redirectToRoute('bourse_connexion');
+    }
 
 }
 
