@@ -41,7 +41,11 @@ class ProfileController extends Controller
 
     public function connectionAction(Request $request)
     {
+        $session= new Session;
+        if ($session->has('logged')) 
         {
+            # code...
+        
             if($request->request->has('Connexion'))
             {
                 $identifiant = $request->get('login');
@@ -51,7 +55,7 @@ class ProfileController extends Controller
                 
                 if($try['logged']==true)
                 {
-                    $session= new Session;
+                    
 
                     $session->set('logged',true);
                     $session->set('userId',$try['id']);
@@ -65,6 +69,12 @@ class ProfileController extends Controller
                     return $this->render ('BourseBundle:Profile:connection.html.twig');
                 }
             }
+
+        }
+        else
+        {
+            $url=$this->get('router')->generate('bourse_profile');
+            return new RedirectResponse($url);
 
         }
 
