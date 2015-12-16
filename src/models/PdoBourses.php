@@ -124,7 +124,7 @@ class PdoBourses
     {
         $req="select * from action where company like '".$rech."'";
         $res=PdoBourses::$monPdo->query($req);
-        $res->fetchAll();
+        $res=$res->fetchAll();
         return $res;
     }
 

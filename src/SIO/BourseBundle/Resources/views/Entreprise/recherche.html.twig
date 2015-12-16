@@ -8,8 +8,14 @@
 {% endblock %}
 
 {% block content %}{{ parent }}
-
+<br><br><br>
 resultats de la recherche : <br><br>
+<table border="1"><tr>
 
+{% for liste in entreprises %}
+
+	<td>{{ liste.company }}</td><td> <a href={{ path('bourse_entreprise') }} /> En savoir plus ... </a> </td>
+
+{% endfor %}
 
 {% endblock %}
