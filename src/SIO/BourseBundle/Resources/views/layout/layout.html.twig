@@ -1,9 +1,9 @@
 <html lang=fr>
 <head>
     <title> {% block title %}
-                boursiquote :
-            {% endblock %}
-        </title>
+            boursiquote :
+        {% endblock %}
+    </title>
     <meta http-equiv="Content-Language" content="fr">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     {% stylesheets '@BourseBundle/Resources/public/css/cssGeneral.css' filter='cssrewrite' %}
@@ -25,7 +25,7 @@
     <!-- Images En-tête -->
     <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->
     <img id="banniere" src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>
-    <input id="bt-deco" type='button' value="Se déconnecter" name='Deco'/>
+    <form method=post action={{ path('bourse_deconnexion') }}> <input id="bt-deco" type='submit' value="Se déconnecter" name='Bt-deco'/></form>
 </div>
 
 <!--  Menu haut-->
@@ -42,8 +42,8 @@
 
 
 <div id="menu lateral">
-{% block lateral %}
-{% endblock %}
+    {% block lateral %}
+    {% endblock %}
 </div>
 
 
@@ -55,6 +55,7 @@
 
 
 
+<br>
 <div id="pied"> Copyright _ BourSIQoute _ 2016 </br> <div id="cred"> powered by symfony 2</div>  </div>
 </body>
 
