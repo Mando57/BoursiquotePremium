@@ -89,8 +89,8 @@ class ProfileController extends Controller
 
         }
 
-        return $this->render ('BourseBundle:Profile:connection.html.twig');
-        //return $this->redirectToRoute('bourse_connexion');
+
+        return $this->redirectToRoute('bourse_connexion');
     }
 
 }
