@@ -17,8 +17,8 @@ bourse_connexion:
     defaults: { _controller: BourseBundle:Profile:connection }
 
 bourse_deconnexion:
-        path: /deconnection
-        defaults: { _controller: BourseBundle:Profile:Deconnection }    defaults: { _controller: BourseBundle:Profile:connection }
+    path: /deconnection
+    defaults: { _controller: BourseBundle:Profile:Deconnection }
 
 
 bourse_entreprise:
