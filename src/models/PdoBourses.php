@@ -114,9 +114,9 @@ class PdoBourses
 
     public function getEntrepriseByTicker($tick)
     {
-        $req="select * from action where ticker=$tick";
+        $req="select * from action where ticker='$tick'";
         $res=PdoBourses::$monPdo->query($req);
-        $res->fetchAll();
+        $res=$res->fetchAll();
         return $res;
     }
 

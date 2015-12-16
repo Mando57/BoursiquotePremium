@@ -15,7 +15,7 @@ if(isset($_GET['tailleL']))
 {
    $tailleL=$_GET['tailleL'];
 }else{
-    $tailleL=200;
+    $tailleL=300;
 }
 
 if(isset($_GET['tailleH']))
@@ -23,7 +23,7 @@ if(isset($_GET['tailleH']))
     $tailleH=$_GET['tailleH'];
 
 }else{
-    $tailleH=200;
+    $tailleH=300;
 }
 
 

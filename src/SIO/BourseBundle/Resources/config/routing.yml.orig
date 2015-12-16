@@ -24,3 +24,7 @@ bourse_deconnexion:
 bourse_entreprise:
     path: /entreprise/{ticker}
     defaults: { _controller: BourseBundle:Entreprise:voirEntreprise}
+
+bourse_recherche:
+    path: /recherche
+    defaults: { _controller: BourseBundle:Entreprise:rechercher}
