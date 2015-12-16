@@ -11,6 +11,7 @@ bourse_tableau:
     path:     /TableauDeBord
     defaults: { _controller: BourseBundle:Profile:index }
 
+
 bourse_connexion:
     path: /connection
     defaults: { _controller: BourseBundle:Profile:connection }
@@ -19,6 +20,11 @@ bourse_deconnexion:
     path: /deconnection
     defaults: { _controller: BourseBundle:Profile:Deconnection }
 
+
 bourse_entreprise:
     path: /entreprise/{ticker}
     defaults: { _controller: BourseBundle:Entreprise:voirEntreprise}
+
+bourse_recherche:
+    path: /recherche
+    defaults: { _controller: BourseBundle:Entreprise:rechercher}

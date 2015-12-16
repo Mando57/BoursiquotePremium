@@ -10,32 +10,26 @@
 {% endblock %}
 
 {% block content %}{{ parent }}
-    {% set i=1 %}
-    {% if i==5 %}
-
-    {% else %}
-
-    {% endif %}
     <div id="conteneur">
-    <p id="p1"> Mes valeurs favorites </p>
-<table id="graphiques">
-
-    {% for fav in favoris %}
+<table id="entreprise" border="0">
     <tr>
         <td>
-
-
-        <p> {{ fav.company }} </p>
-
-        <img id="g" src={{ asset('images/graph/graph.php?ent='~fav.ticker~'&&t='~fav.company ) }} />
-        <a href="">En savoir plus...</a>
+            <p id="p1"> {{ entreprise.company }} </p>
+             <img id="g" src={{ asset('images/graph/graph.php?ent='~entreprise.ticker~'&&t='~entreprise.company ) }} /><br>
         </td>
-     </tr>
-    {% endfor %}
+        <td>
+            <br><br>
+           Localisation:{{ entreprise.pays }}
+            <br>Ouverture: {{ entreprise.open }}
+            <br>Le plus haut: {{ entreprise.high }}
+            <br>Le plus bas: {{ entreprise.low }}
+            <br>Volume: {{ entreprise.volume }}
+            <br>Fermeture: {{ entreprise.close }}
+            <br>last update:{{ entreprise.date }}
 
-
+        </td>
+    </tr>
 </table>
-
     </div>
 
 {% endblock %}
