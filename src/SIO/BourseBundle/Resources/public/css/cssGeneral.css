@@ -123,8 +123,7 @@ margin-right: 30%;
 
 #graphiques
 {
-	/* faut qui soit plus beau psk la il est grave moche ... et trop petit */
-	/* faire espacer les TD ...?*/
+
 
 }
 
@@ -205,13 +204,14 @@ margin-top: 1.2%;
 margin-left: 1%;
 border-radius: 20px 1px 20px 1px;
 background-color: #FFFFFF;
-width: 97%;
+width: 97.5%;
 padding-bottom: 1%;
 }
 
 #pied
 {
 margin-left: auto;
+margin-top: 25px;
 margin-right: auto;
 border-radius: 15px 1px 15px 1px;
 background-color: #FFFFFF;

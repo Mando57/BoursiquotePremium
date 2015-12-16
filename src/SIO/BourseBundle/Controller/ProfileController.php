@@ -22,8 +22,6 @@ class ProfileController extends Controller
             $query = new YahooFinanceQuery;
             foreach($fav as $favoris) {
                 $data = $query->historicalQuote($favoris['ticker'], '2015-11-09', '2015-12-09', 'daily')->get();
-                dump($data);
-                dump($favoris['ticker']);
                 $data2 = array();
                 $i = 0;
                 foreach ($data as $d) {
@@ -32,7 +30,7 @@ class ProfileController extends Controller
 
                 $session->set($favoris['ticker'], $data2);
             }
-            dump($fav);
+
             return $this->render('BourseBundle:Default:TableauDeBord.html.twig', array('favoris'=>$fav));
         }
         else
