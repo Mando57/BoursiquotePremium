@@ -15,3 +15,8 @@ bourse_tableau:
 bourse_connexion:
     path: /connection
     defaults: { _controller: BourseBundle:Profile:connection }
+
+
+la_fleur_symfony_retirerPanier:
+    path: /Entreprise/{id}
+    defaults: { _controller: LaFleurSymfonyBundle:Entreprise:voirEntreprise}

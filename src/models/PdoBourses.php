@@ -78,7 +78,7 @@ class PdoBourses
     {
         $insert=("insert into client(login,mdp) values ('$login','$pwd') ");
         $res=PdoBourses::$monPdo->exec($insert);
-        var_dump($insert);
+
         return $res;
     }
 
@@ -105,11 +105,20 @@ class PdoBourses
     public function getFav()
     {
         $session=new Session();
+        $session->
         //$session->start();
         $req='select company,ticker from favoris as f inner join action as a on a.idaction=f.idaction where f.id='.$session->get('userId');
-        var_dump($req);
+
         $res = PdoBourses::$monPdo->query($req);
         return $res->fetchAll();
+    }
+
+    public function getEntrepriseByTicker($tick)
+    {
+        $req="select * from action where ticker=$tick";
+        $res=PdoBourses::$monPdo->query($req);
+        $res->fetchAll();
+        return $res;
     }
 
 
