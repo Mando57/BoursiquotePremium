@@ -12,7 +12,7 @@
         {% set i= i + 1 %}
         <p> {{ fav.company }} </p>
         <img id="g" src={{ asset('images/graph/graph.php?ent='~fav.ticker~'&&t='~fav.company ) }} /><br>
-        <img id="info" src={{ asset('images/info.png') }}>&nbsp; <a id="info2" href="">En savoir plus...</a>
+        <a href="">En savoir plus...</a>
     {% if i==4 %}
         </td></tr><tr><td>
         {% set i=0 %}

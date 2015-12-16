@@ -122,9 +122,9 @@ class PdoBourses
 
     public function rechercherEntreprise($rech)
     {
-        $req="select * from action where company like '".$rech."'";
+        $req="select * from action where company like '%".$rech."%'";
         $res=PdoBourses::$monPdo->query($req);
-        $res->fetchAll();
+        $res=$res->fetchAll();
         return $res;
     }
 
