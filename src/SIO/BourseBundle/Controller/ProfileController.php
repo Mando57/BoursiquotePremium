@@ -49,9 +49,7 @@ class ProfileController extends Controller
             return new RedirectResponse($url);
 
 
-        }
-        else
-        {
+        }else{
             if($request->request->has('Connexion'))
                 {
                     $identifiant = $request->get('login');
