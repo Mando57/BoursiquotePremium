@@ -21,6 +21,6 @@ bourse_deconnexion:
         defaults: { _controller: BourseBundle:Profile:Deconnection }    defaults: { _controller: BourseBundle:Profile:connection }
 
 
-la_fleur_symfony_retirerPanier:
+bourse_entreprise:
     path: /Entreprise/{id}
     defaults: { _controller: LaFleurSymfonyBundle:Entreprise:voirEntreprise}
