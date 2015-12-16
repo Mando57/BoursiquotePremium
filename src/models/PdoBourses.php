@@ -105,7 +105,6 @@ class PdoBourses
     public function getFav()
     {
         $session=new Session();
-        $session->
         //$session->start();
         $req='select company,ticker from favoris as f inner join action as a on a.idaction=f.idaction where f.id='.$session->get('userId');
 
