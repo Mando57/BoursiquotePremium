@@ -44,37 +44,40 @@ class ProfileController extends Controller
         $session= new Session;
         if ($session->has('logged')) 
         {
+
             $url=$this->get('router')->generate('bourse_profile');
             return new RedirectResponse($url);
+
+
         }
         else
         {
-
             if($request->request->has('Connexion'))
-            {
-                $identifiant = $request->get('login');
-                $pwd= $request->get('mdp');
-                $pdo = models\PdoBourses::getPdoBourse();
-                $try=$pdo->checkClient($identifiant, $pwd);
-
-                if($try['logged']==true)
                 {
+                    $identifiant = $request->get('login');
+                    $pwd= $request->get('mdp');
+                    $pdo = models\PdoBourses::getPdoBourse();
+                    $try=$pdo->checkClient($identifiant, $pwd);
+
+                    if($try['logged']==true)
+                    {
 
 
-                    $session->set('logged',true);
-                    $session->set('userId',$try['id']);
-                    $session->set('layout',1);
-                    $url=$this->get('router')->generate('bourse_profile');
-                    return new RedirectResponse($url);
-                }
-                else
-                {
-                    $this->get('session')->getFlashBag()->add('notice', 'Erreur identifiants! ');
-                    return $this->render ('BourseBundle:Profile:connection.html.twig');
-                }
+                        $session->set('logged',true);
+                        $session->set('userId',$try['id']);
+                        $session->set('layout',1);
+                        $url=$this->get('router')->generate('bourse_profile');
+                        return new RedirectResponse($url);
+                    }
+                    else
+                    {
+                        $this->get('session')->getFlashBag()->add('notice', 'Erreur identifiants! ');
+                        return $this->render ('BourseBundle:Profile:connection.html.twig');
+                    }
             }
-
         }
+
+
 
         return $this->render ('BourseBundle:Profile:connection.html.twig');
     }
