@@ -133,8 +133,9 @@ tr{
 
 }
 
-td
+#graphiques td
 {
+	max-width: 250px;
 	border-left: 15px solid #FFFFFF;
 	border-right: 150px solid #FFFFFF;
 	border-bottom: 30px solid #FFFFFF;
