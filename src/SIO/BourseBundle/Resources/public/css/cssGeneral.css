@@ -99,7 +99,8 @@ fieldset {
    width:95%;
 }
 
-#bandeau {
+#bandeau 
+{
 
 }
 
@@ -110,7 +111,8 @@ margin-right: 30%;
 }
 
 
-#contenu{
+#contenu
+{
 
 }
 
@@ -157,8 +159,6 @@ margin-right: 30%;
 
 #graphiques
 {
-
-
 }
 
 tr{
@@ -171,7 +171,7 @@ tr{
 	min-width: 200px;
 	max-width: 200px;
 	border-left: 15px solid #FFFFFF;
-	border-right: 200px solid #FFFFFF;
+	border-right: 150px solid #FFFFFF;
 	border-bottom: 60px solid #FFFFFF;
 
 }
@@ -267,6 +267,23 @@ text-align: center;
 	width: 300px;
 	font-size: 20px;
 	height: 30px;
+}
+
+
+#tablerecherche
+{
+	margin-left: 50px;
+	border-collapse: collapse;
+	border: 2px solid black;
+	
+
+}
+
+#tablerecherche td
+{
+	min-width: 200px;
+	max-width: 600px;
+	padding: 7px;
 }
 
 #cred
