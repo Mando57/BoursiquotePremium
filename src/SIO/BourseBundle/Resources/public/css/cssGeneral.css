@@ -11,7 +11,10 @@ background:#0099FF;
 }
 #bt-deco{
 	text-align: center;
-	width: 10%;
+	cursor: pointer;
+	font-family: Courier New;
+	font-size: 1vmax;
+	width: 11%;
 	height: 4%;
 	margin-left: 87%;
 	margin-top: -11%;
@@ -22,12 +25,11 @@ background:#0099FF;
 	background-image: linear-gradient(to bottom, #3498db, #2980b9);
 	-webkit-border-radius: 15%;
 	-moz-border-radius: 15%;
-	border-radius: 15px;
-	font-size: 15px;
-	padding: 10px 20px 10px 20px;
+	border-radius: 4px;
 	border: solid #1f628d 2px;
 	text-decoration: none;
 }
+
 #bt-deco:hover {
 	background: #3cb0fd;
 	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
@@ -121,8 +123,7 @@ margin-right: 30%;
 
 #graphiques
 {
-	/* faut qui soit plus beau psk la il est grave moche ... et trop petit */
-	/* faire espacer les TD ...?*/
+
 
 }
 
@@ -131,8 +132,9 @@ tr{
 
 }
 
-td
+#graphiques td
 {
+	max-width: 250px;
 	border-left: 15px solid #FFFFFF;
 	border-right: 150px solid #FFFFFF;
 	border-bottom: 30px solid #FFFFFF;
@@ -202,13 +204,14 @@ margin-top: 1.2%;
 margin-left: 1%;
 border-radius: 20px 1px 20px 1px;
 background-color: #FFFFFF;
-width: 97%;
+width: 97.5%;
 padding-bottom: 1%;
 }
 
 #pied
 {
 margin-left: auto;
+margin-top: 25px;
 margin-right: auto;
 border-radius: 15px 1px 15px 1px;
 background-color: #FFFFFF;
