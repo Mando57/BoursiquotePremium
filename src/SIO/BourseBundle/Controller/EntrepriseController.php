@@ -35,15 +35,12 @@ class EntrepriseController extends Controller
             $data = $query->historicalQuote($entreprise[0]['ticker'], '2015-12-15', '2015-12-16', 'daily')->get();
 
             $test=array('test'=>'valdetst');
-            dump($data);
             $entreprise[0]['date']=$data[0]['Date'];
             $entreprise[0]['open']=$data[0]['Open'];
             $entreprise[0]['high']=$data[0]['High'];
             $entreprise[0]['low']=$data[0]['Low'];
             $entreprise[0]['close']=$data[0]['Close'];
             $entreprise[0]['volume']=$data[0]['Volume'];
-
-            dump($entreprise);
 
 
             return $this->render('BourseBundle:Entreprise:focusEntreprise.html.twig',array('entreprise'=>$entreprise[0]));
@@ -57,8 +54,6 @@ class EntrepriseController extends Controller
     {
     	$pdo=models\PdoBourses::getPdoBourse();
     	$entreprises=$pdo->rechercherEntreprise($REQUEST->get('recherche'));
-    	dump($entreprises);
-
 
 
     	return $this->render ('BourseBundle:Entreprise:recherche.html.twig', array('entreprises'=>$entreprises));
