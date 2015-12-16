@@ -31,7 +31,7 @@
 <div id="conteneur">
     {% for flashMessage in app.session.flashbag.get('notice') %}
         <div class='erreur'>
-            {{ flashMessage }}
+             {{ flashMessage }}
         </div>
     {% endfor %}
     <div id="conn">
@@ -39,9 +39,10 @@
         <form name="form1" method="POST" action ="">
             <table border="0" align="center" cellspacing="2" cellpadding="2">
 
-                <p>Mail : <br> <input type="text" name="login" required="Champ vide!" /></p>
-                <p>Mot de passe : <br> <input type="password" name="mdp" required="Champ vide!" /></p>
-                <input type='submit' name='Connexion'/>
+                <p>Mail : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="login" required="Champ vide!" /></p>
+                <p>Mot de passe : &nbsp;&nbsp; <input type="password" name="mdp" required="Champ vide!" /></p>
+                <br>
+                <input id="bt-co" type='submit' name='Connexion'/>
 
         </form>
 
@@ -49,6 +50,8 @@
 
 
 </div>
+<br>
+<br>
 <br>
 <div id="pied"> Copyright _ BourSIQoute _ 2016 </br> <div id="cred"> powered by symfony 2</div>  </div>
 </body>

@@ -53,5 +53,16 @@ class EntrepriseController extends Controller
             return $this->redirectToRoute('bourse_connexion');
         }
     }
+    public function rechercherAction(Request $REQUEST)
+    {
+    	$pdo=models\PdoBourses::getPdoBourse();
+    	$entreprises=$pdo->rechercherEntreprise($REQUEST->get('recherche'));
+
+
+
+    	return $this->render ('BourseBundle:Entreprise:recherche.html.twig', array('resultas'=>$entreprises));
+    }
+
+
 
 }
