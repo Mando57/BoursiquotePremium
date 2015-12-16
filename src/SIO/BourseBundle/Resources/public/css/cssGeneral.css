@@ -155,9 +155,10 @@ margin-right: 30%;
 }
 
 
-#graphiques
+#graphiques p
 {
-
+	font-size: 20px;
+	border-style: groove;
 
 }
 
@@ -173,13 +174,30 @@ tr{
 	border-left: 15px solid #FFFFFF;
 	border-right: 150px solid #FFFFFF;
 	border-bottom: 60px solid #FFFFFF;
+	text-align: center;
 
 }
+
+#info{
+	width: 30px;
+	height: auto;
+}
+
+#info2{
+	position: absolute;
+	font-family: Comic sans MS;
+	font-size: 18px;
+	text-decoration: none;
+}
+#info2:hover{
+	border-bottom: 1px solid darkorange;
+}
+
 #p1{
 	padding-top: 1%;
 	margin-left: 2%;
 	text-decoration: underline;
-	font-size: 132%;
+	font-size: 200%;
 }
 /*
 #p1{
