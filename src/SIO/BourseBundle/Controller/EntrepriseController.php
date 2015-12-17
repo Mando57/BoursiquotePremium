@@ -59,6 +59,21 @@ class EntrepriseController extends Controller
     	return $this->render ('BourseBundle:Entreprise:recherche.html.twig', array('entreprises'=>$entreprises));
     }
 
+    public function secteursAction(){
+        $pdo=models\PdoBourses::getPdoBourse();
 
+        $lesActions = $pdo->getAllActions();
+        $query = new YahooFinanceQuery();
+        foreach($lesActions as $uneAction){
+            $code = $uneAction['ticker'];
+            $data = $query->stockInfo($code)->get();
+            if($data != null) {
+                $leSecteur = $data['Sector'];
+                $pdo->affecterSecteur($code, $leSecteur);
+            }
+            //break;
+        }
+        return $this->render('BourseBundle:Entreprise:focusEntreprise.html.twig');
+    }
 
 }

@@ -98,5 +98,20 @@ class ProfileController extends Controller
         return $this->render ('BourseBundle:Profile:analyse.html.twig');
     }
 
+    public function inscriptionAction(Request $request)
+    {
+        if ($request->request->has('inscription'))
+        {
+        $request->get('prenom');
+            $request->get('nom');
+            $request->get('identifiant');
+            $request->get('mdp');
+
+
+
+        }
+
+        return $this->render('BourseBundle:Profile:inscription.html.twig');
+    }
 }
 

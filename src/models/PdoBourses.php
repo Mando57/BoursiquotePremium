@@ -128,7 +128,24 @@ class PdoBourses
         return $res;
     }
 
+    public function getAllActions()
+    {
+        $req="select * from action where pays like '%FRANCE%' and ticker not in (select codetitre from secteur)";
+        $res=PdoBourses::$monPdo->query($req);
+        $resu = $res->fetchAll();
+        return $resu;
+    }
 
+    public function affecterSecteur($code, $secteur){
+        $insert=("insert into secteur(codeTitre, secteurLib) values ('$code','$secteur') ");
+        $res=PdoBourses::$monPdo->exec($insert);
+    }
 
+    public function isInList($code){
+        $req="select count(*) as nb from secteur where codeTitre ='$code'";
+        $res=PdoBourses::$monPdo->query($req);
+        $resu = $res->fetch();
+        return $resu['nb'];
+    }
 }
 ?>
