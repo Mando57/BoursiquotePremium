@@ -118,7 +118,7 @@ class ProfileController extends Controller
             $try=$pdo->inscription($aa);
         }
 
-        return $this->render('BourseBundle:Profile:inscription.html.twig');
+        return $this->render('BourseBundle:Profile:connection.html.twig');
     }
     public function inscrireAction()
     {
