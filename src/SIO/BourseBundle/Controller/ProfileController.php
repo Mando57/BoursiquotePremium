@@ -93,5 +93,10 @@ class ProfileController extends Controller
         return $this->redirectToRoute('bourse_connexion');
     }
 
+    public function analyseAction()
+    {
+        return $this->render ('BourseBundle:Profile:analyse.html.twig');
+    }
+
 }
 

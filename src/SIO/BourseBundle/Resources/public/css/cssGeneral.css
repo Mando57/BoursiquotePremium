@@ -272,7 +272,12 @@ text-align: center;
 
 #cred
 {
-	font-size: x-small;
+	font-size: 15px;
 	margin-top: 1%;
 	padding-bottom: 1%;
+}
+
+#PageEnConstruction{
+	width: 100%;
+	height: auto;
 }
