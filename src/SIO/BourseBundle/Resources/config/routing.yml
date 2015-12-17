@@ -35,6 +35,12 @@ bourse_entreprise:
 bourse_recherche:
     path: /recherche
     defaults: { _controller: BourseBundle:Entreprise:rechercher}
+
+bourse_analyse:
+    path: /analyse
+    defaults: { _controller: BourseBundle:Profile:analyse}
+
+    defaults: { _controller: BourseBundle:Entreprise:rechercher}
 generer_secteurs:
     path: /secteurs
     defaults: { _controller: BourseBundle:Entreprise:secteurs}
