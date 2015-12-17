@@ -95,7 +95,14 @@ class ProfileController extends Controller
 
     public function analyseAction()
     {
-        return $this->render ('BourseBundle:Profile:analyse.html.twig');
+        $session = new Session();
+        if($session->has('logged')) {
+            return $this->render ('BourseBundle:Profile:analyse.html.twig');
+        }else
+        {
+            return $this->redirectToRoute('bourse_connexion');
+        }
+
     }
 
     public function validerinscriptionAction(Request $request)
