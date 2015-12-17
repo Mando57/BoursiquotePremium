@@ -139,7 +139,8 @@ margin-right: 30%;
 	-moz-border-radius: 15%;
 	border-radius: 3px;
 	font-family: Courier New;
-	font-size: 1vmax;
+
+	font-size: 17px;
 	padding: 10px 15px 10px 15px;
 	border: solid #1f628d 2px;
 	text-decoration: none;
@@ -280,4 +281,30 @@ text-align: center;
 #PageEnConstruction{
 	width: 100%;
 	height: auto;
+}
+
+#add{
+	position: absolute;
+	font-family: Comic sans MS;
+	font-size: 18px;
+	text-decoration: none;
+}
+#add:hover{
+	border-bottom: 1px solid #33CCCC;
+}
+
+#suppr{
+	position: absolute;
+	font-family: Comic sans MS;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+#suppr:hover{
+	border-bottom: 1px solid #CC0000;
+}
+
+#lol{
+	font-family: Comic sans MS;
+	font-size: 18px;
 }

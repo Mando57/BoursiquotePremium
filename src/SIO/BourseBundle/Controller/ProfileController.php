@@ -69,7 +69,7 @@ class ProfileController extends Controller
                     }
                     else
                     {
-                        $this->get('session')->getFlashBag()->add('notice', 'Mot de passe ou identifiant faux! ');
+                        $this->get('session')->getFlashBag()->add('notice', 'Mot de passe ou identifiant incorrect !');
                         return $this->render ('BourseBundle:Profile:connection.html.twig');
                     }
             }
