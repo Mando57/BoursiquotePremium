@@ -159,23 +159,23 @@ class PdoBourses
         $req="select count(*) as nb from favoris inner join action on action.idaction=favoris.idaction where id=".$session->get('userId')." and ticker like '$ticker'";
         $res=PdoBourses::$monPdo->query($req);
         $res=$res->fetch();
-        dump($res);
+
         $req2="select *  from action  where ticker like '$ticker'";
         $res2=PdoBourses::$monPdo->query($req2);
         $res2=$res2->fetch();
-        dump($res2);
+
         if(isset($res2['idaction'])) {
             if ($res['nb'] == 0) {
 
                 $insert = 'insert into favoris values(' . $session->get('userId') . ',' . $res2['idaction'].')';
                 PdoBourses::$monPdo->exec($insert);
-                dump($insert);
+
 
 
             } else {
                 $insert = "delete from favoris where id=" . $session->get('userId') . " and idaction=" . $res2['idaction'];
                 PdoBourses::$monPdo->exec($insert);
-                dump($insert);
+
 
             }
         }
@@ -184,7 +184,7 @@ class PdoBourses
     public function inscription($array)
     {
         $req="insert into client values(null,'".$array[1]."','".$array[2]."','".$array[3]."','".$array[4]."')";
-        dump($req);
+
         //$res=PdoBourses::$monPdo->query($req);        
     }
 
