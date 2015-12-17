@@ -153,5 +153,13 @@ class PdoBourses
         $resu = $res->fetch();
         return $resu['nb'];
     }
+
+    public function inscription($array)
+    {
+        $req="insert into client values(null,'".$array[1]."','".$array[2]."','".$array[3]."','".$array[4]."')";
+        var_dump($req);
+        //$res=PdoBourses::$monPdo->query($req);        
+    }
+
 }
 ?>

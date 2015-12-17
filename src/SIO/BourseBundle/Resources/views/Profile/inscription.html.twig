@@ -1,12 +1,27 @@
-<form name="insertion"  action={{ path: }} method="POST">
+{% extends "BourseBundle:layout:layout.html.twig" %}
+
+{% block title %} {{ parent() }} S'inscrire{% endblock %}
+
+
+{% block lateral %}{{ parent }}
+
+{% endblock %}
+
+{% block content %}{{ parent }}
 
 
 
-            <p> Prenom: <br> <input type="text" name="Prenom" required="Champ vide!" /></p>
-            <p>Nom :<br> <input type="text" name="nom"required="Champ vide!"  /></p>
-            <p>identifiant :<br> <input type="text" name="identifiant"required="Champ vide!"  /></p>
-            <p>motde passe :<br> <input type="text" name="mdp"required="Champ vide!"  /></p>
-           <input type="submit"  name="inscription"  value="M'inscrire"/>
-
+<form name="insertion"  action="{{ path('bourse_inscription')}}" method="POST">
+<div id="blockinscr">
+    <p> Prenom: <br> <input type="text" name="prenom" required="Champ vide!" /></p>
+    <p>Nom :<br> <input type="text" name="nom"required="Champ vide!"  /></p>
+    <p>Identifiant :<br> <input type="text" name="identifiant"required="Champ vide!"  /></p>
+    <p>Mot de passe :<br> <input type="password" name="mdp"required="Champ vide!"  /></p>
+    <input type="submit"  name="inscription"  value="M'inscrire"/>
+</div>
 
 </form>
+
+
+
+{% endblock %}

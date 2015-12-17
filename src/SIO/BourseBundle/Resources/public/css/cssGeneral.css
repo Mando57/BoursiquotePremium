@@ -69,6 +69,13 @@ background:#0099FF;
 	text-decoration: none;
 }
 
+
+#blockinscr
+{
+	margin-left: 50px;
+	padding-top: 25px;
+}
+
 #recherche{
 	margin-left: 70%;
 	margin-top: -1.5%;
