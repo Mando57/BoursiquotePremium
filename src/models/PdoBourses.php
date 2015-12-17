@@ -125,7 +125,13 @@ class PdoBourses
         $req="select * from action where company like '%".$rech."%'";
         $res=PdoBourses::$monPdo->query($req);
         $res=$res->fetchAll();
-        return $res;
+        $req2="select * from action inner join favoris on action.idaction=favoris.idaction where company like '%$rech%'";
+        $res2=PdoBourses::$monPdo->query($req2);
+        $res2=$res2->fetchAll();
+        $tab=array();
+        $tab[]=$res;
+        $tab[]=$res2;
+        return $tab;
     }
 
     public function getAllActions()
