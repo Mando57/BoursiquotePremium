@@ -57,6 +57,24 @@
     
 </div>
 <div id="pied"> Copyright _ BourSIQoute _ 2016 </br> <div id="cred"> powered by symfony 2</div>  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $('#ajoutFav').click(function(event) {
+        var ticker=$(this).val();
+         $.ajax({
+         url: "{{  path('bourse_favoris',{'ticker':fav.ticker}) }}",
+         type : 'POST',
+         data : 'ticker=' + ticker,
+         dataType:'html',
+         success : function(code_html, statut){
+
+
+         },
+         error:function(resultat,staut,erreur){
+         }
+         });
+    });
+</script>
 </body>
 
 </html>

@@ -89,7 +89,7 @@ class PdoBourses
         $req="select id,count(*) as nbr from client where identifiant='".$identifiant."' and pwd='".$pwd."'";
         $res = PdoBourses::$monPdo->query($req);
         $logged=$res->fetch();
-        dump($req);
+
         if($logged['nbr']==1)
         {
             $LoginConfirmation['logged']=true;
@@ -152,6 +152,33 @@ class PdoBourses
         $res=PdoBourses::$monPdo->query($req);
         $resu = $res->fetch();
         return $resu['nb'];
+    }
+    public function setFavoris($ticker)
+    {
+        $session=new Session();
+        $req="select count(*) as nb from favoris inner join action on action.idaction=favoris.idaction where id=".$session->get('userId')." and ticker like '$ticker'";
+        $res=PdoBourses::$monPdo->query($req);
+        $res=$res->fetch();
+        dump($res);
+        $req2="select *  from action  where ticker like '$ticker'";
+        $res2=PdoBourses::$monPdo->query($req2);
+        $res2=$res2->fetch();
+        dump($res2);
+        if(isset($res2['idaction'])) {
+            if ($res['nb'] == 0) {
+
+                $insert = 'insert into favoris values(' . $session->get('userId') . ',' . $res2['idaction'].')';
+                PdoBourses::$monPdo->exec($insert);
+                dump($insert);
+
+
+            } else {
+                $insert = "delete from favoris where id=" . $session->get('userId') . " and idaction=" . $res2['idaction'];
+                PdoBourses::$monPdo->exec($insert);
+                dump($insert);
+
+            }
+        }
     }
 
     public function inscription($array)

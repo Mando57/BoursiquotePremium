@@ -126,5 +126,13 @@ class ProfileController extends Controller
 
 
 
+        return $this->render('BourseBundle:Profile:inscription.html.twig');
+    }
+    public function favorisAction($ticker)
+    {
+        $pdo= models\PdoBourses::getPdoBourse();
+        $pdo->setFavoris($ticker);
+        return $this->render('BourseBundle:Profile:blanc.html.twig');
+    }
 }
 
