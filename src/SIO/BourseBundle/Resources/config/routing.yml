@@ -14,15 +14,13 @@ bourse_tableau:
 bourse_connexion:
     path: /connection
     defaults: { _controller: BourseBundle:Profile:connection }
-
 bourse_inscription:
     path: /validerinscription
-    defaults: {_controller: BourseBundle:Profile:validerinscription }
+    defaults: { _controller: BourseBundle:Profile:validerinscription }
 
-
-bourse_validerinscription:
-    path: /validerinscription
-    defaults: {_controller: BourseBundle:Profile:inscription }
+bourse_inscrire:
+    path: /inscription
+    defaults: { _controller: BourseBundle:Profile:inscrire }
 
 bourse_deconnexion:
     path: /deconnection

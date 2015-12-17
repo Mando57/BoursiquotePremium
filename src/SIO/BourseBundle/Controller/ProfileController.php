@@ -105,20 +105,26 @@ class ProfileController extends Controller
 
     }
 
-    public function inscriptionAction(Request $request)
+    public function validerinscriptionAction(Request $request)
     {
         if ($request->request->has('inscription'))
         {
-        $request->get('prenom');
-            $request->get('nom');
-            $request->get('identifiant');
-            $request->get('mdp');
-
-
-
+            $aa[1] = $request->get('prenom');
+            $aa[2] = $request->get('nom');
+            $aa[3] = $request->get('identifiant');
+            $aa[4] = $request->get('mdp');
+            $pdo = models\PdoBourses::getPdoBourse();
+            $try=$pdo->inscription($aa);
         }
 
-        return $this->render('BourseBundle:Profile:inscription.html.twig');
+        return $this->render('BourseBundle:Profile:connection.html.twig');
     }
+    public function inscrireAction()
+    {
+        return $this->render ('BourseBundle:Profile:inscription.html.twig');
+    }
+
+
+
 }
 
