@@ -113,7 +113,6 @@ class ProfileController extends Controller
             $aa[2] = $request->get('nom');
             $aa[3] = $request->get('identifiant');
             $aa[4] = $request->get('mdp');
-            dump($aa);
             $pdo = models\PdoBourses::getPdoBourse();
             $try=$pdo->inscription($aa);
         }
