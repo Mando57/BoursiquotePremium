@@ -52,11 +52,35 @@ class EntrepriseController extends Controller
     }
     public function rechercherAction(Request $REQUEST)
     {
-    	$pdo=models\PdoBourses::getPdoBourse();
-    	$entreprises=$pdo->rechercherEntreprise($REQUEST->get('recherche'));
+        $session = new Session();
+        if($session->has('logged')) {
+            $pdo=models\PdoBourses::getPdoBourse();
+            $entreprises=$pdo->rechercherEntreprise($REQUEST->get('recherche'));
+            dump($entreprises);
+            if(!empty($entreprises[1]))
+            {
+                for($i=0;$i<count($entreprises[0]);$i++)
+                {
+                    for($z=0;$z<count($entreprises[1]);$z++)
+                    {
+                        if($entreprises[1][$z]['ticker']==$entreprises[0][$i]['ticker'])
+                        {
+                            $entreprises[0][$z]['favoris']=true;
 
+                        }else{
+                            $entreprises[0][$z]['favoris']=false;
 
-    	return $this->render ('BourseBundle:Entreprise:recherche.html.twig', array('entreprises'=>$entreprises));
+                        }
+                    }
+                }
+            }
+
+            return $this->render ('BourseBundle:Entreprise:recherche.html.twig', array('entreprises'=>$entreprises[0]));
+        }
+        else
+        {
+            return $this->redirectToRoute('bourse_connexion');
+        }
     }
 
     public function secteursAction(){

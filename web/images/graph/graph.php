@@ -58,7 +58,7 @@ if(isset($_GET['ent']))
         $graph->setDataPointSize(3);
         $graph->setGoalLineColor('blue');
 		$graph->setRange($min,$max);
-       $graph->createGraph();
+        $graph->createGraph();
 
 
 ?>
