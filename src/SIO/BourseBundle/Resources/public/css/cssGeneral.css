@@ -209,6 +209,11 @@ tr{
 	width: 30px;
 	height: auto;
 }
+.info{
+    width: 30px;
+    height: auto;
+}
+
 
 #info2{
 	position: absolute;

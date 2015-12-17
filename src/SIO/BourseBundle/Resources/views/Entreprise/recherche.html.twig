@@ -20,9 +20,9 @@
         <td> <img id="info" src={{ asset('images/info.png') }}>&nbsp; <a id="info2" href={{ path('bourse_entreprise', {'ticker':liste.ticker}) }} /> En savoir plus ... </a> </td>
         <td>
             {% if liste['favoris']==true %}
-                <input type='button' id='ajoutFav' value="{{ liste.ticker }}"/>
+                <input  type="image" id='ajoutFav' class='info' src={{ asset('images/suppr.png') }} value="{{ liste.ticker }}"/>
             {% else %}
-               <input type='button' id='ajoutFav' value="{{ liste.ticker }}"/>
+               <input  type="image" id='ajoutFav' class='info' src={{ asset('images/fav.png') }} value="{{ liste.ticker }}"/>
             {% endif %}
         </td>
     </tr>

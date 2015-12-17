@@ -62,9 +62,9 @@
     $('#ajoutFav').click(function(event) {
         var ticker=$(this).val();
          $.ajax({
-         url: "{{  path('bourse_favoris',{'ticker':fav.ticker}) }}",
-         type : 'POST',
-         data : 'ticker=' + ticker,
+         url: "{{  path('bourse_favoris') }}",
+             type : 'post',
+             data : 'ticker=' + ticker,
          dataType:'html',
          success : function(code_html, statut){
 
