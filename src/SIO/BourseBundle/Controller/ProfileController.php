@@ -31,7 +31,7 @@ class ProfileController extends Controller
                 $session->set($favoris['ticker'], $data2);
             }
 
-            return $this->render('BourseBundle:Default:TableauDeBord.html.twig', array('favoris'=>$fav));
+            return $this->render('BourseBundle:Profile:TableauDeBord.html.twig', array('favoris'=>$fav));
         }
         else
         {
@@ -109,12 +109,12 @@ class ProfileController extends Controller
     {
         if ($request->request->has('inscription'))
         {
-            $aa[1] = $request->get('prenom');
-            $aa[2] = $request->get('nom');
-            $aa[3] = $request->get('identifiant');
-            $aa[4] = $request->get('mdp');
+            $prenom = $request->get('prenom');
+            $nom = $request->get('nom');
+            $iden = $request->get('identifiant');
+            $mdp = $request->get('mdp');
             $pdo = models\PdoBourses::getPdoBourse();
-            $try=$pdo->inscription($aa);
+            $try=$pdo->inscription($prenom,$nom,$iden,$mdp);
         }
 
         return $this->render('BourseBundle:Profile:connection.html.twig');
@@ -133,6 +133,33 @@ class ProfileController extends Controller
         $pdo= models\PdoBourses::getPdoBourse();
         $pdo->setFavoris($ticker);
         return $this->render('BourseBundle:Profile:blanc.html.twig');
+    }
+
+    public function gererTableauAction(Request $request)
+    {
+
+
+        $session = new Session();
+        if($session->has('logged')) {
+            $pdo = models\PdoBourses::getPdoBourse();
+            dump('test');
+            if($request->request->has('rmfav'))
+            {
+                dump('test');
+                $pdo->remooveFav($request->get('rmfav'));
+            }
+
+            $pdo = models\PdoBourses::getPdoBourse();
+            $fav=$pdo->getFav();
+
+
+
+            return $this->render('BourseBundle:Profile:gererTableau.html.twig', array('favoris'=>$fav));
+        }
+        else
+        {
+            return $this->redirectToRoute('bourse_connexion');
+        }
     }
 }
 

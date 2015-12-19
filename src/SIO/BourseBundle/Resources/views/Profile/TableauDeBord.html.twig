@@ -1,0 +1,26 @@
+{% extends "BourseBundle:layout:layout.html.twig" %}
+
+
+{% block content %}{{ parent }}
+
+    <div id="conteneur">
+        <p id="p1"> Mes valeurs favorites </p>
+    <table id="graphiques" class><tr><td>
+
+    {% set i=0 %}
+    {% for fav in favoris %}
+        {% set i= i + 1 %}
+        <p> {{ fav.company }} </p>
+        <img id="g" src={{ asset('images/graph/graph.php?ent='~fav.ticker~'&&t='~fav.company ) }} /><br>
+                <img id="info" src={{ asset('images/info.png') }}>&nbsp; <a href={{ path('bourse_entreprise', {'ticker':fav.ticker}) }}>En savoir plus...</a>
+
+                {% if i==4 %}
+        </td></tr><tr><td>
+        {% set i=0 %}
+    {% else %}
+        </td><td>
+    {% endif %}
+    {% endfor %}
+    </td></tr></table>
+    </div>
+{% endblock %}

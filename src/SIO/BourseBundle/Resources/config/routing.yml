@@ -43,6 +43,11 @@ generer_secteurs:
     path: /secteurs
     defaults: { _controller: BourseBundle:Entreprise:secteurs}
 
+bourse_gererTableau:
+    path: /gererTableau
+    defaults: { _controller: BourseBundle:Profile:gererTableau}
+
 bourse_favoris:
     path: /favoris
     defaults: { _controller: BourseBundle:Profile:favoris}
+

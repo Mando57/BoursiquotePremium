@@ -19,10 +19,10 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class PdoBourses
 {
-    private static $serveur='mysql:host=172.18.204.105';
+    private static $serveur='mysql:host=127.0.0.1';
     private static $bdd='dbname=BSIQ';
     private static $user='root' ;
-    private static $mdp='yama2211' ;
+    private static $mdp='' ;
     private static $monPdo;
     private static $monPdoBourse = null;
 
@@ -106,7 +106,7 @@ class PdoBourses
     {
         $session=new Session();
         //$session->start();
-        $req='select company,ticker from favoris as f inner join action as a on a.idaction=f.idaction where f.id='.$session->get('userId');
+        $req='select * from favoris as f inner join action as a on a.idaction=f.idaction where f.id='.$session->get('userId');
 
         $res = PdoBourses::$monPdo->query($req);
         return $res->fetchAll();
@@ -181,12 +181,24 @@ class PdoBourses
         }
     }
 
-    public function inscription($array)
+    public function inscription($prenom,$nom,$iden,$mdp)
     {
-        $req="insert into client values(null,'".$array[1]."','".$array[2]."','".$array[3]."','".$array[4]."')";
+        $req="insert into client values(null,'".$prenom."','".$nom."','".$iden."','".$mdp."')";
+        $res=PdoBourses::$monPdo->exec($req);
 
-        //$res=PdoBourses::$monPdo->query($req);        
+
     }
+
+    public function remooveFav($ident)
+    {
+        $session=new Session();
+        $req="delete from favoris where id=". $session->get('userId')." and idaction=".$ident;
+        $res=PdoBourses::$monPdo->exec($req);
+        var_dump($req);
+
+
+    }
+
 
 }
 ?>
