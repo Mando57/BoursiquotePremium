@@ -1,52 +1,11 @@
-<html lang=fr>
-<head>
-    <title> {% block title %}
-            boursiquote :
-        {% endblock %}
-    </title>
-    <meta http-equiv="Content-Language" content="fr">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    {% stylesheets '@BourseBundle/Resources/public/css/cssGeneral.css' filter='cssrewrite' %}
-    <link href="{{ asset_url }}" rel="stylesheet" media="screen">
-    {% endstylesheets %}
-</head>
+{% extends "BourseBundle:layout:layout.html.twig" %}
 
-<script>
-    function R1600()
-    {
-        var width = 1600;
-        document.body.style.zoom = screen.width/1600;
-    }
-</script>
-
-<body onload="R1600();">
-
-<div id="bandeau">
-    <!-- Images En-t�te -->
-    <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->
-    <img id="banniere" src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>
-</div>
-
-<!--  Menu haut-->
-<ul id="menu">
-    <li><a href={{ path('bourse_tableau') }}> Tableau de bord </a></li>       {# les liens sont a remettre via le routing #}
-    <li><a href= {{ path('bourse_analyse') }} > Analyse du marché</a></li>
-    <li><a href={#  {{ path('gerertableau') }}  #}> Gerer tableau de bord</a></li>
+{% block title %} {{ parent() }}{% endblock %}
 
 
-</ul>
-<form method="POST" action={{ path('bourse_recherche') }}>
-    <div id="recherche">
-        Recherche : <input type="text" name="recherche"> <input type='submit' value="OK" name='OK' />
-    </div>
-</form>
+{% block content %}{{ parent }}
 
 
-<div id="conteneur">
 
-    <img id="PageEnConstruction" src={{ asset('images/pec.png') }} alt="pec" />
-
-</div>
-
-<div id="pied"> Copyright _ BourSIQoute _ 2016 </br> <div id="cred"> powered by symfony 2</div>  </div>
-</body>
+<img id="PageEnConstruction" src={{ asset('images/pec.png') }} alt="pec" />
+{% endblock %}
