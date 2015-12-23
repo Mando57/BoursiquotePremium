@@ -1,17 +1,48 @@
+<html lang=fr>
+<head>
+    <title> {% block title %}
+            boursiquote :
+        {% endblock %}
+    </title>
+    <meta http-equiv="Content-Language" content="fr">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {% stylesheets '@BourseBundle/Resources/public/css/cssGeneral.css' filter='cssrewrite' %}
+    <link href="{{ asset_url }}" rel="stylesheet" media="screen">
+    {% endstylesheets %}
+</head>
 
+<script>
+    function R1600()
+    {
+        var width = 1600;
+        document.body.style.zoom = screen.width/1600;
+    }
+</script>
 
+<body onload="R1600();">
 
-<form name="insertion"  action="{{ path('bourse_inscription')}}" method="POST">
-<div id="blockinscr">
-    <p> Prenom: <br> <input type="text" name="prenom" required="Champ vide!" /></p>
-    <p>Nom :<br> <input type="text" name="nom"required="Champ vide!"  /></p>
-    <p>Identifiant :<br> <input type="text" name="identifiant"required="Champ vide!"  /></p>
-    <p>Mot de passe :<br> <input type="password" name="mdp"required="Champ vide!"  /></p>
-    <input type="submit"  name="inscription"  value="M'inscrire"/>
+<div id="bandeau">
+    <!-- Images En-t?te -->
+    <!--<img src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/>-->
+    <img id="banniere" src={{ asset('images/banniere.png') }} alt="Lentete" title="entetebourseimg"/>
 </div>
 
-</form>
+<div id="conteneur">
 
+    <form name="insertion"  action="{{ path('bourse_inscription')}}" method="POST">
 
+        <div id="blockinscr">
+            <p1 id="p1">Inscription</p1>
+            <p> Prenom: <input type="text" name="prenom" required="Champ vide!" /></p>
+            <p>Nom : <input type="text" name="nom"required="Champ vide!"  /></p>
+            <p>Identifiant : <input type="text" name="identifiant"required="Champ vide!"  /></p>
+            <p>Mot de passe : <input type="password" name="mdp"required="Champ vide!"  /></p>
+            <input type="submit"  name="inscription"  value="M'inscrire"/>
+        </div>
 
-{% endblock %}
+    </form>
+
+</div>
+
+<div id="pied"> Copyright _ BourSIQoute _ 2016 </br> <div id="cred"> powered by symfony 2</div>  </div>
+</body>
