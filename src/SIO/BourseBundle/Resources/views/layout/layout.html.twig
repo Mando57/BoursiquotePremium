@@ -39,7 +39,7 @@
 </ul>
 <form method="POST" action={{ path('bourse_recherche') }}>
 <div id="recherche">
-    Recherche : <input type="text" name="recherche" REQUIRED/> <input type='button' value="OK" name='OK' />
+    Recherche : <input type="text" name="recherche" REQUIRED/> <input type='submit' value="OK" name='OK' />
   </div>
 </form>
 
@@ -73,6 +73,11 @@
          error:function(resultat,staut,erreur){
          }
          });
+        if($(this).attr('src')=='/dmp/web/images/fav.png') {
+            $(this).attr('src','{{ asset('images/suppr.png') }}');
+        }else{
+            $(this).attr('src','{{ asset('images/fav.png')}}');
+        }
     });
 </script>
 </body>
