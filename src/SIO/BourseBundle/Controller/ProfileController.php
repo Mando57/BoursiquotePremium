@@ -20,6 +20,7 @@ class ProfileController extends Controller
             $fav=$pdo->getFav();
 
             $query = new YahooFinanceQuery;
+
             foreach($fav as $favoris) {
                 $data = $query->historicalQuote($favoris['ticker'], date('Y-m-d', strtotime("-30 days")) ,  date("Y-m-d"), 'daily')->get();
                 $data2 = array();
@@ -85,7 +86,7 @@ class ProfileController extends Controller
         if($request->request->has('Bt-deco'))
         {
             $session= new Session();
-            $session->clear();
+            //$session->clear();
 
         }
 
@@ -142,10 +143,10 @@ class ProfileController extends Controller
         $session = new Session();
         if($session->has('logged')) {
             $pdo = models\PdoBourses::getPdoBourse();
-            dump('test');
+
             if($request->request->has('rmfav'))
             {
-                dump('test');
+
                 $pdo->remooveFav($request->get('rmfav'));
             }
 
@@ -155,6 +156,25 @@ class ProfileController extends Controller
 
 
             return $this->render('BourseBundle:Profile:gererTableau.html.twig', array('favoris'=>$fav));
+        }
+        else
+        {
+            return $this->redirectToRoute('bourse_connexion');
+        }
+    }
+
+        public function voirallPorteFeuillesAction()
+    {
+        $session = new Session();
+        $session->set('test',3);
+
+        if($session->has('logged'))
+        {
+            $pdo = models\PdoBourses::getPdoBourse();
+            $portefeuille = $pdo->getPF();
+
+
+            return $this->render('BourseBundle:Profile:portefeuille.html.twig', array('portefeuille'=>$portefeuille));
         }
         else
         {

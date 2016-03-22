@@ -19,10 +19,10 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class PdoBourses
 {
-    private static $serveur='mysql:host=127.0.0.1';
+    private static $serveur='mysql:host=172.18.204.105';
     private static $bdd='dbname=BSIQ';
     private static $user='root' ;
-    private static $mdp='' ;
+    private static $mdp='yama2211' ;
     private static $monPdo;
     private static $monPdoBourse = null;
 
@@ -42,7 +42,7 @@ class PdoBourses
      * Fonction statique qui crée l'unique instance de la classe
      *
      * Appel : $instancePdoBourse = PdoBourse::getPdoBourse();
-     * @return l'unique objet de la classe PdoBourse
+     * @return l'unique objet de l<a classe PdoBourse
      */
     public  static function getPdoBourse()
     {
@@ -194,11 +194,29 @@ class PdoBourses
         $session=new Session();
         $req="delete from favoris where id=". $session->get('userId')." and idaction=".$ident;
         $res=PdoBourses::$monPdo->exec($req);
-        var_dump($req);
+
 
 
     }
 
+
+    public function getPF()
+    {
+        $session=new Session();
+        $req='select * from Portefeuille where idc='.$session->get('userId');
+
+        $res=PdoBourses::$monPdo->query($req);
+        return $res->fetchAll();
+    }
+
+    public function getOpebyPfF($idp)
+    {
+        $session=new Session();
+        $req='select * from operation where idc='.$session->get('userId').' idp='.$idp;
+
+        $res=PdoBourses::$monPdo->query($req);
+        return $res->fetchAll();
+    }
 
 }
 ?>

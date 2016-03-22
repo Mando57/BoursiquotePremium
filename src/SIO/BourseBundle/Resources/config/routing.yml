@@ -51,3 +51,7 @@ bourse_favoris:
     path: /favoris
     defaults: { _controller: BourseBundle:Profile:favoris}
 
+bourse_portefeuille:
+    path: /portefeuille
+    defaults: { _controller: BourseBundle:Profile:voirallPorteFeuilles}
+
