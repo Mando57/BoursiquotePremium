@@ -1,0 +1,25 @@
+{% extends "BourseBundle:layout:layout.html.twig" %}
+
+
+{% block content %}{{ parent }}
+
+    <div id="conteneur">
+        <p id="p1"> Mes valeurs favorites </p>
+        <from action="" method="">
+    <select name='pf' style="width:15%">
+        {% for ent in portefeuille %}
+
+            <option>{{ ent.libelle}}</option>
+
+
+        {% endfor %}
+    </select>
+    <input type="submit"  />
+    </from>
+
+
+
+
+
+    </div>
+{% endblock %}
