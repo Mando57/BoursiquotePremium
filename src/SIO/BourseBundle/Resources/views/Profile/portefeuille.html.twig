@@ -4,18 +4,18 @@
 {% block content %}{{ parent }}
 
     <div id="conteneur">
-        <p id="p1"> Mes valeurs favorites </p>
-        <from action="" method="">
+        <p id="p1"> Mes Portefueilles </p>
+        <form action="{{ path('bourse_operation') }}" method="POST">
     <select name='pf' style="width:15%">
         {% for ent in portefeuille %}
 
-            <option>{{ ent.libelle}}</option>
+            <option value="{{ ent.id }}">{{ ent.libelle}}</option>
 
 
         {% endfor %}
     </select>
-    <input type="submit"  />
-    </from>
+    <input type="submit" name="port" />
+    </form>
 
 
 

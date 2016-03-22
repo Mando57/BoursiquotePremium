@@ -38,7 +38,6 @@ bourse_analyse:
     path: /analyse
     defaults: { _controller: BourseBundle:Profile:analyse}
 
-    defaults: { _controller: BourseBundle:Entreprise:rechercher}
 generer_secteurs:
     path: /secteurs
     defaults: { _controller: BourseBundle:Entreprise:secteurs}
@@ -54,4 +53,8 @@ bourse_favoris:
 bourse_portefeuille:
     path: /portefeuille
     defaults: { _controller: BourseBundle:Profile:voirallPorteFeuilles}
+
+bourse_operation:
+    path: /operation
+    defaults: { _controller: BourseBundle:Profile:voirOperation}
 

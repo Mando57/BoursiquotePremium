@@ -1,0 +1,27 @@
+{% extends "BourseBundle:layout:layout.html.twig" %}
+
+
+{% block content %}{{ parent }}
+
+    <div id="conteneur">
+        <p id="p1"> Mes operation du portefeuille : {{ portefeuille.libelle }}  </p>
+
+        solde:{{ portefeuille.solde }} ({{ portefeuille.solde*100/portefeuille.solde_init-100 }})
+        <hr/>
+
+
+        {% for ent in operations %}
+
+           prix:{{ ent.prix}} quantite:{{ ent.quantite }} frais:{{ ent.frais }}
+
+
+        {% endfor %}
+
+
+
+
+
+
+
+    </div>
+{% endblock %}

@@ -163,10 +163,10 @@ class ProfileController extends Controller
         }
     }
 
-        public function voirallPorteFeuillesAction()
+    public function voirallPorteFeuillesAction()
     {
         $session = new Session();
-        $session->set('test',3);
+
 
         if($session->has('logged'))
         {
@@ -175,6 +175,37 @@ class ProfileController extends Controller
 
 
             return $this->render('BourseBundle:Profile:portefeuille.html.twig', array('portefeuille'=>$portefeuille));
+        }
+        else
+        {
+            return $this->redirectToRoute('bourse_connexion');
+        }
+    }
+
+    public function voirOperationAction(Request $request)
+    {
+        $session = new Session();
+
+
+        if($session->has('logged'))
+        {
+            if($request->request->has('port'))
+            {
+
+
+                $pdo = models\PdoBourses::getPdoBourse();
+                $portefeuille = $pdo->getOpeById($request->get('pf'));
+
+
+                return $this->render('BourseBundle:Profile:operation.html.twig', array('portefeuille'=>$portefeuille[0],'operations'=>$portefeuille[1]));
+
+            }else{
+
+                return $this->redirectToRoute('bourse_portefeuille');
+
+            }
+
+
         }
         else
         {

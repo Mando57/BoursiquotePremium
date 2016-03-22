@@ -209,14 +209,23 @@ class PdoBourses
         return $res->fetchAll();
     }
 
-    public function getOpebyPfF($idp)
+    public function getOpeById($idp)
     {
-        $session=new Session();
-        $req='select * from operation where idc='.$session->get('userId').' idp='.$idp;
+
+        $req='select * from operation where idp='.$idp;
 
         $res=PdoBourses::$monPdo->query($req);
-        return $res->fetchAll();
+        $return=array();
+        $return[1]=$res->fetchAll();
+
+        $req='select * from Portefeuille where id='.$idp;
+        $res=PdoBourses::$monPdo->query($req);
+        $return[0]=$res->fetch();
+
+
+        return $return;
     }
+
 
 }
 ?>
