@@ -6,17 +6,20 @@
     <div id="conteneur">
         <p id="p1"> Mes operation du portefeuille : {{ portefeuille.libelle }}  </p>
 
-        solde:{{ portefeuille.solde }} ({{ portefeuille.solde*100/portefeuille.solde_init-100 }})
+        solde:{{ soldeactu }} ({{ (soldeactu*100/portefeuille.solde_init-100)|round(3, 'floor') }}%)
         <hr/>
 
-
+        <table border="0">
         {% for ent in operations %}
 
-           prix:{{ ent.prix}} quantite:{{ ent.quantite }} frais:{{ ent.frais }}
-
-
+            <tr class="trope">
+                <td>
+                    {{ ent.company }} - PRU:{{ ent.prix}}  </br>
+                    prix actu:{% if ent.ltpo == 'N/A' %} N/A {% else %} {{ ent.ltpo|round(2,'floor') }} {% endif %} quantite:{{ ent.quantite }} frais:{{ ent.frais }}</br>
+                </td>
+            </tr>
         {% endfor %}
-
+        </table>
 
 
 

@@ -324,3 +324,9 @@ text-align: center;
 #blockinscr{
 	text-align: center;
 }
+
+.trope{
+    border-style: solid;
+    border-top: thick double #ff0000 ;
+}
+reset.css

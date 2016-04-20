@@ -182,6 +182,54 @@ class ProfileController extends Controller
         }
     }
 
+
+    public function getJsonAction(Request $request)
+    {
+
+
+        $pdo = models\PdoBourses::getPdoBourse();
+        $portefeuille = $pdo->getOpeById($request->get('pf'));
+        $soldeactuel=$portefeuille[0]['solde_init'];
+        $query=new YahooFinanceQuery;
+        // dump($portefeuille);
+        $param = explode(' ','LastTradePriceOnly x c1');
+        $i=0;
+        foreach($portefeuille[1] as $feuille)
+        {
+            $ticker=explode(' ',$feuille['ticker']);
+            //dump($feuille);
+            $res=$query->quote($ticker,$param)->get();
+            if($res[0]['LastTradePriceOnly']!='N/A')
+            {
+                $val=$res[0]['LastTradePriceOnly']*$feuille['quantite'];
+                $portefeuille[1][$i]['ltpo']=$res[0]['LastTradePriceOnly'];
+
+            }else {
+                $val=$feuille['prix']*$feuille['quantite'];
+                $portefeuille[1][$i]['ltpo']='N/A';
+            }
+
+            if($feuille['sens']=='+')
+            {
+                $soldeactuel+=$val;
+                $soldeactuel-=$feuille['frais'];
+            }else{
+                $soldeactuel-=$val;
+                $soldeactuel-=$feuille['frais'];
+            }
+            $i++;
+        }
+        $portefeuille[0]['soldeactu']=$soldeactuel;
+        $json=json_encode($portefeuille);
+        return $this->render('BourseBundle:Profile:json.html.twig', array('json'=>$json));
+        //dump($portefeuille);
+        //dump($soldeactuel);
+
+    }
+
+
+
+
     public function voirOperationAction(Request $request)
     {
         $session = new Session();
@@ -195,9 +243,41 @@ class ProfileController extends Controller
 
                 $pdo = models\PdoBourses::getPdoBourse();
                 $portefeuille = $pdo->getOpeById($request->get('pf'));
+                $soldeactuel=$portefeuille[0]['solde_init'];
+                $query=new YahooFinanceQuery;
+               // dump($portefeuille);
+                $param = explode(' ','LastTradePriceOnly x c1');
+                $i=0;
+                 foreach($portefeuille[1] as $feuille)
+                {
+                    $ticker=explode(' ',$feuille['ticker']);
+                    dump($feuille);
+                   $res=$query->quote($ticker,$param)->get();
+                    if($res[0]['LastTradePriceOnly']!='N/A')
+                    {
+                        $val=$res[0]['LastTradePriceOnly']*$feuille['quantite'];
+                        $portefeuille[1][$i]['ltpo']=$res[0]['LastTradePriceOnly'];
+
+                    }else {
+                        $val=$feuille['prix']*$feuille['quantite'];
+                        $portefeuille[1][$i]['ltpo']='N/A';
+                    }
+                    
+                    if($feuille['sens']=='+')
+                    {
+                        $soldeactuel+=$val;
+                        $soldeactuel-=$feuille['frais'];
+                    }else{
+                        $soldeactuel-=$val;
+                        $soldeactuel-=$feuille['frais'];
+                    }
+                    $i++;
+                }
+                dump($portefeuille);
+                dump($soldeactuel);
 
 
-                return $this->render('BourseBundle:Profile:operation.html.twig', array('portefeuille'=>$portefeuille[0],'operations'=>$portefeuille[1]));
+                return $this->render('BourseBundle:Profile:operation.html.twig', array('portefeuille'=>$portefeuille[0],'operations'=>$portefeuille[1],'soldeactu'=>$soldeactuel));
 
             }else{
 

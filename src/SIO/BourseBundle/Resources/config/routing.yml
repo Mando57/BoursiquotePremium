@@ -58,3 +58,7 @@ bourse_operation:
     path: /operation
     defaults: { _controller: BourseBundle:Profile:voirOperation}
 
+bourse_json:
+    path: /json
+    defaults: { _controller: BourseBundle:Profile:getJson}
+
