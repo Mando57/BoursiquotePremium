@@ -10,12 +10,19 @@
         <hr/>
 
         <table border="0">
-        {% for ent in operations %}
+        {% for ope in operations %}
+
 
             <tr class="trope">
                 <td>
-                    {{ ent.company }} - PRU:{{ ent.prix}}  </br>
-                    prix actu:{% if ent.ltpo == 'N/A' %} N/A {% else %} {{ ent.ltpo|round(2,'floor') }} {% endif %} quantite:{{ ent.quantite }} frais:{{ ent.frais }}</br>
+                    {{ ope.nom }}<br>
+                    {% for ent in ope %}
+
+
+                        prix actu:{% if ent.ltpo == 'N/A' %} N/A {% else %} {{ ent.ltpo|round(2,'floor') }} {% endif %} quantite:{{ ent.quantite }} frais:{{ ent.frais }}</br>
+
+                    {% endfor %}
+
                 </td>
             </tr>
         {% endfor %}

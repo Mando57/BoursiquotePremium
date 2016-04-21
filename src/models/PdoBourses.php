@@ -212,7 +212,7 @@ class PdoBourses
     public function getOpeById($idp)
     {
 
-        $req='select operation.*,ticker,company,pays from operation inner join action on operation.ida=action.idaction where idp='.$idp;
+        $req='select operation.*,ticker,company,pays from operation inner join action on operation.ida=action.idaction where idp='.$idp.' order by ida';
 
         $res=PdoBourses::$monPdo->query($req);
         $return=array();

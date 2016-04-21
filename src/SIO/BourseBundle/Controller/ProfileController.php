@@ -247,37 +247,106 @@ class ProfileController extends Controller
                 $query=new YahooFinanceQuery;
                // dump($portefeuille);
                 $param = explode(' ','LastTradePriceOnly x c1');
+
+
+                $ope=array();
+                $tempida='      d';
                 $i=0;
-                 foreach($portefeuille[1] as $feuille)
-                {
-                    $ticker=explode(' ',$feuille['ticker']);
-                    dump($feuille);
-                   $res=$query->quote($ticker,$param)->get();
-                    if($res[0]['LastTradePriceOnly']!='N/A')
-                    {
-                        $val=$res[0]['LastTradePriceOnly']*$feuille['quantite'];
-                        $portefeuille[1][$i]['ltpo']=$res[0]['LastTradePriceOnly'];
+                $p=(-1);
 
-                    }else {
-                        $val=$feuille['prix']*$feuille['quantite'];
-                        $portefeuille[1][$i]['ltpo']='N/A';
-                    }
-                    
-                    if($feuille['sens']=='+')
-                    {
-                        $soldeactuel+=$val;
-                        $soldeactuel-=$feuille['frais'];
+                foreach($portefeuille[1] as $feuille) {
+                    if ($tempida == $feuille['ida']) {
+                        $ticker = explode(' ', $feuille['ticker']);
+
+                        $res = $query->quote($ticker, $param)->get();
+                            $ope[$p][]=$feuille;
+
+                        if ($res[0]['LastTradePriceOnly'] != 'N/A') {
+                            $val = $res[0]['LastTradePriceOnly'] * $feuille['quantite'];
+
+                            $ope[$p][$i]['ltpo'] = $res[0]['LastTradePriceOnly'];
+
+                        } else {
+                            $val = $feuille['prix'] * $feuille['quantite'];
+                            $ope[$p][$i]['ltpo'] = 'N/A';
+                        }
+
+
+                        if ($feuille['sens'] == '+') {
+                            $soldeactuel += $val;
+                            $soldeactuel -= $feuille['frais'];
+                        } else {
+                            $soldeactuel -= $val;
+                            $soldeactuel -= $feuille['frais'];
+                        }
+                        $i++;
                     }else{
-                        $soldeactuel-=$val;
-                        $soldeactuel-=$feuille['frais'];
+                        $tempida=$feuille['ida'];
+                        $i=0;
+                        $p++;
+
+
+                        $ticker = explode(' ', $feuille['ticker']);
+
+                        $res = $query->quote($ticker, $param)->get();
+                        $ope[$p]['nom']=$feuille['company'];
+                        $ope[$p]['pru']='';
+                        $ope[$p][]=$feuille;
+
+
+                        if ($res[0]['LastTradePriceOnly'] != 'N/A') {
+                            $val = $res[0]['LastTradePriceOnly'] * $feuille['quantite'];
+
+                            $ope[$p][$i]['ltpo'] = $res[0]['LastTradePriceOnly'];
+
+                        } else {
+                            $val = $feuille['prix'] * $feuille['quantite'];
+                            $ope[$p][$i]['ltpo'] = 'N/A';
+                        }
+
+
+                        if ($feuille['sens'] == '+') {
+                            $soldeactuel += $val;
+                            $soldeactuel -= $feuille['frais'];
+                        } else {
+                            $soldeactuel -= $val;
+                            $soldeactuel -= $feuille['frais'];
+                        }
+                        $i++;
+
+
                     }
-                    $i++;
                 }
-                dump($portefeuille);
-                dump($soldeactuel);
 
+                $quant=0;
+                $total=0;
+                $pru=array();
+                foreach($ope as $action )
+                {
 
-                return $this->render('BourseBundle:Profile:operation.html.twig', array('portefeuille'=>$portefeuille[0],'operations'=>$portefeuille[1],'soldeactu'=>$soldeactuel));
+                    for($z=0;$z<(count($action)-2);$z++)
+                    {
+                        if($action[$z]['sens']=='-')
+                        {
+                            $quant+=$action[$z]['quantite'];
+                            $total+=($action[$z]['prix']*$action[$z]['quantite']+$action[$z]['frais']);
+                        }
+                    }
+                    $pru[]=round($total/$quant, 2, PHP_ROUND_HALF_DOWN);
+
+                }
+                dump($pru);
+                dump($ope);
+
+                for($o=0;$o<count($pru);$o++)
+                {
+                    $ope[$o]['pru']=$pru[$o];
+                }
+                dump($ope);
+
+#######################TO DO traitement dans le twig avec des i++ dans 
+
+                return $this->render('BourseBundle:Profile:operation.html.twig', array('portefeuille'=>$portefeuille[0],'operations'=>$ope,'soldeactu'=>$soldeactuel));
 
             }else{
 
