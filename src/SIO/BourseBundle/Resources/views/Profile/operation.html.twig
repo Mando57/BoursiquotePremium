@@ -10,18 +10,22 @@
         <hr/>
 
         <table border="0">
+            {% set i=0 %}
         {% for ope in operations %}
 
 
             <tr class="trope">
                 <td>
-                    {{ ope.nom }}<br>
+                    {{ ope.nom }}- pru: {{ ope.pru }}<br>
                     {% for ent in ope %}
-
+                        {% if i>1 %}
 
                         prix actu:{% if ent.ltpo == 'N/A' %} N/A {% else %} {{ ent.ltpo|round(2,'floor') }} {% endif %} quantite:{{ ent.quantite }} frais:{{ ent.frais }}</br>
 
+                        {% endif %}
+                        {% set i=i+1 %}
                     {% endfor %}
+                    {% set i=0 %}
 
                 </td>
             </tr>
