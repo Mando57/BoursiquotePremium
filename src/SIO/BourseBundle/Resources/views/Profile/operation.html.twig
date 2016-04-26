@@ -6,35 +6,50 @@
     <div id="conteneur">
         <p id="p1"> Mes operation du portefeuille : {{ portefeuille.libelle }}  </p>
 
-        solde:{{ soldeactu }} ({{ (soldeactu*100/portefeuille.solde_init-100)|round(3, 'floor') }}%)
+        solde:{{ soldeactu }} ({{ ((soldeactu*100/portefeuille.solde_init)-100)|round(3, 'floor') }}%)
         <hr/>
 
-        <table border="0">
+        <table class="tableope" border="1">
             {% set i=0 %}
         {% for ope in operations %}
 
 
             <tr class="trope">
-                <td>
-                    {{ ope.nom }}- pru: {{ ope.pru }}<br>
+                <td class="tdope">
+                    {{ ope.nom }} - pru: {{ ope.pru }}  <button class="detail" onclick="displaychange('{{ope.0.ticker}}')" >voir details</button> <br> <div class="operation" id="{{ope.0.ticker}}">
                     {% for ent in ope %}
                         {% if i>1 %}
 
-                        prix actu:{% if ent.ltpo == 'N/A' %} N/A {% else %} {{ ent.ltpo|round(2,'floor') }} {% endif %} quantite:{{ ent.quantite }} frais:{{ ent.frais }}</br>
+                        prix actu:{% if ent.ltpo == 'N/A' %} N/A {% else %} {{ ent.ltpo|round(2,'floor') }}  perf:{{ ((ent.ltpo*ent.quantite*100)/(ent.prix*ent.quantite)-100)|round(2,'floor') }}%  {% endif %} quantite:{{ ent.quantite }} frais:{{ ent.frais }}</br>
 
                         {% endif %}
                         {% set i=i+1 %}
                     {% endfor %}
                     {% set i=0 %}
-
+                    </div>
                 </td>
+
             </tr>
         {% endfor %}
         </table>
 
 
 
+        <script>
+            function displaychange(id)
+            {
+                if(document.getElementById(id).style.display=='none' )
+                {
+                    document.getElementById(id).style.display='inline';
 
+                }else{
+                    document.getElementById(id).style.display='none';
+
+                }
+            }
+
+
+        </script>
 
 
     </div>
