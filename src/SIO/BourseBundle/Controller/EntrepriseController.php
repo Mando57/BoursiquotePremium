@@ -11,11 +11,21 @@ use DirkOlbrich\YahooFinanceQuery\YahooFinanceQuery;
 
 class EntrepriseController extends Controller
 {
-    public function voirEntrepriseAction($ticker)
+    public function voirEntrepriseAction($ticker,Request $request)
     {
         $session = new Session();
+        $pdo=models\PdoBourses::getPdoBourse();
         if($session->has('logged')) {
-            $pdo=models\PdoBourses::getPdoBourse();
+
+            if($request->request->has('quant'))
+            {
+                $pdo->addOpe($request->get('quant'),$request->get('prixu'),$request->get('pf'),$request->get('ident'));
+            }
+
+
+
+
+
             $entreprise=$pdo->getEntrepriseByTicker($ticker);
 
             $query = new YahooFinanceQuery;
@@ -33,6 +43,12 @@ class EntrepriseController extends Controller
 
             //attribution des variable pour les info dans la page
             $data = $query->historicalQuote($entreprise[0]['ticker'], '2015-12-15', '2015-12-16', 'daily')->get();
+            dump($data);
+            $param = explode(' ','LastTradePriceOnly x c1');
+            $ticker2 = explode(' ', $entreprise[0]['ticker']);
+            $res = $query->quote($ticker2, $param)->get();
+
+
 
             $test=array('test'=>'valdetst');
             $entreprise[0]['date']=$data[0]['Date'];
@@ -41,9 +57,14 @@ class EntrepriseController extends Controller
             $entreprise[0]['low']=$data[0]['Low'];
             $entreprise[0]['close']=$data[0]['Close'];
             $entreprise[0]['volume']=$data[0]['Volume'];
+            $entreprise[0]['tcp']=$res[0]['LastTradePriceOnly'];
+            dump($entreprise);
+
+            $pf=$pdo->getPF();
+            dump($pf);
 
 
-            return $this->render('BourseBundle:Entreprise:focusEntreprise.html.twig',array('entreprise'=>$entreprise[0]));
+            return $this->render('BourseBundle:Entreprise:focusEntreprise.html.twig',array('entreprise'=>$entreprise[0],'pf'=>$pf));
         }
         else
         {

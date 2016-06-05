@@ -62,3 +62,7 @@ bourse_json:
     path: /json
     defaults: { _controller: BourseBundle:Profile:getJson}
 
+bourse_mail:
+    path: /mail
+    defaults: { _controller: BourseBundle:Mail:sendMail}
+

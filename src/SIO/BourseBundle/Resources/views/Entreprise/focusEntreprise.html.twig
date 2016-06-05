@@ -28,6 +28,36 @@
             <br>last update:{{ entreprise.date }}
 
         </td>
+        <td><br><br><br>
+            <form method="POST">
+                <select name='pf' >
+                    {% for ent in pf %}
+
+                        <option value="{{ ent.id }}">{{ ent.libelle}} solde: {{ ent.solde }}</option>
+
+
+                    {% endfor %}
+                </select><br>
+                <input type="hidden" name='prixu' id="prixu" value="{{ entreprise.tcp }}"/>
+                <input type="hidden" name='ident' value="{{ entreprise.idaction }}"/>
+                quantité: <input type="text" name="quant" id="quant"  onkeyup="actuprix({{ entreprise.tcp }})"/><br>
+                <div id="prix">total :</div>
+
+                <input name='acheter' type="submit" value="acheter" />
+
+            </form>
+<script>
+    function actuprix(prix)
+    {
+        var quant=document.getElementById('quant').value;
+        var precision = 2;
+        var tmp = Math.pow(10, 2);
+        document.getElementById('prix').innerHTML='total :'+Math.round( (prix*quant)*tmp )/tmp;
+    }
+
+
+</script>
+        </td>
     </tr>
 </table>
     </div>

@@ -19,10 +19,10 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class PdoBourses
 {
-    private static $serveur='mysql:host=172.18.204.105';
+    private static $serveur='mysql:host=127.0.0.1';
     private static $bdd='dbname=BSIQ';
     private static $user='root' ;
-    private static $mdp='yama2211' ;
+    private static $mdp='' ;
     private static $monPdo;
     private static $monPdoBourse = null;
 
@@ -225,6 +225,29 @@ class PdoBourses
 
         return $return;
     }
+
+    public function addOpe($quant,$prixu,$pf,$ident)
+    {
+        $req="INSERT INTO operation (ida, idp, frais, prix, quantite, date, sens) VALUES ($ident,$pf,2,$prixu,$quant,now(),'-')";
+        $res=PdoBourses::$monPdo->exec($req);
+        var_dump($req);
+
+    }
+
+    public function getAllNotif()
+    {
+        $req="select notification.*,ticker,company,identifiant from notification inner join action on notification.ida=action.idaction inner join client on notification.idc=client.id where envoie=0";
+        $res=PdoBourses::$monPdo->query($req);
+        dump($req);
+        return $res->fetchAll();
+    }
+
+    public function updateNotif($id)
+    {
+        $req="update notification set envoie=1 where id=$id";
+        $res=PdoBourses::$monPdo->exec($req);
+    }
+
 
 
 

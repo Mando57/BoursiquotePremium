@@ -86,7 +86,7 @@ class ProfileController extends Controller
         if($request->request->has('Bt-deco'))
         {
             $session= new Session();
-            //$session->clear();
+            $session->clear();
 
         }
 
