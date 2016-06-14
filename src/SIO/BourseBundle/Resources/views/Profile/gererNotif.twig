@@ -1,0 +1,28 @@
+{% extends "BourseBundle:layout:layout.html.twig" %}
+
+
+{% block content %}{{ parent }}
+
+    <div id="conteneur">
+        <p id="p1"> Mes valeurs favorite </p>
+    <table id="graphiques" class>
+{% set i=0 %}
+
+    {% for fav in favoris %}
+        <tr>
+            <td>
+            <p> {{ fav.company }} </p>
+            </td>
+            <td>
+                <form method="post">
+                    <input type="hidden" name="rmfav" value="{{ fav.idaction }} "/>
+                    <input type="image"  class='info' src={{ asset('images/suppr.png') }} />
+                </form>
+            </td>
+        </tr>
+
+
+    {% endfor %}
+    </table>
+    </div>
+{% endblock %}

@@ -57,7 +57,9 @@ class PdoBourses
     {
         $req="select count(*) as nbr from administrateur where nom='".$identifiant."' and mdp='".$pwd."'";
         $res = PdoBourses::$monPdo->query($req);
+        var_dump($req);
         $logged=$res->fetch();
+
         if($logged['nbr']==1)
         {
             $LoginConfirmation=true;
