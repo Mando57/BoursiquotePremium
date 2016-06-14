@@ -66,3 +66,6 @@ bourse_mail:
     path: /mail
     defaults: { _controller: BourseBundle:Mail:sendMail}
 
+bourse_gererNotif:
+    path: /mesNotifs
+    defaults: { _controller: BourseBundle:Profile:gererNotif}

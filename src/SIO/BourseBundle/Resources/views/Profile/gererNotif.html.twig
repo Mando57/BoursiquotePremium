@@ -1,0 +1,28 @@
+{% extends "BourseBundle:layout:layout.html.twig" %}
+
+
+{% block content %}{{ parent }}
+
+    <div id="conteneur">
+        <p id="p1"> Mes notifications </p>
+    <table id="graphiques" >
+{% set i=0 %}
+
+    {% for notif in notifs %}
+        <tr>
+            <td>
+            <p> {{ notif.company }} : {{ notif.seuil }}€ </p>
+            </td>
+            <td>
+                <form method="post">
+                    <input type="hidden" name="rmnotif" value="{{ notif.id }} "/>
+                    <input type="image"  class='info' src={{ asset('images/suppr.png') }} />
+                </form>
+            </td>
+        </tr>
+
+
+    {% endfor %}
+    </table>
+    </div>
+{% endblock %}

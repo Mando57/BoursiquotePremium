@@ -248,6 +248,31 @@ class PdoBourses
         $res=PdoBourses::$monPdo->exec($req);
     }
 
+    public function getNotifs()
+    {
+        $session=new Session();
+        $req= " select notification.*, company from notification inner join action on notification.ida=action.idaction where idc=".$session->get('userId');
+        $res = PdoBourses::$monPdo->query($req);
+        return $res->fetchAll();
+
+
+    }
+
+    public function delNotif($id)
+    {
+        $req="delete from notification where id=$id ";
+        dump($req);
+        PdoBourses::$monPdo->exec($req);
+    }
+
+    public function addNotif($seuil,$lib,$ida)
+    {
+        $session=new Session();
+        $req="insert into notification (seuil,libelle,ida,idc) values ('$seuil','$lib',$ida,".$session->get('userId').")";
+        dump($req);
+        PdoBourses::$monPdo->exec($req);
+    }
+
 
 
 

@@ -28,9 +28,10 @@
             <br>last update:{{ entreprise.date }}
 
         </td>
-        <td><br><br><br>
+
+        <td>Acheter : <br><br><br>
             <form method="POST">
-                <select name='pf' >
+               Portefeuille: <select name='pf' >
                     {% for ent in pf %}
 
                         <option value="{{ ent.id }}">{{ ent.libelle}} solde: {{ ent.solde }}</option>
@@ -57,6 +58,19 @@
 
 
 </script>
+        </td>
+
+        <td>
+            Ajouter Notification:<br><br><br><br>
+            <form method="POST">
+
+                seuil:<input type="text" name='seuil' id="prixu"/><br>
+                Description:<input type="text" name='lib' /><br>
+                <input type="hidden" name='ident' value="{{ entreprise.idaction }}"/>
+                <input type="submit" name="addnotif" />
+
+
+            </form>
         </td>
     </tr>
 </table>

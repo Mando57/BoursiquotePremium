@@ -17,6 +17,12 @@ class EntrepriseController extends Controller
         $pdo=models\PdoBourses::getPdoBourse();
         if($session->has('logged')) {
 
+            if($request->request->has('addnotif'))
+            {
+                $pdo->addnotif($request->get('seuil'),$request->get('lib'),$request->get('ident'));
+            }
+
+
             if($request->request->has('quant'))
             {
                 $pdo->addOpe($request->get('quant'),$request->get('prixu'),$request->get('pf'),$request->get('ident'));

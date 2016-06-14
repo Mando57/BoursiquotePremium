@@ -344,7 +344,6 @@ class ProfileController extends Controller
                 }
                 dump($ope);
 
-#######################TO DO traitement dans le twig avec des i++ dans 
 
                 return $this->render('BourseBundle:Profile:operation.html.twig', array('portefeuille'=>$portefeuille[0],'operations'=>$ope,'soldeactu'=>$soldeactuel));
 
@@ -360,6 +359,32 @@ class ProfileController extends Controller
         {
             return $this->redirectToRoute('bourse_connexion');
         }
+    }
+
+    public function gererNotifAction(Request $request)
+    {
+
+        $session = new Session();
+        if($session->has('logged')) {
+            $pdo = models\PdoBourses::getPdoBourse();
+
+            if($request->request->has('rmnotif'))
+            {
+                $pdo->delNotif($request->get('rmnotif'));
+
+            }
+
+
+            $notifs = $pdo->getNotifs();
+
+            return $this->render('BourseBundle:Profile:gererNotif.html.twig', array('notifs' => $notifs));
+
+        }else{
+
+            return $this->redirectToRoute('bourse_connexion');
+        }
+
+
     }
 }
 
